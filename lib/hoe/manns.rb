@@ -14,7 +14,7 @@ class Hoe; end
 # Main module for hoe-manns
 module Hoe::Manns
   # Version constant for HOE::Manns
-  VERSION = '1.0.2'
+  VERSION = '1.1.0'
 
   attr_accessor :update_gemfile_lock
   attr_accessor :remove_pre_gemspec
