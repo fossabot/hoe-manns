@@ -51,7 +51,7 @@ Hoe.spec 'hoe-manns' do
   dependency 'parseconfig', '~> 1.0'
   dependency 'bundler-audit', '~> 0.4.0'
 
-  extra_dev_deps << ['coveralls', '~> 0.8']
+  extra_dev_deps << ['coveralls', '~> 0.8.3']
   extra_dev_deps << ['digest', '~> 0.0.1']
   extra_dev_deps << ['gem-release', '~> 0.7']
   extra_dev_deps << ['hoe-bundler', '~> 1.2']
@@ -81,16 +81,6 @@ Hoe.spec 'hoe-manns' do
   self.readme_file = 'README.rdoc'
   self.extra_rdoc_files = FileList['*.rdoc'].to_a
   self.post_install_message = '*** Run rake setup to finish the installation *** Please file bugreports and feature requests on: https://gitlab.com/saigkill/hoe-manns/issues'
-end
-
-require 'fileutils'
-require File.expand_path(File.join(File.dirname(__FILE__), 'lib/hoe/manns'))
-desc 'Prepares for release'
-task :make_release => %w(run_before_release) do
-
-  system("rake release VERSION=#{Hoe::Manns::VERSION}")
-
-  Rake::Task['run_after_release']
 end
 
 ##################################################SETUP ZONE############################################################
