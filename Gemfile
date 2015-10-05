@@ -10,7 +10,7 @@ gem "bundler-audit", "~>0.4.0"
 
 gem "hoe-highline", "~>0.2", :group => [:development, :test]
 gem "hoe-yard", ">=0.1.2", :group => [:development, :test]
-gem "coveralls", "~>0.8", :group => [:development, :test]
+gem "coveralls", "~>0.8.3", :group => [:development, :test]
 gem "digest", "~>0.0.1", :group => [:development, :test]
 gem "gem-release", "~>0.7", :group => [:development, :test]
 gem "hoe-bundler", "~>1.2", :group => [:development, :test]

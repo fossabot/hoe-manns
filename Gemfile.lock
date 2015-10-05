@@ -51,6 +51,7 @@ GEM
       highline (~> 1.6)
       hoe (~> 3.11)
     hoe-manns (1.0.2)
+      bundler-audit (~> 0.4.0)
       parseconfig (~> 1.0)
       setup (~> 5.2)
     hoe-mercurial (1.4.1)
@@ -153,7 +154,7 @@ PLATFORMS
 DEPENDENCIES
   ZenTest (~> 4.11)
   bundler-audit (~> 0.4.0)
-  coveralls (~> 0.8)
+  coveralls (~> 0.8.3)
   digest (~> 0.0.1)
   gem-release (~> 0.7)
   hoe (~> 3.14)
