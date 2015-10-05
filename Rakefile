@@ -50,6 +50,7 @@ Hoe.spec 'hoe-manns' do
   dependency 'setup', '~> 5.2'
   dependency 'parseconfig', '~> 1.0'
   dependency 'bundler-audit', '~> 0.4.0'
+  dependency 'fpm', '~> 1.4.0'
 
   extra_dev_deps << ['coveralls', '~> 0.8.3']
   extra_dev_deps << ['digest', '~> 0.0.1']

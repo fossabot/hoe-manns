@@ -182,6 +182,8 @@ update_workspace bundle_audit:run copy_mirror) do
     puts 'Copying to mirror succeeded'.colour(:green)
   end
 
+  # Method for deploying to bintray
+
   # Method for getting the project name
   def self.get_projectname
     pnameraw = File.open(*Dir.glob('README.*')) {|f| f.readline}

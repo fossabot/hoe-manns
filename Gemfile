@@ -7,6 +7,7 @@ source "https://rubygems.org/"
 gem "setup", "~>5.2"
 gem "parseconfig", "~>1.0"
 gem "bundler-audit", "~>0.4.0"
+gem "fpm", "~>1.4.0"
 
 gem "hoe-highline", "~>0.2", :group => [:development, :test]
 gem "hoe-yard", ">=0.1.2", :group => [:development, :test]
