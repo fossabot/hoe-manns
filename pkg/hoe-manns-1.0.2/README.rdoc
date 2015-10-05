@@ -1,0 +1,112 @@
+= hoe-manns
+
+home  :: http://saigkill.github.io
+code  :: http://gitlab.com/saigkill/hoe-manns
+docu :: https://gitlab.com/saigkill/hoe-manns/wikis/home
+apidoc :: http://www.rubydoc.info/gems/hoe-manns
+bugs  :: https://gitlab.com/saigkill/hoe-manns/issues
+last public version  :: {<img src="https://badge.fury.io/rb/hoe-manns.png" alt="Last Version" />}[http://rubygems.org/gems/hoe-manns]
+downloads latest :: {<img src="https://img.shields.io/gem/dtv/hoe-manns.svg" alt="Downloads latest version" />}[http://rubygems.org/gems/hoe-manns]
+downloads all :: {<img src="https://img.shields.io/gem/dt/hoe-manns.svg" alt="Downloads all versions" />}[http://rubygems.org/gems/hoe-manns]
+continuous integration :: {<img src="http://saigkill.ddns.net:8111/app/rest/builds/buildType:(id:HoeManns_2_Build)/statusIcon" alt="Build Status" />}[http://saigkill.ddns.net:8111/viewType.html?buildTypeId=HoeManns_2_Build&guest=1]
+continuous integration :: {<img src="https://gitlab.com/ci/projects/9594/status.png?ref=master" alt="Build Status" />}[https://gitlab.com/saigkill/hoe-manns]
+test coverage :: {<img src="https://coveralls.io/repos/saigkill/hoe-manns/badge.png?branch=master" alt="Test Coverage" />}[https://coveralls.io/r/saigkill/hoe-manns?branch=master]
+dependency check :: {<img src="https://gemnasium.com/saigkill/hoe-manns.png" alt="Dependency Check" />}[https://gemnasium.com/saigkill/hoe-manns]
+still maintained? :: {<img src="http://stillmaintained.com/saigkill/hoe-manns.png" alt="Still maintained?" />}[http://stillmaintained.com/saigkill/hoe-manns]
+donations :: {<img src="https://pledgie.com/campaigns/30268.png?skin_name=chrome" alt="Donations" />}[https://pledgie.com/campaigns/FIX]
+donations :: {<img src="http://img.shields.io/gratipay/saigkill.svg" alt="Donations" />}[https://gratipay.com/~saigkill/]
+donations :: {<img src="http://tsv-neuss.de/cms/upload/News-Bilder/amazon1.png" alt="Donations" />}[http://www.amazon.de/registry/wishlist/D75HOEQ00BDD]
+
+
+== DESCRIPTION:
+
+hoe-manns is a small collection of my personal used rake tasks for using with hoe. Actually it includes that tasks:
+
+* update_gemfile_lock
+* remove_pre_gemspec
+* update_workspace
+* update_index
+* copy_manuals
+* run_before_release
+* run_after_release
+* clean_pkg
+
+== FEATURES/PROBLEMS:
+
+* Updates the Gemfile.lock
+* Removes the old *.gemspec created in test cases
+* commits the workspace before rake release
+* Does a index --using VERSION Index.yml if you use the indexer from Rubyworks
+* copies your manuals to your docpath.
+* runs the rake tasks before release: git:manifest, bundler:gemfile, update_gemfile_lock, update_index, remove_pre_gemspec and update_workspace
+* runs after release: send_email version:bump
+* Cleans up the pkg dir
+
+This Gem was programmed and tested for Linux systems. If anyone would like to make the methods also fit for other OS,
+i'm happy about Pull requests.
+
+For a detailed information please visit: https://gitlab.com/saigkill/hoe-manns/wikis/home
+If you like this piece of software don't forget to give the gitlab repo a star.
+
+== SYNOPSIS:
+
+Use in your Rakefile:
+
+    Hoe.plugin :manns
+
+    Hoe.spec 'yourproject' do
+    ...
+    end
+
+Also add hoe-manns to your requirements and recreate your Gemfile.
+
+== REQUIREMENTS:
+
+* rake
+* hoe
+* parseconfig
+
+== INSTALL:
+
+* gem install hoe-manns
+* cd /path/to/gem (In case of using RVM anything like ~/.rvm/gems/ruby-2.2.1/gems/hoe-manns)
+* rake setup
+
+'rake setup' installs a config file in $HOME/.hoe-manns/hoe-manns.cfg. If you would like to use copy_manuals so you
+have to place in the config your docpath.
+
+== DEVELOPERS:
+
+After checking out the source, run:
+
+  $ rake newb
+
+This task will install any missing dependencies, run the tests/specs,
+and generate the RDoc.
+
+Read https://gitlab.com/saigkill/hoe-manns/blob/master/CONTRIBUTING.md
+
+== LICENSE:
+
+(The MIT License)
+
+Copyright (c) 2015 Sascha Manns <samannsml@directbox.com>
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

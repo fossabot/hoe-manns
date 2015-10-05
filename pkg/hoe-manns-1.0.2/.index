@@ -1,0 +1,165 @@
+---
+revision: 2013
+type: ruby
+sources:
+- VERSION
+- Index.yml
+authors:
+- name: Sascha Manns
+  email: samannsml@directbox.com
+organizations: []
+requirements:
+- name: setup
+- name: notifier
+- name: parseconfig
+- groups:
+  - build
+  development: true
+  name: bundler
+- groups:
+  - build
+  development: true
+  name: gem-release
+- groups:
+  - build
+  development: true
+  name: hoe
+- groups:
+  - build
+  development: true
+  name: hoe-bundler
+- groups:
+  - build
+  development: true
+  name: hoe-deveiate
+- groups:
+  - build
+  development: true
+  name: hoe-doofus
+- groups:
+  - build
+  development: true
+  name: hoe-gemspec
+- groups:
+  - build
+  development: true
+  name: hoe-git
+- groups:
+  - build
+  development: true
+  name: hoe-highline
+- groups:
+  - build
+  development: true
+  name: hoe-manns
+- groups:
+  - build
+  development: true
+  name: hoe-reek
+- groups:
+  - build
+  development: true
+  name: hoe-rubocop
+- groups:
+  - build
+  development: true
+  name: hoe-rubygems
+- groups:
+  - build
+  development: true
+  name: hoe-seattlerb
+- groups:
+  - build
+  development: true
+  name: hoe-travis
+- groups:
+  - build
+  development: true
+  name: hoe-version
+- groups:
+  - build
+  development: true
+  name: hoe-yard
+- groups:
+  - build
+  development: true
+  name: indexer
+- groups:
+  - build
+  development: true
+  name: rubocop
+- groups:
+  - build
+  development: true
+  name: rake
+- groups:
+  - build
+  development: true
+  name: rdoc
+- groups:
+  - build
+  development: true
+  name: rspec
+- groups:
+  - build
+  development: true
+  name: reek
+- groups:
+  - build
+  development: true
+  name: simplecov
+- groups:
+  - test
+  development: true
+  name: coveralls
+- groups:
+  - test
+  development: true
+  name: test
+- groups:
+  - test
+  development: true
+  name: ZenTest
+conflicts: []
+alternatives: []
+resources:
+- type: home
+  uri: http://saigkill.github.io
+  label: Homepage
+- type: docs
+  uri: https://gitlab.com/saigkill/hoe-manns/wikis/home
+  label: Documentation
+- type: code
+  uri: https://gitlab.com/saigkill
+  label: Source Code
+- type: bugs
+  uri: https://gitlab.com/saigkill/hoe-manns/issues
+  label: Issue Tracker
+- type: issues
+  uri: https://gitlab.com/saigkill/hoe-manns/issues
+  label: Issue Tracker
+repositories:
+- name: upstream
+  scm: git
+  uri: https://gitlab.com/saigkill/hoe-manns.git
+categories:
+- hoe
+- packaging
+- gem release
+- metadata
+copyrights:
+- holder: Sascha Manns
+  year: '2015'
+  license: MIT
+customs: []
+paths:
+  lib:
+  - lib
+version: 1.0.2
+name: hoe-manns
+title: hoe-manns
+summary: hoe-manns is a small collection of my personal used rake tasks for using
+  with hoe
+description: hoe-manns is a small collection of my personal used rake tasks for using
+  with hoe. See README.rdoc for more information.
+date: '2015-10-02'
