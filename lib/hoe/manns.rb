@@ -171,13 +171,16 @@ update_workspace bundle_audit:run copy_mirror) do
     FileUtils.cp_r "#{source}/Rakefile", "#{destination}", verbose: true
     FileUtils.cp_r "#{source}/Gemfile", "#{destination}", verbose: true
     FileUtils.cp_r "#{source}/Gemfile.lock", "#{destination}", verbose: true
+    FileUtils.cd(destination) do
+      system('git add * && git commit -m "Sync mirror" && git push')
+    end
     puts 'Copying to mirror succeeded'.colour(:green)
   end
 
   # Method for getting the project name
   def self.get_projectname
     pnameraw = File.open(*Dir.glob('README.*')) {|f| f.readline}
-    project = pnameraw.gsub(/[^0-9A-Za-z_]/, '')
+    project = pnameraw.gsub(/[^0-9A-Za-z_-]/, '')
     return project
   end
 
