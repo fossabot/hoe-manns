@@ -136,7 +136,7 @@ update_workspace bundle_audit:run copy_mirror) do
   # Method for updating workspace
   def self.update_workspace_method
     puts 'Updating workspace'.colour(:yellow)
-    system('git add Manifest.txt Gemfile Gemfile.lock Rakefile History.rdoc')
+    system('git add Manifest.txt Gemfile Gemfile.lock Rakefile History.rdoc bin/* data/* etc/* lib/* test/*')
     system('git commit -m "Updated workspace"')
     system('git push')
     system('git status')
