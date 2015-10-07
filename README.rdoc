@@ -1,9 +1,0 @@
-= hoe-manns
-
-home  :: http://saigkill.github.io
-code  :: http://gitlab.com/saigkill/hoe-manns
-docu :: https://gitlab.com/saigkill/hoe-manns/wikis/home
-apidoc :: http://www.rubydoc.info/gems/hoe-manns
-bugs  :: https://gitlab.com/saigkill/hoe-manns/issues
-
-This is a mirror for testing purposes. The current sourcecode is placed in GitLab see above.
