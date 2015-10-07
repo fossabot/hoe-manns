@@ -23,9 +23,9 @@ describe 'Hoe::Manns' do
     it 'removes the old gemspec' do
       Hoe::Manns.remove_pre_gemspec_method
 
-      gemspec = true
-      gemspec = false if !Dir.glob('*.gemspec').empty?
-      expect(gemspec) == true
+      gemspec = false
+      gemspec = true if Dir.glob('*.gemspec').empty? == true
+      expect(gemspec) == false
     end
   end
 

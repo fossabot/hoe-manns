@@ -14,14 +14,15 @@ class Hoe; end
 # Main module for hoe-manns
 module Hoe::Manns
   # Version constant for HOE::Manns
-  VERSION = '1.1.0'
+  VERSION = '1.2.0'
 
-  attr_accessor :update_gemfile_lock
   attr_accessor :remove_pre_gemspec
-  attr_accessor :update_workspace
   attr_accessor :update_index
   attr_accessor :copy_manuals
   attr_accessor :copy_mirror
+  attr_accessor :copy_wiki
+  attr_accessor :create_packages
+  attr_accessor :deploy_packages
   attr_accessor :run_before_release
   attr_accessor :run_after_release
   attr_accessor :clean_pkg
@@ -34,6 +35,8 @@ module Hoe::Manns
     require 'parseconfig'
     require 'rainbow/ext/string'
     require 'bundler/audit/cli'
+    require 'rest-client'
+    require 'fpm'
   end
 
   # Definitions of the Rake task
@@ -41,13 +44,13 @@ module Hoe::Manns
 
     # Rake Task for updating Gemfile.lock
     desc 'Update Gemfile.lock'
-    task :update_gemfile_lock do
+    task 'bundler:gemfile_lock' do
       Hoe::Manns.update_gemfile_lock_method
     end
 
     # Rake Task for removing Prerelease Gemspecs
     desc 'Remove Pre-Gemspec'
-    task :remove_pre_gemspec do
+    task 'gem:spec_remove' do
       Hoe::Manns.remove_pre_gemspec_method
     end
 
@@ -70,10 +73,28 @@ module Hoe::Manns
       Hoe::Manns.copy_manuals_method
     end
 
+    # Rake Task for copying the GitLab Wiki to ./doc
+    desc 'Copy Wiki'
+    task :copy_wiki do
+      Hoe::Manns.copy_wiki_method
+    end
+
     # Rake task for copying to mirror
     desc 'Coying to mirror'
     task :copy_mirror do
       Hoe::Manns.copy_mirror_method
+    end
+
+    # Rake Task for building packages
+    desc 'Creating deb and rpm files'
+    task :create_packages => %w(clean_pkg package) do
+      Hoe::Manns.create_packages_method
+    end
+
+    # Rake task for deploying packages
+    desc 'Deploying packages to bintray'
+    task :deploy_packages do
+      Hoe::Manns.deploy_bintray_method
     end
 
     # Method for bundle audit
@@ -100,14 +121,14 @@ module Hoe::Manns
 
     # Rake Task for running needed Rake Tasks before running rake release
     desc 'Run all tasks before rake release'
-    task :run_before_release => %w(git:manifest bundler:gemfile update_gemfile_lock update_index remove_pre_gemspec
+    task :run_before_release => %w(git:manifest bundler:gemfile bundler:gemfile_lock update_index gem:spec_remove
 update_workspace bundle_audit:run copy_mirror) do
       puts 'Ready to run rake release VERSION=x.y.z'.colour(:green)
     end
 
     # Rake Task for running needed Rake Tasks after running rake release
     desc 'Run all tasks after rake release'
-    task :run_after_release => %w(send_email version:bump) do
+    task :run_after_release => %w(send_email generate_packages deploy_packages) do
       puts 'Release finished'.colour (:green)
     end
 
@@ -163,6 +184,7 @@ update_workspace bundle_audit:run copy_mirror) do
     config = ParseConfig.new(File.join("#{Dir.home}/.hoe-manns/hoe-manns.cfg"))
     docpath = config['docpath'].to_s
     FileUtils.cp_r('manual/output', "#{docpath}/#{project}")
+    puts 'Copied manuals'.colour(:green)
   end
 
   # Method for copying to mirror
@@ -182,13 +204,65 @@ update_workspace bundle_audit:run copy_mirror) do
     puts 'Copying to mirror succeeded'.colour(:green)
   end
 
+  # Copies the actual wiki entries to ./doc
+  def self.copy_wiki_method
+    puts 'Copying wiki content to docs'.colour(:yellow)
+    project = Hoe::Manns.get_projectname
+    develpath = Hoe::Manns.get_develpath
+    dest = "#{develpath}#{project}"
+    wikipath = "#{develpath}#{project}.wiki"
+    FileUtils.mkdir_p "#{dest}/doc", verbose: true if File.exist?('docs') == false
+    files = Dir.glob("#{wikipath}/*.md")
+    FileUtils.cp files, "#{dest}/docs", verbose: true
+    FileUtils.mv "#{dest}/docs/home.md", "#{dest}/docs/index.md", verbose: true
+    puts 'Copied wiki content'.colour(:green)
+  end
+
+  # Method for creating deb and rpm packages
+  def self.create_packages_method
+    project = Hoe::Manns.get_projectname
+    FileUtils.cd("recipes/#{project}") do
+      puts 'Creating the deb package'.colour(:yellow)
+      system('fpm-cook -t deb')
+      puts 'deb creating done'.colour(:green)
+      puts 'Creating the rpm package'.colour(:yellow)
+      system('fpm-cook -t rpm')
+      puts 'rpm creating done'.colour(:green)
+    end
+  end
+
   # Method for deploying to bintray
+  def self.deploy_bintray_method
+    project = Hoe::Manns.get_projectname
+    config = ParseConfig.new(File.join("#{Dir.home}/.hoe-manns/hoe-manns.cfg"))
+    user = config['bintray_user'].to_s
+    apikey = config['bintray_api_key'].to_s
+    file_target_path = 'pool/main/r'
+    version = File.open(*Dir.glob('VERSION')) { |f| f.readline }
+    puts 'Deploying packages to bintray'.colour(:yellow)
+    FileUtils.cd("recipes/#{project}/pkg") do
+      filerpm = Dir.glob('*.rpm')
+      filedeb = Dir.glob('*.deb')
+      rpm = filerpm.first.to_s
+      deb = filedeb.first.to_s
+      system("curl -T #{rpm} -u#{user}:#{apikey} https://api.bintray.com/content/#{user}/rpm/#{project}/v#{version}/#{file_target_path}/")
+      system("curl -T #{deb} -u#{user}:#{apikey} 'https://api.bintray.com/content/#{user}/deb/#{project}/v#{version}/#{file_target_path}/#{deb};deb_distribution=ubuntu;deb_component=main;deb_architecture=i386,amd64'")
+    end
+    puts 'Deploying succeeded'.colour(:green)
+  end
 
   # Method for getting the project name
   def self.get_projectname
-    pnameraw = File.open(*Dir.glob('README.*')) {|f| f.readline}
+    pnameraw = File.open(*Dir.glob('README.*')) { |f| f.readline }
     project = pnameraw.gsub(/[^0-9A-Za-z_-]/, '')
     return project
+  end
+
+  # Method for getting the develpath
+  def self.get_develpath
+    config = ParseConfig.new(File.join("#{Dir.home}/.hoe-manns/hoe-manns.cfg"))
+    develpath = config['develpath'].to_s
+    return develpath
   end
 
   # Method for cleanup the pkg

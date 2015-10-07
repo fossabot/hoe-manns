@@ -17,8 +17,8 @@ Hoe.plugin :doofus
 Hoe.plugin :email
 Hoe.plugin :gemspec
 # Hoe.plugin :gem_prelude_sucks
-Hoe.plugins.delete :git
-#Hoe.plugin :git
+#Hoe.plugins.delete :git
+Hoe.plugin :git
 Hoe.plugin :history
 Hoe.plugin :highline
 #Hoe.plugin :inline
@@ -49,8 +49,11 @@ Hoe.spec 'hoe-manns' do
 
   dependency 'setup', '~> 5.2'
   dependency 'parseconfig', '~> 1.0'
+  dependency 'rainbow', '~> 2.0'
   dependency 'bundler-audit', '~> 0.4.0'
-  dependency 'fpm', '~> 1.4.0'
+  dependency 'fpm', '~> 1.4'
+  dependency 'fpm-cookery', '~> 0.30.1'
+  dependency 'indexer', '~> 0.3'
 
   extra_dev_deps << ['coveralls', '~> 0.8.3']
   extra_dev_deps << ['digest', '~> 0.0.1']
@@ -61,7 +64,7 @@ Hoe.spec 'hoe-manns' do
   extra_dev_deps << ['hoe-gemspec', '~> 1.0']
   extra_dev_deps << ['hoe-git', '~> 1.6']
   extra_dev_deps << ['hoe-highline', '~> 0.2']
-  extra_dev_deps << ['hoe-manns', '~> 1.0']
+  extra_dev_deps << ['hoe-manns', '~> 1.2']
   extra_dev_deps << ['hoe-reek', '~> 1.0']
   extra_dev_deps << ['hoe-rubocop', '~> 0.1']
   extra_dev_deps << ['hoe-rubygems', '~> 1.0']
@@ -69,8 +72,7 @@ Hoe.spec 'hoe-manns' do
   extra_dev_deps << ['hoe-travis', '~> 1.2']
   extra_dev_deps << ['hoe-version', '~> 1.2']
   extra_dev_deps << ['hoe-yard', '~> 0.1']
-  extra_dev_deps << ['indexer', '~> 0.3']
-  extra_dev_deps << ['minitest', '~> 5.8.1']
+  extra_dev_deps << ['minitest', '~> 5.8']
   extra_dev_deps << ['rake', '~> 10.0']
   extra_dev_deps << ['reek', '~> 3.3']
   extra_dev_deps << ['rspec', '~> 3.3']

@@ -6,8 +6,10 @@ source "https://rubygems.org/"
 
 gem "setup", "~>5.2"
 gem "parseconfig", "~>1.0"
+gem "rainbow", "~>2.0.0"
 gem "bundler-audit", "~>0.4.0"
 gem "fpm", "~>1.4.0"
+gem "fpm-cookery", "~>0.30.1"
 
 gem "hoe-highline", "~>0.2", :group => [:development, :test]
 gem "hoe-yard", ">=0.1.2", :group => [:development, :test]
@@ -19,7 +21,7 @@ gem "hoe-deveiate", "~>0.7", :group => [:development, :test]
 gem "hoe-doofus", "~>1.0", :group => [:development, :test]
 gem "hoe-gemspec", "~>1.0", :group => [:development, :test]
 gem "hoe-git", "~>1.6", :group => [:development, :test]
-gem "hoe-manns", "~>1.0", :group => [:development, :test]
+gem "hoe-manns", "~>1.2", :group => [:development, :test]
 gem "hoe-reek", "~>1.0", :group => [:development, :test]
 gem "hoe-rubocop", "~>0.1", :group => [:development, :test]
 gem "hoe-rubygems", "~>1.0", :group => [:development, :test]
