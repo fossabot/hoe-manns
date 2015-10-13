@@ -169,6 +169,7 @@ update_workspace bundle_audit:run copy_mirror) do
     puts 'Copied manuals'.colour(:green)
   end
 
+  # rubocop:disable Metrics/LineLength
   # Method for copying to mirror
   def self.copy_mirror_method
     project = Hoe::Manns.get_projectname
@@ -176,11 +177,29 @@ update_workspace bundle_audit:run copy_mirror) do
     source = "#{develpath}/#{project}"
     destination = "#{develpath}/#{project}-mirror"
     puts 'Copying to mirror'.colour(:yellow)
-
-    Omnibus::FileSyncer.sync(source, destination, exclude: '.git')
-
+    %w(bin etc docs lib test recipes).each do |d|
+      if !File.exist?("#{destination}/#{d}") # if d isn't available in destination
+      FileUtils.mkdir("#{destination}/#{d}") if File.exist?("#{source}/#{d}") # and exist in source then create them
+      end
+      FileUtils.cp_r "#{source}/#{d}/.", "#{destination}/#{d}/.", verbose: true if File.exist?("#{source}/#{d}") # copy the content of the dirs
+    end
+    # FileUtils.cp_r "#{source}/bin/.", "#{destination}/bin/.", verbose: true if File.exist?("#{source}/bin")
+    # FileUtils.cp_r "#{source}/etc/.", "#{destination}/etc/.", verbose: true if File.exist?("#{source}/etc")
+    # FileUtils.cp_r "#{source}/docs/.", "#{destination}/docs/.", verbose: true if File.exist?("#{source}/docs")
+    # FileUtils.cp_r "#{source}/lib/.", "#{destination}/lib/.", verbose: true if File.exist?("#{source}/lib")
+    # FileUtils.cp_r "#{source}/test/.", "#{destination}/test/.", verbose: true if File.exist?("#{source}/test")
+    FileUtils.cp_r "#{source}/recipes/recipe.rb", "#{destination}/recipes/recipe.rb", verbose: true if File.exist?("#{source}/recipes/recipe.rb")
     FileUtils.cd(destination) do
-      system('git add * && git commit -m "Sync mirror" && git push')
+      %w(Rakefile Gemfile Gemfile.lock .autotest .codeclimate.yml .coveralls.yml .gemnasium.yml .gitignore .index .rspec .rubocop.yml
+.scrutinizer.yml .travis.yml CODE_OF_CONDUCT.md config.reek CONTRIBUTING.md History.rdoc Index.yml LICENSE.rdoc MAINTENANCE.md Manifest.txt
+README.rdoc VERSION).each do |i|
+        FileUtils.cp_r "#{source}/#{i}", "#{destination}", verbose: true if File.exist?("#{source}/#{i}")
+        system("git add #{i}") if File.exist?(i)
+        %w(bin etc docs lib test).each do |d|
+          system("git add #{d}/*") if File.exist?(d)
+        end
+      end
+      system('git commit -m "Sync mirror" && git push')
     end
     puts 'Copying to mirror succeeded'.colour(:green)
   end
