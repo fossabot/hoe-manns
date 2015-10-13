@@ -1,3 +1,9 @@
+=== 1.2.1 / 2015-10-13
+
+* 1 bug fix
+
+  * fixed run_after_release for using create_packages instead of generate_packages
+
 === 1.2.0 / 2015-10-13
 
 * 5 major enhancements

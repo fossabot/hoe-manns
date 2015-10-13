@@ -11,7 +11,7 @@
 # Main module for hoe-manns
 module Hoe::Manns
   # Version constant for HOE::Manns
-  VERSION = '1.2.0'
+  VERSION = '1.2.1'
 
   attr_accessor :remove_pre_gemspec
   attr_accessor :update_index
@@ -88,7 +88,7 @@ update_workspace bundle_audit:run copy_mirror) do
 
     # Rake Task for running needed Rake Tasks after running rake release
     desc 'Run all tasks after rake release'
-    task :run_after_release => %w(send_email clean_pkg generate_packages deploy_packages) do
+    task :run_after_release => %w(send_email clean_pkg create_packages deploy_packages) do
       puts 'Release finished'.colour (:green)
     end
 
