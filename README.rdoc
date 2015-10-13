@@ -5,15 +5,17 @@ code  :: http://gitlab.com/saigkill/hoe-manns
 docu :: https://gitlab.com/saigkill/hoe-manns/wikis/home
 apidoc :: http://www.rubydoc.info/gems/hoe-manns
 bugs  :: https://gitlab.com/saigkill/hoe-manns/issues
+license :: {<img src="http://img.shields.io/:license-mit-blue.svg" />}[https://gitlab.com/saigkill/hoe-manns/blob/master/LICENSE.rdoc]
 last public version  :: {<img src="https://badge.fury.io/rb/hoe-manns.png" alt="Last Version" />}[http://rubygems.org/gems/hoe-manns]
 downloads latest :: {<img src="https://img.shields.io/gem/dtv/hoe-manns.svg" alt="Downloads latest version" />}[http://rubygems.org/gems/hoe-manns]
 downloads all :: {<img src="https://img.shields.io/gem/dt/hoe-manns.svg" alt="Downloads all versions" />}[http://rubygems.org/gems/hoe-manns]
-continuous integration :: {<img src="https://secure.travis-ci.org/saigkill/hoe-manns.png?branch=master" alt="Build Status" />}[https://secure.travis-ci.org/saigkill/hoe-manns]
+last rpm :: {<img src="https://img.shields.io/bintray/v/saigkill/rpm/hoe-manns.svg" />}[https://bintray.com/saigkill/rpm/hoe-manns]
+last deb :: {<img src="https://img.shields.io/bintray/v/saigkill/deb/hoe-manns.svg" />}[https://bintray.com/saigkill/deb/hoe-manns]
 continuous integration :: {<img src="https://scrutinizer-ci.com/g/saigkill/hoe-manns/badges/build.png?b=master" />}[https://scrutinizer-ci.com/g/saigkill/hoe-manns]
+docs (pdf, epub) :: {<img src="https://readthedocs.org/projects/hoe-manns/badge/?version=latest" />}[http://hoe-manns.readthedocs.org/en/latest/?badge=latest]
 code quality :: {<img src="https://scrutinizer-ci.com/g/saigkill/hoe-manns/badges/quality-score.png?b=master" />}[https://scrutinizer-ci.com/g/saigkill/hoe-manns]
 code quality :: {<img src="https://d3s6mut3hikguw.cloudfront.net/github/saigkill/hoe-manns/badges/gpa.svg" alt="Code Quality" />}[https://codeclimate.com/github/saigkill/hoe-manns]
 code quality :: {<img src="https://api.codacy.com/project/badge/35e9e27255e8477e96f33b5016720b30" />}[https://www.codacy.com/app/saigkill/hoe-manns]
-test coverage :: {<img src="https://coveralls.io/repos/saigkill/hoe-manns/badge.png?branch=master" alt="Test Coverage" />}[https://coveralls.io/r/saigkill/hoe-manns?branch=master]
 dependency check :: {<img src="https://gemnasium.com/b83a1c275ea3fd0f5a9a93efbb1ea6d9.svg" alt="Build Status" />}[https://gemnasium.com/2a56a3d68e779b8be5caf118ab2700d8]
 still maintained? :: {<img src="http://stillmaintained.com/saigkill/hoe-manns.png" alt="Still maintained?" />}[http://stillmaintained.com/saigkill/hoe-manns]
 documentation quality :: {<img src="http://inch-ci.org/github/saigkill/hoe-manns.svg?branch=master" alt="Documentation Quality" />}[http://inch-ci.org/github/saigkill/hoe-manns]
@@ -31,8 +33,6 @@ hoe-manns is a small collection of my personal used rake tasks for using with ho
 * copy_manuals
 * copy_mirror
 * copy_wiki
-* create_packages
-* deploy_packages
 * remove_pre_gemspec
 * run_before_release
 * run_after_release
@@ -51,8 +51,6 @@ hoe-manns is a small collection of my personal used rake tasks for using with ho
 * Cleans up the pkg dir
 * provides bundler_audit tasks
 * copies the current stuff to a mirror repository
-* creates deb & rpm packages from gem
-* deploys packages to bintray
 
 This Gem was programmed and tested for Linux systems. If anyone would like to make the methods also fit for other OS,
 i'm happy about Pull requests.
@@ -79,22 +77,12 @@ Also add hoe-manns to your requirements and recreate your Gemfile.
 * hoe
 * parseconfig
 * bundler-audit
-* fpm
-* fpm-cookery
-* omnibus
-
-== REQUIREMENTS (hard)
-
-* curl
 
 == INSTALL:
 
     gem install hoe-manns
-    cd /path/to/gem (In case of using RVM anything like ~/.rvm/gems/ruby-2.2.1/gems/hoe-manns)
-    rake setup
 
-'rake setup' installs a config file in $HOME/.hoe-manns/hoe-manns.cfg. If you would like to use copy_manuals so you
-have to place in that config your docpath, and (if used) your bintray username and API-Key.
+Edit your .hoerc: http://bit.ly/1L9hBwN
 
 == DEVELOPERS:
 

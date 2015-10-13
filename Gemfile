@@ -8,7 +8,6 @@ gem "setup", "~>5.2"
 gem "parseconfig", "~>1.0"
 gem "rainbow", "~>2.0"
 gem "indexer", "~>0.3"
-gem "omnibus", "~>4.1"
 gem "bundler-audit", "~>0.4.0"
 
 gem "hoe-highline", "~>0.2", :group => [:development, :test]

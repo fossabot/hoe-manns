@@ -1,7 +1,7 @@
 require 'rspec'
 require 'digest'
-require File.expand_path(File.join(File.dirname(__FILE__), '../lib/hoe/manns'))
-require File.expand_path(File.join(File.dirname(__FILE__), 'spec_helper'))
+require 'lib/hoe/manns'
+require 'test/spec_helper'
 
 describe 'Hoe::Manns' do
   describe 'update_gemfile_lock_method' do

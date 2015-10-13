@@ -48,11 +48,9 @@ Hoe.spec 'hoe-manns' do
   email_to << 'ruby-talk@ruby-lang.org'
   #email_to << 'Sascha.Manns@directbox.com'
 
-  dependency 'setup', '~> 5.2'
   dependency 'parseconfig', '~> 1.0'
   dependency 'rainbow', '~> 2.0'
   dependency 'indexer', '~> 0.3'
-  dependency 'omnibus', '~> 4.1'
   dependency 'bundler-audit', '~> 0.4.0'
 
   extra_dev_deps << ['coveralls', '~> 0.8.3']
@@ -85,7 +83,7 @@ Hoe.spec 'hoe-manns' do
   self.history_file = 'History.rdoc'
   self.readme_file = 'README.rdoc'
   self.extra_rdoc_files = FileList['*.rdoc'].to_a
-  self.post_install_message = '*** Run rake setup to finish the installation *** Please file bugreports and feature requests on: https://gitlab.com/saigkill/hoe-manns/issues'
+  self.post_install_message = '*** Edit your .hoerc: http://bit.ly/1L9hBwN *** Please file bugreports and feature requests on: https://gitlab.com/saigkill/hoe-manns/issues'
 end
 
 ##################################################SETUP ZONE############################################################

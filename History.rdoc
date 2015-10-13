@@ -1,10 +1,12 @@
-=== 1.2.0 / 2015-10-07
+=== 1.2.0 / 2015-10-13
 
-* 2 major enhancements
+* 5 major enhancements
 
   * HM-6 Copy wiki method implemented
-  * HM-7 Method for creating rpm & deb packages implemented
-  * HM-8 Bintray submitter implemented
+  * use of .hoerc instead of own config
+  * reworked update_workspace_method
+  * reworked copy_mirror_method
+  * excluded create_packages & deploy_packages methods to hoe-packaging
 
 === 1.1.0 / 2015-10-05
 
