@@ -276,7 +276,6 @@ DEPENDENCIES
   reek (~> 3.3)
   rspec (~> 3.3)
   rubocop (~> 0.34)
-  setup (~> 5.2)
   simplecov (~> 0.10)
 
 BUNDLED WITH

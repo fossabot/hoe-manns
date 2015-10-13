@@ -9,12 +9,8 @@ authors:
   email: samannsml@directbox.com
 organizations: []
 requirements:
-- name: setup
 - name: bundler-audit
-- name: parseconfig
 - name: rainbow
-- name: fpm
-- name: fpm-cookery
 - name: indexer
 - groups:
   - build
@@ -162,4 +158,4 @@ summary: hoe-manns is a small collection of my personal used rake tasks for usin
   with hoe.
 description: hoe-manns is a small collection of my personal used rake tasks for using
   with hoe.
-date: '2015-10-07'
+date: '2015-10-13'

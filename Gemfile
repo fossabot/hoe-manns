@@ -4,7 +4,6 @@
 
 source "https://rubygems.org/"
 
-gem "setup", "~>5.2"
 gem "parseconfig", "~>1.0"
 gem "rainbow", "~>2.0"
 gem "indexer", "~>0.3"
