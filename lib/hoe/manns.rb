@@ -230,6 +230,7 @@ README.rdoc VERSION).each do |i|
     puts 'Merging master with develop'.colour(:yellow)
     system('git merge develop')
     puts 'Pushing master to origin'.colour(:yellow)
+    system('git add recipes/recipe.rb') if File.exist?('recipes/recipe.rb')
     system('git push')
     puts 'Checking out develop again'.colour(:yellow)
     system('git checkout develop')
