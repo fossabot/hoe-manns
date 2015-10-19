@@ -1,3 +1,9 @@
+=== 1.4.1 / 2015-10-19
+
+* 1 minor enhancement
+
+  * Added FileUtils.rm_rf('recipes/pkg') to cleanup method
+
 === 1.4.0 / 2015-10-19
 
 * 1 minor enhancement

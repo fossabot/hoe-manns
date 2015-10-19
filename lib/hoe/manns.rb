@@ -11,7 +11,7 @@
 # Main module for hoe-manns
 module Hoe::Manns
   # Version constant for HOE::Manns
-  VERSION = '1.4.0'
+  VERSION = '1.4.1'
 
   attr_accessor :remove_pre_gemspec
   attr_accessor :update_index
@@ -254,6 +254,7 @@ README.rdoc VERSION).each do |i|
   def self.clean_pkg_method
     puts 'Cleaning pkg'.colour(:yellow)
     FileUtils.rm_rf('pkg') if Dir.exist?('pkg')
+    FileUtils.rm_rf('recipes/pkg') if Dir.exist?('recipe/pkg')
     puts 'Cleanup succeed'.colour(:green)
   end
 end
