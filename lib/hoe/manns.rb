@@ -11,7 +11,7 @@
 # Main module for hoe-manns
 module Hoe::Manns
   # Version constant for HOE::Manns
-  VERSION = '1.4.1'
+  VERSION = '1.4.2'
 
   attr_accessor :remove_pre_gemspec
   attr_accessor :update_index
@@ -223,7 +223,7 @@ README.rdoc VERSION).each do |i|
     puts 'Copied wiki content'.colour(:green)
   end
 
-  # Method for git tag
+  # Method for copying to master
   def self.copy_master
     puts 'Checking out master'.colour(:yellow)
     system('git checkout master')
@@ -231,6 +231,9 @@ README.rdoc VERSION).each do |i|
     system('git merge develop')
     puts 'Pushing master to origin'.colour(:yellow)
     system('git add recipes/recipe.rb') if File.exist?('recipes/recipe.rb')
+    system('git push')
+    puts 'Creating git tag'.colour(:yellow)
+    Rake::Task['git:tag']
     system('git push')
     puts 'Checking out develop again'.colour(:yellow)
     system('git checkout develop')
