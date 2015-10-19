@@ -11,7 +11,7 @@
 # Main module for hoe-manns
 module Hoe::Manns
   # Version constant for HOE::Manns
-  VERSION = '1.2.1'
+  VERSION = '1.3.0'
 
   attr_accessor :remove_pre_gemspec
   attr_accessor :update_index
@@ -29,7 +29,6 @@ module Hoe::Manns
     require 'fileutils'
     require 'parseconfig'
     require 'rainbow/ext/string'
-    require 'omnibus/file_syncer'
     require 'bundler/audit/cli'
   end
 
@@ -208,6 +207,9 @@ README.rdoc VERSION).each do |i|
     develpath = Hoe::Manns.get_develpath
     wikipath = "#{develpath}/#{project}.wiki"
     FileUtils.mkdir_p 'docs', verbose: true if File.exist?('docs') == false
+    FileUtils.cd(wikipath) do
+      system('git pull')
+    end
     files = Dir.glob("#{wikipath}/*.md")
     FileUtils.cp files, 'docs', verbose: true
     FileUtils.mv 'docs/home.md', 'docs/index.md', verbose: true

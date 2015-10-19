@@ -63,7 +63,7 @@ Hoe.spec 'hoe-manns' do
   extra_dev_deps << ['hoe-gemspec', '~> 1.0']
   extra_dev_deps << ['hoe-git', '~> 1.6']
   extra_dev_deps << ['hoe-highline', '~> 0.2']
-  extra_dev_deps << ['hoe-manns', '~> 1.2']
+  extra_dev_deps << ['hoe-manns', '~> 1.3']
   extra_dev_deps << ['hoe-packaging', '~> 1.1']
   extra_dev_deps << ['hoe-reek', '~> 1.0']
   extra_dev_deps << ['hoe-rubocop', '~> 0.1']
