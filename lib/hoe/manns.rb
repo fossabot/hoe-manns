@@ -233,7 +233,8 @@ README.rdoc VERSION).each do |i|
     system('git add recipes/recipe.rb') if File.exist?('recipes/recipe.rb')
     system('git push')
     puts 'Creating git tag'.colour(:yellow)
-    Rake::Task['git:tag']
+    version = Hoe::Manns.get_version
+    system("git tag -a v#{version} -m \"version #{version}\"")
     system('git push')
     puts 'Checking out develop again'.colour(:yellow)
     system('git checkout develop')
@@ -252,6 +253,13 @@ README.rdoc VERSION).each do |i|
     config = YAML.load(File.read("#{Dir.home}/.hoerc"))
     develpath = config['manns']['develpath'].to_s
     return develpath
+  end
+
+  # Method for getting version
+  # @return [String] version
+  def self.get_version
+    version = File.open(*Dir.glob('VERSION')) { |f| f.readline }
+    version.chomp.to_s
   end
 
   # Method for cleanup the pkg
