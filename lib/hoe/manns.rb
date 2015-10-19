@@ -255,7 +255,7 @@ README.rdoc VERSION).each do |i|
   def self.clean_pkg_method
     puts 'Cleaning pkg'.colour(:yellow)
     FileUtils.rm_rf('pkg') if Dir.exist?('pkg')
-    FileUtils.rm_rf('recipes/pkg') if Dir.exist?('recipe/pkg')
+    FileUtils.rm_rf('recipes/pkg') if Dir.exist?('recipes/pkg')
     puts 'Cleanup succeed'.colour(:green)
   end
 end
