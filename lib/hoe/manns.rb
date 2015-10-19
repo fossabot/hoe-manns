@@ -11,11 +11,12 @@
 # Main module for hoe-manns
 module Hoe::Manns
   # Version constant for HOE::Manns
-  VERSION = '1.3.0'
+  VERSION = '1.4.0'
 
   attr_accessor :remove_pre_gemspec
   attr_accessor :update_index
   attr_accessor :copy_manuals
+  attr_accessor :copy_master
   attr_accessor :copy_mirror
   attr_accessor :copy_wiki
   attr_accessor :run_before_release
@@ -78,10 +79,16 @@ module Hoe::Manns
       Hoe::Manns.copy_mirror_method
     end
 
+    # Rake Task for git tag
+    desc 'Copy master'
+    task :copy_master do
+      Hoe::Manns.copy_master
+    end
+
     # Rake Task for running needed Rake Tasks before running rake release
     desc 'Run all tasks before rake release'
     task :run_before_release => %w(git:manifest bundler:gemfile bundler:gemfile_lock update_index gem:spec_remove
-update_workspace bundle_audit:run copy_mirror) do
+update_workspace bundle_audit:run copy_mirror copy_master) do
       puts 'Ready to run rake release VERSION=x.y.z'.colour(:green)
     end
 
@@ -214,6 +221,19 @@ README.rdoc VERSION).each do |i|
     FileUtils.cp files, 'docs', verbose: true
     FileUtils.mv 'docs/home.md', 'docs/index.md', verbose: true
     puts 'Copied wiki content'.colour(:green)
+  end
+
+  # Method for git tag
+  def self.copy_master
+    puts 'Checking out master'.colour(:yellow)
+    system('git checkout master')
+    puts 'Merging master with develop'.colour(:yellow)
+    system('git merge develop')
+    puts 'Pushing master to origin'.colour(:yellow)
+    system('git push')
+    puts 'Checking out develop again'.colour(:yellow)
+    system('git checkout develop')
+    puts 'Done'.colour(:green)
   end
 
   # Method for getting the project name
