@@ -234,8 +234,8 @@ README.rdoc VERSION).each do |i|
     system('git push')
     puts 'Creating git tag'.colour(:yellow)
     version = Hoe::Manns.get_version
-    system("git tag -a v#{version} -m \"version #{version}\"")
-    system('git push')
+    system("git tag -a v#{version} -m 'version #{version}'")
+    system('git push origin  --tags')
     puts 'Checking out develop again'.colour(:yellow)
     system('git checkout develop')
     puts 'Done'.colour(:green)
