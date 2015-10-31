@@ -86,8 +86,11 @@ module Hoe::Manns
       Hoe::Manns.copy_master
     end
 
-    # Rake Task for converting markdown docs to rst
-    desc ''
+    # Email sending
+    desc 'Send email'
+    task :send_email do
+      Hoe::Manns.send_email
+    end
 
     # Rake Task for running needed Rake Tasks before running rake release
     desc 'Run all tasks before rake release'
@@ -293,4 +296,7 @@ README.rdoc VERSION).each do |i|
     FileUtils.rm_rf('recipes/pkg') if Dir.exist?('recipes/pkg')
     puts 'Cleanup succeed'.colour(:green)
   end
+
+  # Method for sending announce mail
+
 end

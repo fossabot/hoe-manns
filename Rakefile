@@ -19,7 +19,7 @@ Hoe.plugin :gemspec
 # Hoe.plugin :gem_prelude_sucks
 #Hoe.plugins.delete :git
 Hoe.plugin :git
-Hoe.plugin :history
+# Hoe.plugin :history
 Hoe.plugin :highline
 #Hoe.plugin :inline
 Hoe.plugin :manns
@@ -34,8 +34,8 @@ Hoe.plugin :rubocop
 Hoe.plugin :rubygems
 # Hoe.plugin :seattlerb
 Hoe.plugin :travis
-Hoe.plugin :version
-Hoe.plugin :website
+# Hoe.plugin :version
+# Hoe.plugin :website
 Hoe.plugin :yard
 
 ###########################################DEVELOPING ZONE##############################################################
@@ -59,6 +59,7 @@ Hoe.spec 'hoe-manns' do
   extra_dev_deps << ['gem-release', '~> 0.7']
   extra_dev_deps << ['hoe', '~> 3.14.2']
   extra_dev_deps << ['hoe-bundler', '~> 1.2']
+  extra_dev_deps << ['hoe-deveiate', '~> 0.7']
   extra_dev_deps << ['hoe-doofus', '~> 1.0']
   extra_dev_deps << ['hoe-gemspec', '~> 1.0']
   extra_dev_deps << ['hoe-git', '~> 1.6']
@@ -68,6 +69,7 @@ Hoe.spec 'hoe-manns' do
   extra_dev_deps << ['hoe-reek', '~> 1.0']
   extra_dev_deps << ['hoe-rubocop', '~> 0.1']
   extra_dev_deps << ['hoe-rubygems', '~> 1.0']
+  extra_dev_deps << ['hoe-seattlerb', '~> 1.3']
   extra_dev_deps << ['hoe-travis', '~> 1.2']
   extra_dev_deps << ['hoe-version', '~> 1.2']
   extra_dev_deps << ['hoe-yard', '~> 0.1']
