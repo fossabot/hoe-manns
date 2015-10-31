@@ -185,7 +185,7 @@ DEPENDENCIES
   coveralls (~> 0.8.3)
   digest (~> 0.0.1)
   gem-release (~> 0.7)
-  hoe (~> 3.14)
+  hoe (~> 3.14.2)
   hoe-bundler (~> 1.2)
   hoe-doofus (~> 1.0)
   hoe-gemspec (~> 1.0)

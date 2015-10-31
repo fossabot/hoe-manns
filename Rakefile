@@ -45,7 +45,7 @@ Hoe.spec 'hoe-manns' do
   license 'MIT' # this should match the license in the README
   require_ruby_version '>= 2.2.0'
 
-  email_to << 'ruby-talk@ruby-lang.org'
+  #email_to << 'ruby-talk@ruby-lang.org'
   #email_to << 'Sascha.Manns@directbox.com'
 
   dependency 'parseconfig', '~> 1.0'
@@ -57,6 +57,7 @@ Hoe.spec 'hoe-manns' do
   extra_dev_deps << ['coveralls', '~> 0.8.3']
   extra_dev_deps << ['digest', '~> 0.0.1']
   extra_dev_deps << ['gem-release', '~> 0.7']
+  extra_dev_deps << ['hoe', '~> 3.14.2']
   extra_dev_deps << ['hoe-bundler', '~> 1.2']
   extra_dev_deps << ['hoe-doofus', '~> 1.0']
   extra_dev_deps << ['hoe-gemspec', '~> 1.0']
