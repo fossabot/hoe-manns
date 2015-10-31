@@ -17,7 +17,6 @@ code quality :: {<img src="https://d3s6mut3hikguw.cloudfront.net/github/saigkill
 code quality :: {<img src="https://api.codacy.com/project/badge/35e9e27255e8477e96f33b5016720b30" />}[https://www.codacy.com/app/saigkill/hoe-manns]
 dependency check :: {<img src="https://gemnasium.com/b83a1c275ea3fd0f5a9a93efbb1ea6d9.svg" alt="Build Status" />}[https://gemnasium.com/2a56a3d68e779b8be5caf118ab2700d8]
 still maintained? :: {<img src="http://stillmaintained.com/saigkill/hoe-manns.png" alt="Still maintained?" />}[http://stillmaintained.com/saigkill/hoe-manns]
-docs (pdf, epub) :: {<img src="https://readthedocs.org/projects/hoe-manns/badge/?version=latest" />}[http://hoe-manns.readthedocs.org/en/latest/?badge=latest]
 documentation quality :: {<img src="http://inch-ci.org/github/saigkill/hoe-manns.svg?branch=master" alt="Documentation Quality" />}[http://inch-ci.org/github/saigkill/hoe-manns]
 donations :: {<img src="https://pledgie.com/campaigns/30268.png?skin_name=chrome" alt="Donations" />}[https://pledgie.com/campaigns/30268]
 donations :: {<img src="http://img.shields.io/gratipay/saigkill.svg" alt="Donations" />}[https://gratipay.com/~saigkill/]

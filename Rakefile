@@ -72,7 +72,7 @@ Hoe.spec 'hoe-manns' do
   extra_dev_deps << ['hoe-yard', '~> 0.1']
   extra_dev_deps << ['minitest', '~> 5.8']
   extra_dev_deps << ['rake', '~> 10.0']
-  extra_dev_deps << ['reek', '~> 3.3']
+  extra_dev_deps << ['reek', '~> 3.6']
   extra_dev_deps << ['rspec', '~> 3.3']
   extra_dev_deps << ['rubocop', '~> 0.34']
   extra_dev_deps << ['simplecov', '~> 0.10']
