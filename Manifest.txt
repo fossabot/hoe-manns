@@ -19,8 +19,6 @@ README.rdoc
 Rakefile
 VERSION
 config.reek
-docs/behind-the-scene.md
-docs/index.md
 lib/hoe/manns.rb
 recipes/recipe.rb
 test/manns_spec.rb

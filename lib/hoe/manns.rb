@@ -11,7 +11,7 @@
 # Main module for hoe-manns
 module Hoe::Manns
   # Version constant for HOE::Manns
-  VERSION = '1.4.2'
+  VERSION = '1.4.3'
 
   attr_accessor :remove_pre_gemspec
   attr_accessor :update_index
@@ -31,6 +31,7 @@ module Hoe::Manns
     require 'parseconfig'
     require 'rainbow/ext/string'
     require 'bundler/audit/cli'
+    require 'pandoc-ruby'
   end
 
   # Definitions of the Rake task
@@ -84,6 +85,9 @@ module Hoe::Manns
     task :copy_master do
       Hoe::Manns.copy_master
     end
+
+    # Rake Task for converting markdown docs to rst
+    desc ''
 
     # Rake Task for running needed Rake Tasks before running rake release
     desc 'Run all tasks before rake release'
@@ -184,13 +188,23 @@ README.rdoc VERSION recipes/recipe.rb).each do |i|
     source = "#{develpath}/#{project}"
     destination = "#{develpath}/#{project}-mirror"
     puts 'Copying to mirror'.colour(:yellow)
+    Hoe::Manns.copy_mirror_create_dirs(source, destination)
+    FileUtils.cp_r "#{source}/recipes/recipe.rb", "#{destination}/recipes/recipe.rb", verbose: true if File.exist?("#{source}/recipes/recipe.rb")
+    Hoe::Manns.copy_mirror_copy_files(source, destination)
+    system('git status')
+    puts 'Copying to mirror succeeded'.colour(:green)
+  end
+
+  def self.copy_mirror_create_dirs(source, destination)
     %w(bin etc data docs lib test recipes).each do |d|
-      if !File.exist?("#{destination}/#{d}") # if d isn't available in destination
-      FileUtils.mkdir("#{destination}/#{d}") if File.exist?("#{source}/#{d}") # and exist in source then create them
+      unless File.exist?("#{destination}/#{d}") # if d isn't available in destination
+        FileUtils.mkdir("#{destination}/#{d}") if File.exist?("#{source}/#{d}") # and exist in source then create them
       end
       FileUtils.cp_r "#{source}/#{d}/.", "#{destination}/#{d}/.", verbose: true if File.exist?("#{source}/#{d}") # copy the content of the dirs
     end
-    FileUtils.cp_r "#{source}/recipes/recipe.rb", "#{destination}/recipes/recipe.rb", verbose: true if File.exist?("#{source}/recipes/recipe.rb")
+  end
+
+  def self.copy_mirror_copy_files(source, destination)
     FileUtils.cd(destination) do
       %w(Rakefile Gemfile Gemfile.lock .autotest .codeclimate.yml .coveralls.yml .gemnasium.yml .gitignore .index .rspec .rubocop.yml
 .scrutinizer.yml .travis.yml CODE_OF_CONDUCT.md config.reek CONTRIBUTING.md History.rdoc Index.yml LICENSE.rdoc MAINTENANCE.md Manifest.txt
@@ -203,23 +217,33 @@ README.rdoc VERSION).each do |i|
       end
       system('git commit -m "Sync mirror" && git push')
     end
-    system('git status')
-    puts 'Copying to mirror succeeded'.colour(:green)
   end
 
-  # Copies the actual wiki entries to ./doc
+  # Copies the actual wiki entries to ./docs
   def self.copy_wiki_method
     puts 'Copying wiki content to docs'.colour(:yellow)
     project = Hoe::Manns.get_projectname
     develpath = Hoe::Manns.get_develpath
     wikipath = "#{develpath}/#{project}.wiki"
-    FileUtils.mkdir_p 'docs', verbose: true if File.exist?('docs') == false
+    FileUtils.mkdir_p 'docs', verbose: true unless File.exist?('docs')
     FileUtils.cd(wikipath) do
       system('git pull')
     end
     files = Dir.glob("#{wikipath}/*.md")
     FileUtils.cp files, 'docs', verbose: true
     FileUtils.mv 'docs/home.md', 'docs/index.md', verbose: true
+    FileUtils.cd('docs') do
+      Dir['*.md'].each do |f|
+        PandocRuby.allow_file_paths = true
+        @converter = PandocRuby.new(f, :from => :markdown, :to => :rst)
+        File.open(f, 'w') do |file1|
+          file1.puts @converter.convert
+        end
+        extn = File.extname  f        # => ".mp4"
+        name = File.basename f, extn  # => "xyz"
+        FileUtils.mv "#{name}.md", "#{name}.rst"
+      end
+    end
     puts 'Copied wiki content'.colour(:green)
   end
 

@@ -52,23 +52,21 @@ Hoe.spec 'hoe-manns' do
   dependency 'rainbow', '~> 2.0'
   dependency 'indexer', '~> 0.3'
   dependency 'bundler-audit', '~> 0.4.0'
+  dependency 'pandoc-ruby', '~> 1.0.0'
 
   extra_dev_deps << ['coveralls', '~> 0.8.3']
   extra_dev_deps << ['digest', '~> 0.0.1']
   extra_dev_deps << ['gem-release', '~> 0.7']
   extra_dev_deps << ['hoe-bundler', '~> 1.2']
-  extra_dev_deps << ['hoe-bundler_audit', '~> 1.0']
-  extra_dev_deps << ['hoe-deveiate', '~> 0.7']
   extra_dev_deps << ['hoe-doofus', '~> 1.0']
   extra_dev_deps << ['hoe-gemspec', '~> 1.0']
   extra_dev_deps << ['hoe-git', '~> 1.6']
   extra_dev_deps << ['hoe-highline', '~> 0.2']
-  extra_dev_deps << ['hoe-manns', '~> 1.4.2']
+  extra_dev_deps << ['hoe-manns', '~> 1.4.3']
   extra_dev_deps << ['hoe-packaging', '~> 1.1']
   extra_dev_deps << ['hoe-reek', '~> 1.0']
   extra_dev_deps << ['hoe-rubocop', '~> 0.1']
   extra_dev_deps << ['hoe-rubygems', '~> 1.0']
-  extra_dev_deps << ['hoe-seattlerb', '~> 1.3']
   extra_dev_deps << ['hoe-travis', '~> 1.2']
   extra_dev_deps << ['hoe-version', '~> 1.2']
   extra_dev_deps << ['hoe-yard', '~> 0.1']

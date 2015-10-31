@@ -1,3 +1,17 @@
+=== 1.4.3 / 2015-10-31
+
+* 2 minor enhancement
+
+  * Added procedure to convert markdown to rst inside ./docs
+  * Created new methods copy_mirror_create_dirs and copy_mirror_copy_files to reduce the copmplexity of
+    the copy_mirror_method
+
+=== 1.4.2 / 2015-10-19
+
+* 1 minor enhancement
+
+  * Added git tag procedure to copy_master method
+
 === 1.4.1 / 2015-10-19
 
 * 1 minor enhancement
