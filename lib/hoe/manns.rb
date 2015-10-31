@@ -86,12 +86,6 @@ module Hoe::Manns
       Hoe::Manns.copy_master
     end
 
-    # Email sending
-    desc 'Send email'
-    task :send_email do
-      Hoe::Manns.send_email
-    end
-
     # Rake Task for running needed Rake Tasks before running rake release
     desc 'Run all tasks before rake release'
     task :run_before_release => %w(git:manifest bundler:gemfile bundler:gemfile_lock update_index gem:spec_remove
@@ -296,7 +290,5 @@ README.rdoc VERSION).each do |i|
     FileUtils.rm_rf('recipes/pkg') if Dir.exist?('recipes/pkg')
     puts 'Cleanup succeed'.colour(:green)
   end
-
-  # Method for sending announce mail
 
 end
