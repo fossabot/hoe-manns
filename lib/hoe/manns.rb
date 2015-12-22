@@ -11,7 +11,7 @@
 # Main module for hoe-manns
 module Hoe::Manns
   # Version constant for HOE::Manns
-  VERSION = '1.4.3'
+  VERSION = '1.4.4'
 
   attr_accessor :remove_pre_gemspec
   attr_accessor :update_index

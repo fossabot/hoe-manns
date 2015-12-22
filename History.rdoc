@@ -1,3 +1,10 @@
+=== 1.4.4 / 2015-12-22
+
+* 2 minor enhancement
+
+  * Added security to README.rdoc
+  * Updated dependencies by using gemnasium
+
 === 1.4.3 / 2015-10-31
 
 * 2 minor enhancement

@@ -54,7 +54,7 @@ Hoe.spec 'hoe-manns' do
   dependency 'bundler-audit', '~> 0.4.0'
   dependency 'pandoc-ruby', '~> 1.0.0'
 
-  extra_dev_deps << ['coveralls', '~> 0.8.3']
+  extra_dev_deps << ['coveralls', '~> 0.8']
   extra_dev_deps << ['digest', '~> 0.0.1']
   extra_dev_deps << ['gem-release', '~> 0.7']
   extra_dev_deps << ['hoe', '~> 3.14.2']
@@ -66,7 +66,7 @@ Hoe.spec 'hoe-manns' do
   extra_dev_deps << ['hoe-highline', '~> 0.2']
   extra_dev_deps << ['hoe-manns', '~> 1.4.3']
   extra_dev_deps << ['hoe-packaging', '~> 1.1']
-  extra_dev_deps << ['hoe-reek', '~> 1.0']
+  extra_dev_deps << ['hoe-reek', '~> 1.1']
   extra_dev_deps << ['hoe-rubocop', '~> 0.1']
   extra_dev_deps << ['hoe-rubygems', '~> 1.0']
   extra_dev_deps << ['hoe-seattlerb', '~> 1.3']
@@ -75,10 +75,10 @@ Hoe.spec 'hoe-manns' do
   extra_dev_deps << ['hoe-yard', '~> 0.1']
   extra_dev_deps << ['minitest', '~> 5.8']
   extra_dev_deps << ['rake', '~> 10.0']
-  extra_dev_deps << ['reek', '~> 3.6']
-  extra_dev_deps << ['rspec', '~> 3.3']
-  extra_dev_deps << ['rubocop', '~> 0.34']
-  extra_dev_deps << ['simplecov', '~> 0.10']
+  extra_dev_deps << ['reek', '~> 3.7']
+  extra_dev_deps << ['rspec', '~> 3.4']
+  extra_dev_deps << ['rubocop', '~> 0.35']
+  extra_dev_deps << ['simplecov', '~> 0.11']
   extra_dev_deps << ['ZenTest', '~> 4.11']
 
   self.history_file = 'History.rdoc'
