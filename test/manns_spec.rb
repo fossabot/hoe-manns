@@ -1,51 +1,37 @@
 require 'rspec'
-require 'digest'
-require 'lib/hoe/manns'
-require 'test/spec_helper'
+require File.join(File.dirname(__FILE__), '..', 'lib/hoe/manns')
+require File.join(File.dirname(__FILE__), '..', 'test/spec_helper')
+require 'fileutils'
 
 describe 'Hoe::Manns' do
   describe 'update_gemfile_lock_method' do
-    before do
-      @checksumgemlock = Digest::SHA2.hexdigest(File.read('Gemfile.lock'))
-    end
-
     it 'creates a new Gemfile.lock' do
+      FileUtils.rm(File.join(File.dirname(__FILE__), '..', 'Gemfile.lock'))
       Hoe::Manns.update_gemfile_lock_method
-      @checksumgemlocknew = Digest::SHA2.hexdigest(File.read('Gemfile.lock'))
-
-      checksum = false
-      checksum = true if @checksumgemlock == @checksumgemlocknew
-      expect(checksum) == true
+      avail = false
+      avail = File.exist?(File.join(File.dirname(__FILE__), '..', 'Gemfile.lock'))
+      expect(avail) == true
     end
   end
 
   describe 'remove_pre_gemspec' do
     it 'removes the old gemspec' do
       Hoe::Manns.remove_pre_gemspec_method
-
       gemspec = false
       gemspec = true if Dir.glob('*.gemspec').empty? == true
       expect(gemspec) == false
     end
   end
 
-  describe 'update_workspace' do
-    it 'updates the workspace' do
-      Hoe::Manns.update_workspace_method
-    end
-  end
-
   describe 'update_index' do
     it 'updates the .index' do
+      FileUtils.rm(File.join(File.dirname(__FILE__), '..', '.index'))
       Hoe::Manns.update_index_method
+      indexav = false
+      indexav = File.exist?(File.join(File.dirname(__FILE__), '..', '.index'))
+      expect(indexav) == true
     end
   end
-
-  # describe 'copy_manuals' do
-  #   it 'copies the manuals' do
-  #     Hoe::Manns.copy_manuals_method
-  #   end
-  # end
 
   describe 'clean_pkg' do
     it 'cleans the pkg' do
