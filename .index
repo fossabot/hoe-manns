@@ -37,23 +37,11 @@ requirements:
 - groups:
   - build
   development: true
-  name: indexer
-- groups:
-  - build
-  development: true
   name: rake
 - groups:
   - build
   development: true
   name: hoe-bundler
-- groups:
-  - build
-  development: true
-  name: hoe-deveiate
-- groups:
-  - build
-  development: true
-  name: hoe-doofus
 - groups:
   - build
   development: true
@@ -65,15 +53,7 @@ requirements:
 - groups:
   - build
   development: true
-  name: hoe-highline
-- groups:
-  - build
-  development: true
   name: hoe-manns
-- groups:
-  - build
-  development: true
-  name: hoe-reek
 - groups:
   - build
   development: true
@@ -85,47 +65,11 @@ requirements:
 - groups:
   - build
   development: true
-  name: hoe-seattlerb
-- groups:
-  - build
-  development: true
-  name: hoe-travis
-- groups:
-  - build
-  development: true
   name: hoe-version
-- groups:
-  - build
-  development: true
-  name: hoe-yard
-- groups:
-  - build
-  development: true
-  name: indexer
-- groups:
-  - build
-  development: true
-  name: digest
-- groups:
-  - test
-  development: true
-  name: reek
 - groups:
   - test
   development: true
   name: rubocop
-- groups:
-  - test
-  development: true
-  name: ZenTest
-- groups:
-  - test
-  development: true
-  name: minitest
-- groups:
-  - test
-  development: true
-  name: test
 - groups:
   - test
   development: true
@@ -157,7 +101,7 @@ customs: []
 paths:
   lib:
   - lib
-version: 1.4.4
+version: 1.4.5
 name: hoe-manns
 title: hoe-manns
 summary: hoe-manns is a small collection of my personal used rake tasks for using
