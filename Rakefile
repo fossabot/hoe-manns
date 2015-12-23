@@ -15,8 +15,8 @@ Hoe.plugin :bundler
 Hoe.plugin :email
 Hoe.plugin :gemspec
 # Hoe.plugin :gem_prelude_sucks
-Hoe.plugins.delete :git
-#Hoe.plugin :git
+#Hoe.plugins.delete :git
+Hoe.plugin :git
 Hoe.plugin :manns
 Hoe.plugin :packaging
 Hoe.plugin :rdoc
@@ -57,7 +57,6 @@ Hoe.spec 'hoe-manns' do
   extra_dev_deps << ['rspec', '~> 3.4']
   extra_dev_deps << ['rubocop', '~> 0.35']
   extra_dev_deps << ['simplecov', '~> 0.11']
-  extra_dev_deps << ['minitest', '~> 5.8']
 
   self.history_file = 'History.rdoc'
   self.readme_file = 'README.rdoc'
@@ -70,3 +69,4 @@ end
 
 
 # vim: syntax=ruby
+

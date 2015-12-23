@@ -6,7 +6,6 @@ SetupReceipt
 README.txt
 ChangeLog
 pkg
-.teamcity
 .idea
 coverage
 vendor

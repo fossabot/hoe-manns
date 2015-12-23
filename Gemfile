@@ -9,6 +9,7 @@ gem "rainbow", "~>2.0"
 gem "indexer", "~>0.3"
 gem "bundler-audit", "~>0.4.0"
 gem "pandoc-ruby", "~>1.0.0"
+gem "hoe", "~>3.14"
 
 gem "rdoc", "~>4.0", :group => [:development, :test]
 gem "coveralls", "~>0.8", :group => [:development, :test]
