@@ -101,7 +101,7 @@ customs: []
 paths:
   lib:
   - lib
-version: 1.4.5
+version: 1.4.6
 name: hoe-manns
 title: hoe-manns
 summary: hoe-manns is a small collection of my personal used rake tasks for using

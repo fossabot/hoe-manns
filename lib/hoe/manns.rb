@@ -7,11 +7,12 @@
 # License: MIT
 
 # Dependencies
+require 'hoe'
 
 # Main module for hoe-manns
 module Hoe::Manns
   # Version constant for HOE::Manns
-  VERSION = '1.4.5'
+  VERSION = '1.4.6'
 
   attr_accessor :remove_pre_gemspec
   attr_accessor :update_index

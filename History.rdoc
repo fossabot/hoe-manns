@@ -1,3 +1,9 @@
+=== 1.4.6 / 2015-12-23
+
+* 1 minor enhancement
+
+  * moved directory test to spec. So Hoe can handle the tests directly.
+
 === 1.4.5 / 2015-12-23
 
 * 1 minor enhancement

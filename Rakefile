@@ -40,10 +40,10 @@ Hoe.spec 'hoe-manns' do
   dependency 'indexer', '~> 0.3'
   dependency 'bundler-audit', '~> 0.4'
   dependency 'pandoc-ruby', '~> 1.0'
+  dependency 'hoe', '~> 3.14'
 
   extra_dev_deps << ['coveralls', '~> 0.8']
   extra_dev_deps << ['gem-release', '~> 0.7']
-  extra_dev_deps << ['hoe', '~> 3.14']
   extra_dev_deps << ['hoe-bundler', '~> 1.2']
   extra_dev_deps << ['hoe-gemspec', '~> 1.0']
   extra_dev_deps << ['hoe-git', '~> 1.6']
