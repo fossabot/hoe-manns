@@ -7,11 +7,7 @@
 # License: MIT
 
 # Dependencies
-require 'hoe'
 
-module Hoe
-
-end
 # Main module for hoe-manns
 module Hoe::Manns
   # Version constant for HOE::Manns

@@ -1,6 +1,6 @@
 require 'rspec'
 require File.join(File.dirname(__FILE__), '..', 'lib/hoe/manns')
-require File.join(File.dirname(__FILE__), '..', 'test/spec_helper')
+require File.join(File.dirname(__FILE__), '..', 'spec/spec_helper')
 require 'fileutils'
 
 describe 'Hoe::Manns' do
