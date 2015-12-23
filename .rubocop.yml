@@ -6,6 +6,7 @@ AllCops:
 
   Exclude:
     - 'Rakefile'
+    - 'Rahekfile'
 
   DisplayCopNames: true
 
