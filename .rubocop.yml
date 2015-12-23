@@ -6,7 +6,6 @@ AllCops:
 
   Exclude:
     - 'Rakefile'
-    - 'coverage'
 
   DisplayCopNames: true
 
