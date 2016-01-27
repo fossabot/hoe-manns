@@ -36,7 +36,7 @@ Hoe.spec 'hoe-manns' do
   #email_to << 'Sascha.Manns@directbox.com'
 
   dependency 'parseconfig', '~> 1.0'
-  dependency 'rainbow', '~> 2.0'
+  dependency 'rainbow', '~> 2.1'
   dependency 'indexer', '~> 0.3'
   dependency 'bundler-audit', '~> 0.4'
   dependency 'pandoc-ruby', '~> 1.0'
@@ -53,9 +53,9 @@ Hoe.spec 'hoe-manns' do
   extra_dev_deps << ['hoe-rubygems', '~> 1.0']
   extra_dev_deps << ['hoe-seattlerb', '~> 1.3']
   extra_dev_deps << ['hoe-version', '~> 1.2']
-  extra_dev_deps << ['rake', '~> 10.4']
+  extra_dev_deps << ['rake', '~> 10.5']
   extra_dev_deps << ['rspec', '~> 3.4']
-  extra_dev_deps << ['rubocop', '~> 0.35']
+  extra_dev_deps << ['rubocop', '~> 0.36']
   extra_dev_deps << ['simplecov', '~> 0.11']
 
   self.history_file = 'History.rdoc'
