@@ -1,3 +1,9 @@
+=== 1.4.9 / 2016-02-08
+
+* 1 minor enhancement
+
+  * Added some new tests
+
 === 1.4.8 / 2016-02-08
 
 * 1 minor enhancement
