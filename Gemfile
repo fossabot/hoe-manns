@@ -25,7 +25,7 @@ gem "hoe-seattlerb", "~>1.3", :group => [:development, :test]
 gem "hoe-version", "~>1.2", :group => [:development, :test]
 gem "rake", "~>10.5", :group => [:development, :test]
 gem "rspec", "~>3.4", :group => [:development, :test]
-gem "rubocop", "~>0.36", :group => [:development, :test]
+gem "rubocop", "~>0.37", :group => [:development, :test]
 gem "simplecov", "~>0.11", :group => [:development, :test]
 gem "hoe", "~>3.14", :group => [:development, :test]
 

@@ -55,7 +55,7 @@ Hoe.spec 'hoe-manns' do
   extra_dev_deps << ['hoe-version', '~> 1.2']
   extra_dev_deps << ['rake', '~> 10.5']
   extra_dev_deps << ['rspec', '~> 3.4']
-  extra_dev_deps << ['rubocop', '~> 0.36']
+  extra_dev_deps << ['rubocop', '~> 0.37']
   extra_dev_deps << ['simplecov', '~> 0.11']
 
   self.history_file = 'History.rdoc'
