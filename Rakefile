@@ -1,6 +1,6 @@
 # -*- ruby -*-
 # Release:
-# * update *.wiki markdown documentation for GitLab
+# * update documentation
 # * enable :git
 # * rake run_before_release
 # * disable :git
@@ -15,9 +15,11 @@ Hoe.plugin :bundler
 Hoe.plugin :email
 Hoe.plugin :gemspec
 # Hoe.plugin :gem_prelude_sucks
-#Hoe.plugins.delete :git
-Hoe.plugin :git
+Hoe.plugins.delete :git
+#Hoe.plugin :git
 Hoe.plugin :manns
+Hoe.plugin :manualgen
+# Hoe.plugin :deveiate
 Hoe.plugin :packaging
 Hoe.plugin :rdoc
 Hoe.plugin :rubocop
@@ -37,7 +39,6 @@ Hoe.spec 'hoe-manns' do
 
   dependency 'parseconfig', '~> 1.0'
   dependency 'rainbow', '~> 2.1'
-  dependency 'indexer', '~> 0.3'
   dependency 'bundler-audit', '~> 0.4'
   dependency 'pandoc-ruby', '~> 1.0'
   dependency 'hoe', '~> 3.14'
@@ -47,21 +48,22 @@ Hoe.spec 'hoe-manns' do
   extra_dev_deps << ['hoe-bundler', '~> 1.2']
   extra_dev_deps << ['hoe-gemspec', '~> 1.0']
   extra_dev_deps << ['hoe-git', '~> 1.6']
-  extra_dev_deps << ['hoe-manns', '~> 1.4']
   extra_dev_deps << ['hoe-packaging', '~> 1.1']
   extra_dev_deps << ['hoe-rubocop', '~> 1.0']
   extra_dev_deps << ['hoe-rubygems', '~> 1.0']
   extra_dev_deps << ['hoe-seattlerb', '~> 1.3']
   extra_dev_deps << ['hoe-version', '~> 1.2']
+  extra_dev_deps << ['hoe-manualgen', '~> 0.3.0']
+  # extra_dev_deps << ['hoe-deveiate', '~> 0.8.0']
   extra_dev_deps << ['rake', '~> 10.5']
   extra_dev_deps << ['rspec', '~> 3.4']
-  extra_dev_deps << ['rubocop', '~> 0.37']
+  # extra_dev_deps << ['rubocop', '~> 0.37']
   extra_dev_deps << ['simplecov', '~> 0.11']
 
   self.history_file = 'History.rdoc'
   self.readme_file = 'README.rdoc'
   self.extra_rdoc_files = FileList['*.rdoc'].to_a
-  self.post_install_message = '*** Edit your .hoerc: http://bit.ly/1L9hBwN *** Please file bugreports and feature requests on: https://gitlab.com/saigkill/hoe-manns/issues'
+  self.post_install_message = '*** Edit your .hoerc: https://github.com/saigkill/hoe-manns/wiki *** Please file bugreports and feature requests on: https://saigkill.myjetbrains.com/youtrack/issues?q=project%3A+hoe-manns'
 end
 
 ##################################################SETUP ZONE############################################################

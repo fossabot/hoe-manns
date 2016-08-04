@@ -3,7 +3,7 @@
 # @author: Sascha Manns
 # @abstract: hoe-manns is a small collection of my personal used rake tasks for using with hoe
 #
-# Copyright (c) 2015 Sascha Manns <samannsml@directbox.com>
+# Copyright (c) 2015-2016 Sascha Manns <samannsml@directbox.com>
 # License: MIT
 
 # Dependencies
@@ -12,13 +12,11 @@ require 'hoe'
 # Main module for hoe-manns
 module Hoe::Manns
   # Version constant for HOE::Manns
-  VERSION = '1.4.9'
+  VERSION = '1.5.0'
 
   attr_accessor :remove_pre_gemspec
-  attr_accessor :update_index
   attr_accessor :copy_manuals
   attr_accessor :copy_master
-  attr_accessor :copy_mirror
   attr_accessor :copy_wiki
   attr_accessor :run_before_release
   attr_accessor :run_after_release
@@ -56,12 +54,6 @@ module Hoe::Manns
       Hoe::Manns.update_workspace_method
     end
 
-    # Rake Task for updating the .index
-    desc 'Update .index'
-    task :update_index do
-      Hoe::Manns.update_index_method
-    end
-
     # Rake Task for copying manuals
     require 'parseconfig'
     desc 'Copy manuals'
@@ -75,12 +67,6 @@ module Hoe::Manns
       Hoe::Manns.copy_wiki_method
     end
 
-    # Rake task for copying to mirror
-    desc 'Coying to mirror'
-    task :copy_mirror => %w(clean_pkg) do
-      Hoe::Manns.copy_mirror_method
-    end
-
     # Rake Task for git tag
     desc 'Copy master'
     task :copy_master do
@@ -89,14 +75,13 @@ module Hoe::Manns
 
     # Rake Task for running needed Rake Tasks before running rake release
     desc 'Run all tasks before rake release'
-    task :run_before_release => %w(git:manifest bundler:gemfile bundler:gemfile_lock update_index gem:spec_remove
-update_workspace bundle_audit:run copy_mirror copy_master) do
+    task :run_before_release => %w(git:manifest bundler:gemfile bundler:gemfile_lock gem:spec_remove bundle_audit:run copy_master) do
       puts 'Ready to run rake release VERSION=x.y.z'.colour(:green)
     end
 
     # Rake Task for running needed Rake Tasks after running rake release
     desc 'Run all tasks after rake release'
-    task :run_after_release => %w(send_email clean_pkg create_packages deploy_packages) do
+    task :run_after_release => %w(send_email clean_pkg) do
       puts 'Release finished'.colour (:green)
     end
 
@@ -147,7 +132,7 @@ update_workspace bundle_audit:run copy_mirror copy_master) do
   # Method for updating workspace
   def self.update_workspace_method
     puts 'Updating workspace'.colour(:yellow)
-    %w(Rakefile Gemfile Gemfile.lock .autotest .codeclimate.yml .coveralls.yml .gemnasium.yml .gitignore .index .rspec .rubocop.yml
+    %w(Rakefile Gemfile Gemfile.lock .autotest .codeclimate.yml .coveralls.yml .gemnasium.yml .gitignore .rspec .rubocop.yml
 .scrutinizer.yml .travis.yml CODE_OF_CONDUCT.md config.reek CONTRIBUTING.md History.rdoc Index.yml LICENSE.rdoc MAINTENANCE.md Manifest.txt
 README.rdoc VERSION recipes/recipe.rb).each do |i|
       system("git add #{i}") if File.exist?(i)
@@ -161,14 +146,6 @@ README.rdoc VERSION recipes/recipe.rb).each do |i|
     puts 'Updated workspace'.colour(:green)
   end
 
-  # Method for updating .index
-  def self.update_index_method
-    puts 'Updating .index. Have you changed your VERSION file?'.colour(:yellow)
-    system('index --using VERSION Index.yml')
-    system('git add .index')
-    puts '.index updated'.colour(:green)
-  end
-
   # Method for copying the manuals to a target directory
   def self.copy_manuals_method
     puts 'Copying manual pages to target'.colour(:yellow)
@@ -177,44 +154,6 @@ README.rdoc VERSION recipes/recipe.rb).each do |i|
     docpath = config['manns']['docpath'].to_s
     FileUtils.cp_r('manual/output', "#{docpath}/#{project}")
     puts 'Copied manuals'.colour(:green)
-  end
-
-  # Method for copying to mirror
-  def self.copy_mirror_method
-    project = Hoe::Manns.get_projectname
-    develpath = Hoe::Manns.get_develpath
-    source = "#{develpath}/#{project}"
-    destination = "#{develpath}/#{project}-mirror"
-    puts 'Copying to mirror'.colour(:yellow)
-    Hoe::Manns.copy_mirror_create_dirs(source, destination)
-    FileUtils.cp_r "#{source}/recipes/recipe.rb", "#{destination}/recipes/recipe.rb", verbose: true if File.exist?("#{source}/recipes/recipe.rb")
-    Hoe::Manns.copy_mirror_copy_files(source, destination)
-    system('git status')
-    puts 'Copying to mirror succeeded'.colour(:green)
-  end
-
-  def self.copy_mirror_create_dirs(source, destination)
-    %w(bin etc data docs lib test recipes).each do |d|
-      unless File.exist?("#{destination}/#{d}") # if d isn't available in destination
-        FileUtils.mkdir("#{destination}/#{d}") if File.exist?("#{source}/#{d}") # and exist in source then create them
-      end
-      FileUtils.cp_r "#{source}/#{d}/.", "#{destination}/#{d}/.", verbose: true if File.exist?("#{source}/#{d}") # copy the content of the dirs
-    end
-  end
-
-  def self.copy_mirror_copy_files(source, destination)
-    FileUtils.cd(destination) do
-      %w(Rakefile Gemfile Gemfile.lock .autotest .codeclimate.yml .coveralls.yml .gemnasium.yml .gitignore .index .rspec .rubocop.yml
-.scrutinizer.yml .travis.yml CODE_OF_CONDUCT.md config.reek CONTRIBUTING.md History.rdoc Index.yml LICENSE.rdoc MAINTENANCE.md Manifest.txt
-README.rdoc VERSION).each do |i|
-        FileUtils.cp_r "#{source}/#{i}", "#{destination}", verbose: true if File.exist?("#{source}/#{i}")
-        system("git add #{i}") if File.exist?(i)
-        %w(bin etc docs lib test).each do |d|
-          system("git add #{d}/*") if File.exist?(d)
-        end
-      end
-      system('git commit -m "Sync mirror" && git push')
-    end
   end
 
   # Copies the actual wiki entries to ./docs
@@ -275,13 +214,6 @@ README.rdoc VERSION).each do |i|
     config = YAML.load(File.read("#{Dir.home}/.hoerc"))
     develpath = config['manns']['develpath'].to_s
     return develpath
-  end
-
-  # Method for getting version
-  # @return [String] version
-  def self.get_version
-    version = File.open(*Dir.glob('VERSION')) { |f| f.readline }
-    version.chomp.to_s
   end
 
   # Method for cleanup the pkg

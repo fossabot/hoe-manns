@@ -20,7 +20,7 @@ The develop branch is the current edge of development.
 
 ## Pull requests
 
-* https://gitlab.com/saigkill/hoe-manns/merge_requests
+* https://github.com/saigkill/hoe-manns/pulls
 
 Please base all pull requests off the `develop` branch. Merges to
 `master` only occur through the `develop` branch. Pull requests
@@ -30,4 +30,4 @@ based on `master` will likely be cherry picked.
 
 Need to report an issue? Use that issue tracker:
 
-* https://gitlab.com/saigkill/hoe-manns/issues
+* https://github.com/saigkill/hoe-manns/issues

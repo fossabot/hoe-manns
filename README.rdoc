@@ -4,7 +4,7 @@ home  :: http://saigkill.github.io
 code  :: http://gitlab.com/saigkill/hoe-manns
 docu :: https://gitlab.com/saigkill/hoe-manns/wikis/home
 apidoc :: http://www.rubydoc.info/gems/hoe-manns
-bugs  :: https://gitlab.com/saigkill/hoe-manns/issues
+bugs  :: https://saigkill.myjetbrains.com/youtrack/issues?q=project%3A+hoe-manns
 license :: {<img src="http://img.shields.io/:license-mit-blue.svg" />}[https://gitlab.com/saigkill/hoe-manns/blob/master/LICENSE.rdoc]
 last public version  :: {<img src="https://badge.fury.io/rb/hoe-manns.png" alt="Last Version" />}[http://rubygems.org/gems/hoe-manns]
 last rpm :: {<img src="https://img.shields.io/bintray/v/saigkill/rpm/hoe-manns.svg" />}[https://bintray.com/saigkill/rpm/hoe-manns]
@@ -30,32 +30,28 @@ hoe-manns is a small collection of my personal used rake tasks for using with ho
 * bundler:gemfile_lock
 * bundle_audit:*
 * clean_pkg
-* copy_manuals
 * copy_mirror
 * copy_wiki
 * remove_pre_gemspec
 * run_before_release
 * run_after_release
 * update_workspace
-* update_index
 
 == FEATURES/PROBLEMS:
 
 * Updates the Gemfile.lock
 * Removes the old *.gemspec created in test cases
 * commits the workspace before rake release
-* Does a index --using VERSION Index.yml if you use the indexer from Rubyworks
 * copies your manuals to your docpath.
 * runs the rake tasks before release: git:manifest, bundler:gemfile, update_gemfile_lock, update_index, remove_pre_gemspec, update_workspace, bundler_audit:run and copy_mirror.
 * runs after release: send_email, create_packages, deploy_packages.
 * Cleans up the pkg dir
 * provides bundler_audit tasks
-* copies the current stuff to a mirror repository
 
 This Gem was programmed and tested for Linux systems. If anyone would like to make the methods also fit for other OS,
 i'm happy about Pull requests.
 
-For a detailed information please visit: https://gitlab.com/saigkill/hoe-manns/wikis/home
+For a detailed information please visit: https://github.com/saigkill/hoe-manns/wikis/home
 
 If you like this piece of software don't forget to give the gitlab repo a star.
 
@@ -82,7 +78,7 @@ Also add hoe-manns to your requirements and recreate your Gemfile.
 
     gem install hoe-manns
 
-Edit your .hoerc: http://bit.ly/1L9hBwN
+Edit your .hoerc: https://github.com/saigkill/hoe-manns/wiki
 
 == DEVELOPERS:
 
@@ -95,7 +91,7 @@ and generate the RDoc.
 
 Merge Requests are welcome :-)
 
-Read https://gitlab.com/saigkill/hoe-manns/blob/master/CONTRIBUTING.md
+Read https://github.com/saigkill/hoe-manns/blob/master/CONTRIBUTING.md
 
 == LICENSE:
 

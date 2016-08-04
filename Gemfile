@@ -6,7 +6,6 @@ source "https://rubygems.org/"
 
 gem "parseconfig", "~>1.0"
 gem "rainbow", "~>2.1"
-gem "indexer", "~>0.3"
 gem "bundler-audit", "~>0.4"
 gem "pandoc-ruby", "~>1.0"
 gem "hoe", "~>3.14"
@@ -17,15 +16,14 @@ gem "gem-release", "~>0.7", :group => [:development, :test]
 gem "hoe-bundler", "~>1.2", :group => [:development, :test]
 gem "hoe-gemspec", "~>1.0", :group => [:development, :test]
 gem "hoe-git", "~>1.6", :group => [:development, :test]
-gem "hoe-manns", "~>1.4", :group => [:development, :test]
 gem "hoe-packaging", "~>1.1", :group => [:development, :test]
 gem "hoe-rubocop", "~>1.0", :group => [:development, :test]
 gem "hoe-rubygems", "~>1.0", :group => [:development, :test]
 gem "hoe-seattlerb", "~>1.3", :group => [:development, :test]
 gem "hoe-version", "~>1.2", :group => [:development, :test]
+gem "hoe-manualgen", "~>0.3.0", :group => [:development, :test]
 gem "rake", "~>10.5", :group => [:development, :test]
 gem "rspec", "~>3.4", :group => [:development, :test]
-gem "rubocop", "~>0.37", :group => [:development, :test]
 gem "simplecov", "~>0.11", :group => [:development, :test]
 gem "hoe", "~>3.14", :group => [:development, :test]
 

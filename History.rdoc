@@ -1,3 +1,10 @@
+=== 1.5.0 / 2016-08-04
+
+* x major issues:
+
+  * removed .index creation
+  * removed update_workspace from run_before_release
+
 === 1.4.9 / 2016-02-08
 
 * 1 minor enhancement
