@@ -37,13 +37,6 @@ describe 'Hoe::Manns' do
     end
   end
 
-  describe 'get_version' do
-    it 'gets the version' do
-      version = Hoe::Manns.get_version
-      expect(version) == ''
-    end
-  end
-
   describe 'clean_pkg' do
     it 'cleans the pkg' do
       Hoe::Manns.clean_pkg_method

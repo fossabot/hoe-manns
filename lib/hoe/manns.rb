@@ -193,18 +193,11 @@ README.rdoc VERSION recipes/recipe.rb).each do |i|
     puts 'Pushing master to origin'.colour(:yellow)
     system('git add recipes/recipe.rb') if File.exist?('recipes/recipe.rb')
     system('git push')
-    Hoe::Manns.git_tag
+    puts 'Set a Git Tag'.colour(:yellow)
+    Rake::Task['git:tag']
     puts 'Checking out develop again'.colour(:yellow)
     system('git checkout develop')
     puts 'Done'.colour(:green)
-  end
-
-  # Method for tagging a git branch
-  def self.git_tag
-    puts 'Creating git tag'.colour(:yellow)
-    version = Hoe::Manns.get_version
-    system("git tag -a v#{version} -m 'version #{version}'")
-    system('git push origin  --tags')
   end
 
   # Method for getting the project name
@@ -219,14 +212,6 @@ README.rdoc VERSION recipes/recipe.rb).each do |i|
     config = YAML.load(File.read("#{Dir.home}/.hoerc"))
     develpath = config['manns']['develpath'].to_s
     return develpath
-  end
-
-  # Method for getting version
-  # @return [String] version
-  def self.get_version
-    # version = File.open(*Dir.glob('VERSION')) { |f| f.readline }
-    version = Rake::Task['version']
-    version.chomp.to_s
   end
 
   # Method for cleanup the pkg

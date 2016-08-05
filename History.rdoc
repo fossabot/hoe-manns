@@ -1,9 +1,10 @@
 === 1.5.0 / 2016-08-05
 
-* 2 minor issues:
+* 3 minor issues:
 
   * removed .index creation from run_before_release and from code
   * removed copy_mirror from run_before_release and from code
+  * removed get_version and usage of a system based git. Now using the rake task.
 
 === 1.4.9 / 2016-02-08
 
