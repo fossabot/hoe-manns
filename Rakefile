@@ -44,7 +44,7 @@ Hoe.spec 'hoe-manns' do
   extra_dev_deps << ['coveralls', '~> 0.8']
   extra_dev_deps << ['hoe-bundler', '~> 1.3']
   extra_dev_deps << ['hoe-git', '~> 1.6']
-  extra_dev_deps << ['hoe-manns', '~> 1.4']
+  extra_dev_deps << ['hoe-manns', '~> 1.5']
   extra_dev_deps << ['hoe-rubocop', '~> 1.0']
   extra_dev_deps << ['hoe-rubygems', '~> 1.0']
   extra_dev_deps << ['hoe-seattlerb', '~> 1.3']
