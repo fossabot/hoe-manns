@@ -11,7 +11,7 @@ downloads latest :: {<img src="https://img.shields.io/gem/dtv/hoe-manns.svg" alt
 downloads all :: {<img src="https://img.shields.io/gem/dt/hoe-manns.svg" alt="Downloads all versions" />}[http://rubygems.org/gems/hoe-manns]
 continuous integration :: {<img src="https://travis-ci.org/saigkill/hoe-manns.svg" />}[https://travis-ci.org/saigkill/hoe-manns]
 continuous integration :: {<img src="https://scrutinizer-ci.com/g/saigkill/hoe-manns/badges/build.png?b=master" />}[https://scrutinizer-ci.com/g/saigkill/hoe-manns]
-code quality :: {<img src="https://scrutinizer-ci.com/g/saigkill/hoe-manns/badges/quality-score.png?b=master" />}[https://scrutinizer-ci.com/g/saigkill/hoe-manns]
+code quality :: {<img src="https://scrutinizer-ci.com/g/saigkill/hoe-manns/badges/quality-score.png?b=develop" />}[https://scrutinizer-ci.com/g/saigkill/hoe-manns]
 code quality :: {<img src="https://d3s6mut3hikguw.cloudfront.net/github/saigkill/hoe-manns/badges/gpa.svg" alt="Code Quality" />}[https://codeclimate.com/github/saigkill/hoe-manns]
 code quality :: {<img src="https://api.codacy.com/project/badge/Grade/59c5e250bebd4116b39a7577f361f061" alt="Codacy code quality" />}[https://www.codacy.com/app/samannsml/hoe-manns?utm_source=github.com&utm_medium=referral&utm_content=saigkill/hoe-manns&utm_campaign=Badge_Grade]
 security :: {<img src="https://hakiri.io/github/saigkill/hoe-manns/master.svg" alt="security" />}[https://hakiri.io/github/saigkill/hoe-manns/master]
