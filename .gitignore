@@ -1,0 +1,10 @@
+hoe-manns.gemspec
+.yardoc
+SetupConfig
+SetupReceipt
+README.txt
+ChangeLog
+pkg
+.idea
+coverage
+vendor
