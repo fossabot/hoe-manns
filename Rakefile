@@ -38,20 +38,20 @@ Hoe.spec 'hoe-manns' do
   dependency 'parseconfig', '~> 1.0'
   dependency 'rainbow', '~> 2.1'
   dependency 'bundler-audit', '~> 0.4'
-  dependency 'pandoc-ruby', '~> 1.0'
+  dependency 'pandoc-ruby', '~> 2.0'
   dependency 'hoe', '~> 3.15'
 
   extra_dev_deps << ['coveralls', '~> 0.8']
-  extra_dev_deps << ['hoe-bundler', '~> 1.2']
+  extra_dev_deps << ['hoe-bundler', '~> 1.3']
   extra_dev_deps << ['hoe-git', '~> 1.6']
   extra_dev_deps << ['hoe-manns', '~> 1.4']
   extra_dev_deps << ['hoe-rubocop', '~> 1.0']
   extra_dev_deps << ['hoe-rubygems', '~> 1.0']
   extra_dev_deps << ['hoe-seattlerb', '~> 1.3']
   extra_dev_deps << ['hoe-version', '~> 1.2']
-  extra_dev_deps << ['rake', '~> 10.5']
-  extra_dev_deps << ['rspec', '~> 3.4']
-  extra_dev_deps << ['simplecov', '~> 0.11']
+  extra_dev_deps << ['rake', '~> 11.2']
+  extra_dev_deps << ['rspec', '~> 3.5']
+  extra_dev_deps << ['simplecov', '~> 0.12']
 
   self.history_file = 'History.rdoc'
   self.readme_file = 'README.rdoc'

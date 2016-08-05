@@ -17,6 +17,5 @@ README.rdoc
 Rakefile
 config.reek
 lib/hoe/manns.rb
-recipes/recipe.rb
 spec/manns_spec.rb
 spec/spec_helper.rb
