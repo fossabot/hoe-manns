@@ -8,7 +8,6 @@ gem "parseconfig", "~>1.0"
 gem "rainbow", "~>2.1"
 gem "bundler-audit", "~>0.4"
 gem "pandoc-ruby", "~>2.0"
-gem "hoe", "~>3.15"
 
 gem "rdoc", "~>4.0", :group => [:development, :test]
 gem "coveralls", "~>0.8", :group => [:development, :test]

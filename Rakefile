@@ -39,7 +39,6 @@ Hoe.spec 'hoe-manns' do
   dependency 'rainbow', '~> 2.1'
   dependency 'bundler-audit', '~> 0.4'
   dependency 'pandoc-ruby', '~> 2.0'
-  dependency 'hoe', '~> 3.15'
 
   extra_dev_deps << ['coveralls', '~> 0.8']
   extra_dev_deps << ['hoe-bundler', '~> 1.3']
