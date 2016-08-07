@@ -22,9 +22,7 @@ describe 'Hoe::Manns' do
   describe 'remove_pre_gemspec' do
     it 'removes the old gemspec' do
       Hoe::Manns.remove_pre_gemspec_method
-      FileUtils.cd('..') do
-        FileUtils.touch('hoe-manns.gemspec')
-      end
+      FileUtils.touch('hoe-manns.gemspec')
       gemspec = Dir.glob('*.gemspec').empty? == true
       expect(gemspec) == false
     end

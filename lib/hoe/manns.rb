@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+# encoding: UTF-8
 # @encoding: utf-8
 # @author: Sascha Manns
 # @abstract: hoe-manns is a small collection of my personal used rake tasks for using with hoe
@@ -12,7 +12,7 @@ require 'hoe'
 # Main module for hoe-manns
 module Hoe::Manns
   # Version constant for HOE::Manns
-  VERSION = '1.5.0'
+  VERSION = '1.5.1'
 
   attr_accessor :remove_pre_gemspec
   attr_accessor :copy_manuals
@@ -194,7 +194,7 @@ README.rdoc VERSION recipes/recipe.rb).each do |i|
     system('git add recipes/recipe.rb') if File.exist?('recipes/recipe.rb')
     system('git push')
     puts 'Set a Git Tag'.colour(:yellow)
-    Rake::Task['git:tag']
+    system('rake git:tag')
     puts 'Checking out develop again'.colour(:yellow)
     system('git checkout develop')
     puts 'Done'.colour(:green)

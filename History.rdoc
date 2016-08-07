@@ -1,3 +1,11 @@
+=== 1.5.1 / 2016-08-07
+
+* 3 minor enhancement
+
+  * replaced Rake::Task['git:tag'] with system('rake git:tag') because old procedure produces errors
+  * added # encoding: UTF-8
+  * fixed HM-1 - Testcase produces testfile on false place
+
 === 1.5.0 / 2016-08-05
 
 * 3 minor issues:
