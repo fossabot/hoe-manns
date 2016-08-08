@@ -1,7 +1,8 @@
 # encoding: UTF-8
 # @encoding: utf-8
 # @author: Sascha Manns
-# @abstract: hoe-manns is a small collection of my personal used rake tasks for using with hoe
+# @abstract: hoe-manns is a small collection of my personal used rake tasks for
+#            using with hoe
 #
 # Copyright (c) 2015-2016 Sascha Manns <samannsml@directbox.com>
 # License: MIT
@@ -12,7 +13,7 @@ require 'hoe'
 # Main module for hoe-manns
 module Hoe::Manns
   # Version constant for HOE::Manns
-  VERSION = '1.5.1'
+  VERSION = '1.6.0'
 
   attr_accessor :remove_pre_gemspec
   attr_accessor :copy_manuals
@@ -67,7 +68,9 @@ module Hoe::Manns
 
     # Rake Task for running needed Rake Tasks before running rake release
     desc 'Run all tasks before rake release'
-    task :run_before_release => %w(git:manifest bundler:gemfile bundler:gemfile_lock gem:spec_remove bundle_audit:run update_workspace copy_master) do
+    task :run_before_release => %w(git:manifest bundler:gemfile
+bundler:gemfile_lock gem:spec_remove bundle_audit:run update_workspace
+copy_master) do
       puts 'Ready to run rake release VERSION=x.y.z'.colour(:green)
     end
 
@@ -124,9 +127,11 @@ module Hoe::Manns
   # Method for updating workspace
   def self.update_workspace_method
     puts 'Updating workspace'.colour(:yellow)
-    %w(Rakefile Gemfile Gemfile.lock .autotest .codeclimate.yml .coveralls.yml .gemnasium.yml .gitignore .rspec .rubocop.yml
-.scrutinizer.yml .travis.yml CODE_OF_CONDUCT.md config.reek CONTRIBUTING.md History.rdoc Index.yml LICENSE.rdoc MAINTENANCE.md Manifest.txt
-README.rdoc VERSION recipes/recipe.rb).each do |i|
+    %w(Rakefile Gemfile Gemfile.lock .autotest .codeclimate.yml .coveralls.yml
+.gemnasium.yml .gitignore .rspec .rubocop.yml .scrutinizer.yml .travis.yml
+CODE_OF_CONDUCT.md config.reek CONTRIBUTING.md History.rdoc Index.yml
+LICENSE.rdoc MAINTENANCE.md Manifest.txt README.rdoc VERSION
+recipes/recipe.rb).each do |i|
       system("git add #{i}") if File.exist?(i)
     end
     %w(bin etc data docs lib test spec).each do |d|

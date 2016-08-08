@@ -1,3 +1,15 @@
+=== 1.6.0 / 2016-08-08
+
+* 3 major enhancements
+
+  * fixed HM-2: Simplify copy_wiki method (dropped)
+  * fixed HM-3: manns.rb (Code cleanup)
+  * removed pandoc dependency
+
+* 1 minor enhancement
+
+  * reworked spec files
+
 === 1.5.1 / 2016-08-07
 
 * 3 minor enhancement
