@@ -30,7 +30,6 @@ hoe-manns is a small collection of my personal used rake tasks for using with ho
 * clean_pkg
 * copy_manuals
 * copy_master
-* copy_wiki
 * remove_pre_gemspec
 * run_before_release
 * run_after_release
@@ -47,7 +46,6 @@ hoe-manns is a small collection of my personal used rake tasks for using with ho
 * runs after release: send_email.
 * Cleans up the pkg dir
 * provides bundler_audit tasks
-* copies the current stuff to a mirror repository
 
 This Gem was programmed and tested for Linux systems. If anyone would like to make the methods also fit for other OS,
 i'm happy about Pull requests.
