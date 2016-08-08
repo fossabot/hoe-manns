@@ -14,17 +14,18 @@ describe 'Hoe::Manns' do
       FileUtils.rm(File.join(File.dirname(__FILE__), '..', 'Gemfile.lock'))
       Hoe::Manns.update_gemfile_lock_method
       avail = false
-      avail = File.exist?(File.join(File.dirname(__FILE__), '..', 'Gemfile.lock'))
+      avail = File.exist?(File.join(File.dirname(__FILE__), '..',
+                                    'Gemfile.lock'))
       expect(avail) == true
     end
   end
 
   describe 'remove_pre_gemspec' do
     it 'removes the old gemspec' do
-      Hoe::Manns.remove_pre_gemspec_method
       FileUtils.touch('hoe-manns.gemspec')
-      gemspec = Dir.glob('*.gemspec').empty? == true
-      expect(gemspec) == false
+      Hoe::Manns.remove_pre_gemspec_method
+      gemspec = Dir.glob('*.gemspec').empty?
+      expect(gemspec) == true
     end
   end
 
