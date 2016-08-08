@@ -1,5 +1,7 @@
 # Deeper Insight
 
+---
+
 ## About
 
 This kind of documentation explains a little bit more. 
@@ -13,6 +15,8 @@ manns:
 ```
 
 The docpath is optional if you like to use the update_manuals task. It expects to have a directory "manual/output" (created from the hoe-manualgen plugin).The develpath is the path to your development projects. It will used by the copy_wiki task.
+
+---
 
 ### The methods
 
@@ -113,6 +117,8 @@ end
 ```
 
 That method checks out the master, merges it with the develop branch and pushs it to origin/master. Then it creates a git tag with the version number and pushs all known tags to origin.
+
+---
 
 ### The Rake tasks
 
