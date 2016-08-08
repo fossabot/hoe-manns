@@ -17,7 +17,6 @@ module Hoe::Manns
   attr_accessor :remove_pre_gemspec
   attr_accessor :copy_manuals
   attr_accessor :copy_master
-  attr_accessor :copy_wiki
   attr_accessor :run_before_release
   attr_accessor :run_after_release
   attr_accessor :clean_pkg
@@ -30,7 +29,6 @@ module Hoe::Manns
     require 'parseconfig'
     require 'rainbow/ext/string'
     require 'bundler/audit/cli'
-    require 'pandoc-ruby'
   end
 
   # Definitions of the Rake task
@@ -59,12 +57,6 @@ module Hoe::Manns
     desc 'Copy manuals'
     task :copy_manuals do
       Hoe::Manns.copy_manuals_method
-    end
-
-    # Rake Task for copying the GitLab Wiki to ./doc
-    desc 'Copy Wiki'
-    task :copy_wiki do
-      Hoe::Manns.copy_wiki_method
     end
 
     # Rake Task for git tag
@@ -132,7 +124,7 @@ module Hoe::Manns
   # Method for updating workspace
   def self.update_workspace_method
     puts 'Updating workspace'.colour(:yellow)
-    %w(Rakefile Gemfile Gemfile.lock .autotest .codeclimate.yml .coveralls.yml .gemnasium.yml .gitignore .index .rspec .rubocop.yml
+    %w(Rakefile Gemfile Gemfile.lock .autotest .codeclimate.yml .coveralls.yml .gemnasium.yml .gitignore .rspec .rubocop.yml
 .scrutinizer.yml .travis.yml CODE_OF_CONDUCT.md config.reek CONTRIBUTING.md History.rdoc Index.yml LICENSE.rdoc MAINTENANCE.md Manifest.txt
 README.rdoc VERSION recipes/recipe.rb).each do |i|
       system("git add #{i}") if File.exist?(i)
@@ -154,34 +146,6 @@ README.rdoc VERSION recipes/recipe.rb).each do |i|
     docpath = config['manns']['docpath'].to_s
     FileUtils.cp_r('manual/output', "#{docpath}/#{project}")
     puts 'Copied manuals'.colour(:green)
-  end
-
-  # Copies the actual wiki entries to ./docs
-  def self.copy_wiki_method
-    puts 'Copying wiki content to docs'.colour(:yellow)
-    project = Hoe::Manns.get_projectname
-    develpath = Hoe::Manns.get_develpath
-    wikipath = "#{develpath}/#{project}.wiki"
-    FileUtils.mkdir_p 'docs', verbose: true unless File.exist?('docs')
-    FileUtils.cd(wikipath) do
-      system('git pull')
-    end
-    files = Dir.glob("#{wikipath}/*.md")
-    FileUtils.cp files, 'docs', verbose: true
-    FileUtils.mv 'docs/home.md', 'docs/index.md', verbose: true
-    FileUtils.cd('docs') do
-      Dir['*.md'].each do |f|
-        PandocRuby.allow_file_paths = true
-        @converter = PandocRuby.new(f, :from => :markdown, :to => :rst)
-        File.open(f, 'w') do |file1|
-          file1.puts @converter.convert
-        end
-        extn = File.extname  f        # => ".mp4"
-        name = File.basename f, extn  # => "xyz"
-        FileUtils.mv "#{name}.md", "#{name}.rst"
-      end
-    end
-    puts 'Copied wiki content'.colour(:green)
   end
 
   # Method for copying to master
