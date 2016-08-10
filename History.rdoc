@@ -1,0 +1,156 @@
+=== 1.6.0 / 2016-08-08
+
+* 3 major enhancements
+
+  * fixed HM-2: Simplify copy_wiki method (dropped)
+  * fixed HM-3: manns.rb (Code cleanup)
+  * removed pandoc dependency
+
+* 1 minor enhancement
+
+  * reworked spec files
+
+=== 1.5.1 / 2016-08-07
+
+* 3 minor enhancement
+
+  * replaced Rake::Task['git:tag'] with system('rake git:tag') because old procedure produces errors
+  * added # encoding: UTF-8
+  * fixed HM-1 - Testcase produces testfile on false place
+
+=== 1.5.0 / 2016-08-05
+
+* 3 minor issues:
+
+  * removed .index creation from run_before_release and from code
+  * removed copy_mirror from run_before_release and from code
+  * removed get_version and usage of a system based git. Now using the rake task.
+
+=== 1.4.9 / 2016-02-08
+
+* 1 minor enhancement
+
+  * Added some new tests
+
+=== 1.4.8 / 2016-02-08
+
+* 1 minor enhancement
+
+  * updated dependencies from gemnasium
+
+=== 1.4.7 / 2016-01-27
+
+* 1 minor enhancement
+
+  * updated dependencies by gemnasium
+
+=== 1.4.6 / 2015-12-23
+
+* 1 minor enhancement
+
+  * moved directory test to spec. So Hoe can handle the tests directly.
+
+=== 1.4.5 / 2015-12-23
+
+* 1 minor enhancement
+
+  * Updated automatic tests
+
+=== 1.4.4 / 2015-12-22
+
+* 2 minor enhancement
+
+  * Added security to README.rdoc
+  * Updated dependencies by using gemnasium
+
+=== 1.4.3 / 2015-10-31
+
+* 2 minor enhancement
+
+  * Added procedure to convert markdown to rst inside ./docs
+  * Created new methods copy_mirror_create_dirs and copy_mirror_copy_files to reduce the copmplexity of
+    the copy_mirror_method
+
+=== 1.4.2 / 2015-10-19
+
+* 1 minor enhancement
+
+  * Added git tag procedure to copy_master method
+
+=== 1.4.1 / 2015-10-19
+
+* 1 minor enhancement
+
+  * Added FileUtils.rm_rf('recipes/pkg') to cleanup method
+
+=== 1.4.0 / 2015-10-19
+
+* 1 minor enhancement
+
+  * Added a copy_master method
+
+=== 1.3.0 / 2015-10-19
+
+* 1 minor enhancement
+
+  * Added a "git pull" to copy_wiki_method
+
+* 1 bug fix
+
+  * Removed omnibus from require path
+
+=== 1.2.1 / 2015-10-13
+
+* 1 bug fix
+
+  * fixed run_after_release for using create_packages instead of generate_packages
+
+=== 1.2.0 / 2015-10-13
+
+* 5 major enhancements
+
+  * HM-6 Copy wiki method implemented
+  * use of .hoerc instead of own config
+  * reworked update_workspace_method
+  * reworked copy_mirror_method
+  * excluded create_packages & deploy_packages methods to hoe-packaging
+
+=== 1.1.0 / 2015-10-05
+
+* 2 major enhancements
+
+  * HM-4 Add function to copy the content to a mirror directory
+  * HM-5 Integration of bundle audit
+
+* 1 minor enhancements
+
+  * HM-3 Update all content for using with GitLab
+
+=== 1.0.2 / 2015-10-02
+
+* 1 minor enhancement
+
+  * reworked stuff for using with GitLab (HM-3)
+
+=== 1.0.1 / 2015-10-01
+
+* 1 minor enhancement
+
+  * extended documentation so all methods and rake tasks will be explained (HM-2)
+
+=== 1.0.0 / 2015-09-28
+
+* 1 major enhancement
+
+  * Birthday!
+  * fix HM-1
+  * Implemented my project rake tasks
+    * update_gemfile_lock
+    * remove_pre_gemspec
+    * update_workspace
+    * update_index
+    * copy_manuals
+    * run_before_release
+    * run_after_release
+    * clean_pkg
+
