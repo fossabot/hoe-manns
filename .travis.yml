@@ -6,6 +6,7 @@ rvm:
   - 2.2.3
 
 dist: trusty
+sudo: required
 
 os:
   - linux

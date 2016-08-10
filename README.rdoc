@@ -2,9 +2,10 @@
 
 home  :: http://saigkill.github.io
 code  :: http://github.com/saigkill/hoe-manns
-docu :: https://saigkill.github.io/docs/hoe-manns/hoe-manns-doc/
+docu :: https://github.com/saigkill/hoe-manns/blob/master/SUMMARY.md
 apidoc :: http://www.rubydoc.info/gems/hoe-manns
 bugs  :: https://saigkill.myjetbrains.com/youtrack/issues
+min. rubyver :: 2.2.0
 license :: {<img src="http://img.shields.io/:license-mit-blue.svg" />}[https://github.com/saigkill/hoe-manns/blob/master/LICENSE.rdoc]
 last public version  :: {<img src="https://badge.fury.io/rb/hoe-manns.png" alt="Last Version" />}[http://rubygems.org/gems/hoe-manns]
 downloads latest :: {<img src="https://img.shields.io/gem/dtv/hoe-manns.svg" alt="Downloads latest version" />}[http://rubygems.org/gems/hoe-manns]
@@ -34,7 +35,6 @@ hoe-manns is a small collection of my personal used rake tasks for using with ho
 * run_before_release
 * run_after_release
 * update_workspace
-* update_index
 
 == FEATURES/PROBLEMS:
 
@@ -50,7 +50,7 @@ hoe-manns is a small collection of my personal used rake tasks for using with ho
 This Gem was programmed and tested for Linux systems. If anyone would like to make the methods also fit for other OS,
 i'm happy about Pull requests.
 
-For a detailed information please visit: https://saigkill.github.io/docs/hoe-manns/hoe-manns-doc/
+For a detailed information please visit: https://github.com/saigkill/hoe-manns/blob/master/SUMMARY.md
 
 If you like this piece of software don't forget to give the gitlab repo a star.
 
@@ -77,7 +77,7 @@ Also add hoe-manns to your requirements and recreate your Gemfile.
 
     gem install hoe-manns
 
-Edit your .hoerc: https://saigkill.github.io/docs/hoe-manns/hoe-manns-doc/
+Edit your .hoerc: https://github.com/saigkill/hoe-manns/blob/master/SUMMARY.md
 
 == DEVELOPERS:
 
