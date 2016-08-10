@@ -2,7 +2,7 @@
 
 home  :: http://saigkill.github.io
 code  :: http://github.com/saigkill/hoe-manns
-docu :: https://saigkill.github.io/docs/hoe-manns/hoe-manns-doc/
+docu :: https://github.com/saigkill/hoe-manns/SUMMARY.md
 apidoc :: http://www.rubydoc.info/gems/hoe-manns
 bugs  :: https://saigkill.myjetbrains.com/youtrack/issues
 license :: {<img src="http://img.shields.io/:license-mit-blue.svg" />}[https://github.com/saigkill/hoe-manns/blob/master/LICENSE.rdoc]
