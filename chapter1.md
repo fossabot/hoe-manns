@@ -4,9 +4,9 @@
 
 ## About
 
-This kind of documentation explains a little bit more. 
+This kind of documentation explains a little bit more.
 
-Before you start, edit your ~/.hoerc and add (example):
+Before you start, edit your ~\/.hoerc and add \(example\):
 
 ```
 manns: 
@@ -14,7 +14,7 @@ manns:
     develpath: /home/sascha/RubymineProjects
 ```
 
-The docpath is optional if you like to use the update_manuals task. It expects to have a directory "manual/output" (created from the hoe-manualgen plugin).The develpath is the path to your development projects. It will used by the copy_wiki task.
+The docpath is optional if you like to use the update\_manuals task. It expects to have a directory "manual\/output" \(created from the hoe-manualgen plugin\).The develpath is the path to your development projects. It will used by the copy\_wiki task.
 
 ---
 
@@ -66,7 +66,7 @@ FileUtils.cp_r('manual/output', "#{docpath}/#{project}")
 end
 ```
 
-My project documentation is part of my Jekyll blog. The docdir resides now in "~/RubyMine/saigkill.github.io/docs".
+My project documentation is part of my Jekyll blog. The docdir resides now in "~\/RubyMine\/saigkill.github.io\/docs".
 
 ```ruby
 def self.clean_pkg_method 
@@ -77,7 +77,7 @@ puts 'Cleanup succeed'.color(:green)
 end
 ```
 
-Sometimes it can be useful to remove the pkg and recipes/pkg directory from your source. So just launch this method to do this.
+Sometimes it can be useful to remove the pkg and recipes\/pkg directory from your source. So just launch this method to do this.
 
 ```ruby
 namespace :bundle_audit do 
@@ -93,9 +93,15 @@ end
 end 
 task :bundle_audit do 
 Rake::Task['bundle_audit:run'].invoke 
-end```
+end
+```
 
-This Rake task provides 3 new Rake commands: bundle_audit:update, bundle_audit:run, and bundle_audit:check. A bundle_audit:run does bundle_audit:update and bundle_update:check. So you need in most cases just that one command.
+This Rake task provides 3 new Rake commands: 
+* **bundle_audit:update** 
+* **bundle_audit:run**
+* **bundle_audit:check**
+
+A **bundle_audit:run** does bundle_audit:update and bundle_update:check. So you need in most cases just that one command.
 
 ```ruby
 def self.copy_master 
@@ -116,7 +122,7 @@ puts 'Done'.colour(:green)
 end
 ```
 
-That method checks out the master, merges it with the develop branch and pushs it to origin/master. Then it creates a git tag with the version number and pushs all known tags to origin.
+That method checks out the master, merges it with the develop branch and pushs it to origin\/master. Then it creates a git tag with the version number and pushs all known tags to origin.
 
 ---
 
@@ -129,7 +135,7 @@ desc 'Update Gemfile.lock'task :update_gemfile_lock do Hoe::Manns.update_gemfile
 end
 ```
 
-You see, it just runs the method. A task ":update_gemfile_lock" runs a "update_gemfile_lock_method". hoe-manns ships two Rake tasks without any methods. These tasks are used to run a bunch of other tasks in a special order.
+You see, it just runs the method. A task ":update\_gemfile\_lock" runs a "update\_gemfile\_lock\_method". hoe-manns ships two Rake tasks without any methods. These tasks are used to run a bunch of other tasks in a special order.
 
 ```ruby
 desc 'Run all tasks before rake release' 
@@ -138,7 +144,7 @@ puts 'Ready to run rake release VERSION=x.y.z'.colour(:green)
 end
 ```
 
-This rake task runs some rake tasks in that order: git:manifest, bundler:gemfile, bundler:gemfile_lock, gem:spec_remove, update_workspace, bundle_audit:run and copy_master.
+This rake task runs some rake tasks in that order: git:manifest, bundler:gemfile, bundler:gemfile\_lock, gem:spec\_remove, update\_workspace, bundle\_audit:run and copy\_master.
 
 ```ruby
 desc 'Run all tasks after rake release' 
@@ -147,4 +153,5 @@ puts 'Release finished'.colour (:green)
 end
 ```
 
-This task runs: send_email , clean_pkg. That can be useful to automate things after the release.
+This task runs: send\_email , clean\_pkg. That can be useful to automate things after the release.
+
