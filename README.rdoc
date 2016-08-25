@@ -2,7 +2,8 @@
 
 home  :: http://saigkill.github.io
 code  :: http://github.com/saigkill/hoe-manns
-docu :: https://saigkill.github.io/docs/hoe-manns/en-US/html/index.html
+docu (en) :: https://saigkill.github.io/docs/hoe-manns/en-US/html/index.html
+docu (de) :: https://saigkill.github.io/docs/hoe-manns/de-DE/html/index.html
 apidoc :: http://www.rubydoc.info/gems/hoe-manns
 bugs  :: https://saigkill.myjetbrains.com/youtrack/issues
 min. rubyver :: 2.2.0
@@ -50,7 +51,7 @@ hoe-manns is a small collection of my personal used rake tasks for using with ho
 This Gem was programmed and tested for Linux systems. If anyone would like to make the methods also fit for other OS,
 i'm happy about Pull requests.
 
-For a detailed information please visit: https://saigkill.github.io/docs/hoe-manns/en-US/html/index.html
+For a detailed information please visit: https://saigkill.github.io/docs/hoe-manns/en-US/html/index.html (en) or https://saigkill.github.io/docs/hoe-manns/de-DE/html/index.html (de).
 
 If you like this piece of software don't forget to give the gitlab repo a star.
 
@@ -77,7 +78,7 @@ Also add hoe-manns to your requirements and recreate your Gemfile.
 
     gem install hoe-manns
 
-Edit your .hoerc: https://saigkill.github.io/docs/hoe-manns/en-US/html/index.html
+Edit your .hoerc: https://saigkill.github.io/docs/hoe-manns/en-US/html/index.html (en) or https://saigkill.github.io/docs/hoe-manns/de-DE/html/index.html (de).
 
 == DEVELOPERS:
 
