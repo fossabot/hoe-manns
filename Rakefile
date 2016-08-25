@@ -15,14 +15,11 @@ require 'hoe'
 
 Hoe.plugin :bundler
 Hoe.plugin :email
-# Hoe.plugin :gem_prelude_sucks
-#Hoe.plugins.delete :git
 #Hoe.plugin :git
 Hoe.plugin :manns
 Hoe.plugin :rdoc
 Hoe.plugin :rubocop
 Hoe.plugin :rubygems
-#Hoe.plugin :seattlerb
 Hoe.plugin :version
 
 ###########################################DEVELOPING ZONE##############################################################
@@ -54,7 +51,7 @@ Hoe.spec 'hoe-manns' do
   self.history_file = 'History.rdoc'
   self.readme_file = 'README.rdoc'
   self.extra_rdoc_files = FileList['*.rdoc'].to_a
-  self.post_install_message = '*** Edit your .hoerc: https://saigkill.github.io/docs/hoe-manns/hoe-manns-doc/ *** Please file bugreports and feature requests on: https://saigkill.myjetbrains.com/youtrack/issues'
+  self.post_install_message = '*** Edit your .hoerc: https://saigkill.github.io/docs/hoe-manns/en-US/html/index.html *** Please file bugreports and feature requests on: https://saigkill.myjetbrains.com/youtrack/issues'
 end
 
 ##################################################SETUP ZONE############################################################
