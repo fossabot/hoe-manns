@@ -14,3 +14,6 @@ ChangeLog
 pkg
 .idea
 vendor
+tmp
+trans_drop
+hoe-manns.xpr

@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE article [
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % myents SYSTEM "hoe-manns.ent">
+%myents;
+]>
+<article xmlns="http://docbook.org/ns/docbook" version="5.0">
+    <xi:include href="Article_Info.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <info>
+        <title>hoe-manns</title>
+    </info>   
+    <section>
+        <info>
+            <title>Einführung zur Version &VERSION;</title>
+        </info>        
+        <para>hoe-manns ist eine Erweiterung der Ruby Projektsoftware hoe (siehe <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://github.com/seattlerb/hoe"/> ). Es erweitert die Standard Rake-Tasks der Software um einige weitere nützliche.</para>
+        <para>Die Benutzung erfordert eine installierte Ruby Version (Höher oder gleich 2.2.0), parseconfig, bundler-audit sowie ein installiertes und eingerichtetes hoe.</para>
+    </section>
+    <section>
+        <info>
+            <title>Installation</title>
+        </info>
+        <para>Die Installation erfolgt in der Konsole via: <command>gem install
+            hoe-manns</command>.</para>
+    </section>
+    <section>
+        <info>
+            <title>Einbindung</title>
+        </info>
+        <para>Zum Einbinden von hoe-manns öffnen Sie das Rakefile Ihres Projektes und schreiben
+            folgendes oberhalb der hoe spec Zeile:</para>
+        <para><code>Hoe.plugin :manns </code></para>
+        <para><code>Hoe.spec 'yourproject' do ... </code></para>
+        <para><code>end</code></para>
+        <para>Selbstverständlich tragen Sie hoe-manns auch als Abhängigkeit in Ihr Rakefile ein, und
+            generieren ein neues Gemfile. Anschließend steht Ihnen hoe-manns zur Verfügung.</para>
+        <para>Züsätzlich müssen Sie folgende Eintragungen in Ihre ~/.hoerc Datei machen:</para>
+        <para><code>manns:</code></para>
+        <para><code> docpath: /home/youruser/IhrProjektordner/PfadZuIhrenDokumenten/</code></para>
+        <para><code> develpath: /home/youruser/IhrProjektordner</code></para>
+        <para>Der "<emphasis>docpath</emphasis>" bezeichnet einen Pfad, zu Ihrem
+            Dokumentationsverzeichnis. Nehmen wir an, Sie haben mittels hoe-manualgen eine
+            gerenderte statische Version Ihrer Projektdokumentation erstellt. So kann hoe-manns aus
+            dem Projekt-Verzeichnis "manual/output" alles in dieses Dokumentationsverzeichnis
+            kopieren. Innerhalb des docpath legt (sofern nicht vorhanden) hoe-manns ein Verzeichnis
+            mit dem Projektnamen an. Sie können diese dann ganz bequem in das Internet
+            hochladen.</para>
+        <para>Der "<emphasis>develpath</emphasis>" ist der Pfad zu Ihrem Hauptverzeichnis, in dem
+            Sie alle Softwareprojekte anlegen. Er wird aktuell nicht mehr benutzt, und kann leer
+            gelassen werden.</para>
+    </section>
+    <section>
+        <info>
+            <title>Benutzung</title>
+        </info>
+        <para>hoe-manns integriert eine Reihe zusätzlicher Rake-Tasks, die in der folgenden Tabelle
+            erläutert werden.</para>
+        <para>
+            <table frame="all">
+                <title>Die Rake Tasks</title>
+                <tgroup cols="2">
+                    <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+                    <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+                    <thead>
+                        <row>
+                            <entry>Task</entry>
+                            <entry>Wirkung</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry><command>rake bundler:gemfile_lock</command></entry>
+                            <entry>generiert eine neue Gemfile.lock Datei</entry>
+                        </row>
+                        <row>
+                            <entry><command>rake bundle-audit:run</command></entry>
+                            <entry>lädt die aktuellen Sicherheitswarnungen von bundle-audit
+                                herunter, und prüft auf eventuelle Schwachstellen bei den
+                                Abhängigkeiten.</entry>
+                        </row>
+                        <row>
+                            <entry><command>rake clean-pkg</command></entry>
+                            <entry>prüft das Vorhandensein eines "pkg" Verzeichnisses, und löscht
+                                es.</entry>
+                        </row>
+                        <row>
+                            <entry><command>rake copy_manuals</command></entry>
+                            <entry>kopiert den Inhalt von manuals/output in den in der
+                                Konfigurationsdatei festgelegten docpath, im Unterverzeichnis des
+                                aktuellen Projektnamens.</entry>
+                        </row>
+                        <row>
+                            <entry><command>rake copy_master</command></entry>
+                            <entry>geht vom Vorhandensein eines Entwicklungsbranches "develop" aus.
+                                Er merged den develop Branch mit dem master Branch, führt ein rake
+                                git:tag aus, und wechselt wieder in den develop Branch.</entry>
+                        </row>
+                        <row>
+                            <entry><command>rake remove_pre_gemspec</command></entry>
+                            <entry>prüft das Vorhandensein einer Pre-Gemspec (ein zu Testzwecken
+                                generiertes Gemspec), und löscht es.</entry>
+                        </row>
+                        <row>
+                            <entry><command>rake run_before_release</command></entry>
+                            <entry>führt der Reihe nach folgende Tasks aus: git:manifest,
+                                bundler:gemfile, bundler:gemfile_lock, gem:spec_remove,
+                                bundle_audit:run, update_workspace, copy_master.</entry>
+                        </row>
+                        <row>
+                            <entry><command>rake run_after_release</command></entry>
+                            <entry>führt der Reihe nach folgende Tasks aus:
+                                send_email,clean_pkg</entry>
+                        </row>
+                        <row>
+                            <entry><command>rake update_workspace</command></entry>
+                            <entry>checkt alles in den aktuellen Branch ein.</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </para>
+    </section>
+    <section>
+        <title>Weitere Informationen</title>
+        <para>Die API-Dokumentation von hoe-manns liegt hier: <link
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="http://www.rubydoc.info/gems/hoe-manns">http://www.rubydoc.info/gems/hoe-manns</link>.</para>
+        <para>Bugreports und Feature Requests können gerne hier eingereicht werden: <link
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="https://saigkill.myjetbrains.com/youtrack/issues"
+                >https://saigkill.myjetbrains.com/youtrack/issues</link>.</para>
+        <para>
+            <caution>
+                <para>Diese Software wurde auf einem Linux-System mit RVM als Rubymanager entworfen
+                    und getestet. Sollte jemand eine Idee haben, wie man die Software auch unter
+                    anderen Betriebssystemen oder Rubymanagern lauffähig macht, kann er gerne einen
+                    Pull-Request im Github Projekt einreichen.</para>
+            </caution>
+        </para>
+    </section>
+    <xi:include href="Revision_History.xml" xmlns:xi="http://www.w3.org/2001/XInclude"></xi:include>
+    <index></index>
+</article>

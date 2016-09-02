@@ -1,0 +1,30 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2016-08-25 15:02+0200\n"
+"PO-Revision-Date: 2016-08-25 15:52+0200\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: None\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+msgid "Versionsgeschichte"
+msgstr "Version History"
+
+msgid "Sascha"
+msgstr "Sascha"
+
+msgid "Manns"
+msgstr "Manns"
+
+msgid "fixed HM-2: Simplify copy_wiki method (dropped)"
+msgstr "fixed HM-2: Simplify copy_wiki method (dropped)"
+
+msgid "fixed HM-3: manns.rb (Code cleanup)"
+msgstr "fixed HM-3: manns.rb (Code cleanup)"
+
+msgid "removed pandoc dependency"
+msgstr "removed pandoc dependency"
