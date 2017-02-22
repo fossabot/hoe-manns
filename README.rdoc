@@ -1,11 +1,11 @@
 = hoe-manns
 
-home  :: http://saigkill.github.io
+home  :: http://saigkill.tuxfamily.org
 code  :: http://github.com/saigkill/hoe-manns
-docu (en) :: https://saigkill.github.io/docs/hoe-manns/en-US/html/index.html
-docu (de) :: https://saigkill.github.io/docs/hoe-manns/de-DE/html/index.html
+docu (en) :: https://saigkill.tuxfamily.org/dotclear/docs/hoe-manns/tmp/en-US/html/index.html
+docu (de) :: https://saigkill.tuxfamily.org/dotclear/docs/hoe-manns/tmp/en-US/html/index.html
 apidoc :: http://www.rubydoc.info/gems/hoe-manns
-bugs  :: https://saigkill.myjetbrains.com/youtrack/issues
+bugs  :: https://github.com/saigkill/hoe-manns/issues
 min. rubyver :: 2.2.0
 license :: {<img src="http://img.shields.io/:license-mit-blue.svg" />}[https://github.com/saigkill/hoe-manns/blob/master/LICENSE.rdoc]
 last public version  :: {<img src="https://badge.fury.io/rb/hoe-manns.png" alt="Last Version" />}[http://rubygems.org/gems/hoe-manns]
@@ -51,7 +51,7 @@ hoe-manns is a small collection of my personal used rake tasks for using with ho
 This Gem was programmed and tested for Linux systems. If anyone would like to make the methods also fit for other OS,
 i'm happy about Pull requests.
 
-For a detailed information please visit: https://saigkill.github.io/docs/hoe-manns/en-US/html/index.html (en) or https://saigkill.github.io/docs/hoe-manns/de-DE/html/index.html (de).
+For a detailed information please visit: https://saigkill.tuxfamily.org/dotclear/docs/hoe-manns/tmp/en-US/html/index.html (en) or https://saigkill.tuxfamily.org/dotclear/docs/hoe-manns/tmp/en-US/html/index.html (de).
 
 If you like this piece of software don't forget to give the gitlab repo a star.
 
@@ -78,7 +78,7 @@ Also add hoe-manns to your requirements and recreate your Gemfile.
 
     gem install hoe-manns
 
-Edit your .hoerc: https://saigkill.github.io/docs/hoe-manns/en-US/html/index.html (en) or https://saigkill.github.io/docs/hoe-manns/de-DE/html/index.html (de).
+Edit your .hoerc: https://saigkill.tuxfamily.org/dotclear/docs/hoe-manns/tmp/en-US/html/index.html (en) or https://saigkill.tuxfamily.org/dotclear/docs/hoe-manns/tmp/en-US/html/index.html (de).
 
 == DEVELOPERS:
 
@@ -97,7 +97,7 @@ Read https://github.com/saigkill/hoe-manns/blob/master/CONTRIBUTING.md
 
 (The MIT License)
 
-Copyright (c) 2015-2016 Sascha Manns <samannsml@directbox.com>
+Copyright (c) 2015-2017 Sascha Manns <Sascha.Manns@mailbox.org>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

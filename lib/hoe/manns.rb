@@ -4,7 +4,7 @@
 # @abstract: hoe-manns is a small collection of my personal used rake tasks for
 #            using with hoe
 #
-# Copyright (c) 2015-2016 Sascha Manns <samannsml@directbox.com>
+# Copyright (c) 2015-2017 Sascha Manns <Sascha.Manns@mailbox.org>
 # License: MIT
 
 # Dependencies
@@ -13,7 +13,7 @@ require 'hoe'
 # Main module for hoe-manns
 module Hoe::Manns
   # Version constant for HOE::Manns
-  VERSION = '1.6.0'
+  VERSION = '1.6.1'
 
   attr_accessor :remove_pre_gemspec
   attr_accessor :copy_manuals

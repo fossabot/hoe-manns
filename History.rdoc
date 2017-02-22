@@ -1,3 +1,9 @@
+=== 1.6.1 / 2017-02-22
+
+* 1 minor enhancement
+
+  * updated dependencies
+
 === 1.6.0 / 2016-08-08
 
 * 3 major enhancements

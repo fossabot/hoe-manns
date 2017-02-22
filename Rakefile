@@ -15,7 +15,7 @@ require 'hoe'
 
 Hoe.plugin :bundler
 Hoe.plugin :email
-#Hoe.plugin :git
+Hoe.plugin :git
 Hoe.plugin :manns
 Hoe.plugin :rdoc
 Hoe.plugin :rubocop
@@ -25,7 +25,7 @@ Hoe.plugin :version
 ###########################################DEVELOPING ZONE##############################################################
 # rubocop:disable Metrics/LineLength
 Hoe.spec 'hoe-manns' do
-  developer('Sascha Manns', 'samannsml@directbox.com')
+  developer('Sascha Manns', 'Sascha.Manns@mailbox.org')
   license 'MIT' # this should match the license in the README
   require_ruby_version '>= 2.2.0'
 
@@ -34,7 +34,7 @@ Hoe.spec 'hoe-manns' do
 
   dependency 'parseconfig', '~> 1.0'
   dependency 'rainbow', '~> 2.1'
-  dependency 'bundler-audit', '~> 0.4'
+  dependency 'bundler-audit', '~> 0.5'
 
   extra_dev_deps << ['coveralls', '~> 0.8']
   extra_dev_deps << ['hoe-bundler', '~> 1.3']
@@ -44,14 +44,14 @@ Hoe.spec 'hoe-manns' do
   extra_dev_deps << ['hoe-rubygems', '~> 1.0']
   extra_dev_deps << ['hoe-seattlerb', '~> 1.3']
   extra_dev_deps << ['hoe-version', '~> 1.2']
-  extra_dev_deps << ['rake', '~> 11.2']
+  extra_dev_deps << ['rake', '~> 11.3']
   extra_dev_deps << ['rspec', '~> 3.5']
   extra_dev_deps << ['simplecov', '~> 0.12']
 
   self.history_file = 'History.rdoc'
   self.readme_file = 'README.rdoc'
   self.extra_rdoc_files = FileList['*.rdoc'].to_a
-  self.post_install_message = '*** Edit your .hoerc: https://saigkill.github.io/docs/hoe-manns/en-US/html/index.html *** Please file bugreports and feature requests on: https://saigkill.myjetbrains.com/youtrack/issues'
+  self.post_install_message = '*** Edit your .hoerc: https://saigkill.tuxfamily.org/dotclear/docs/hoe-manns/tmp/en-US/html/index.html *** Please file bugreports and feature requests on: https://github.com/saigkill/hoe-manns/issues'
 end
 
 ##################################################SETUP ZONE############################################################
