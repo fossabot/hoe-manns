@@ -15,7 +15,7 @@ require 'hoe'
 
 Hoe.plugin :bundler
 Hoe.plugin :email
-Hoe.plugin :git
+#Hoe.plugin :git
 Hoe.plugin :manns
 Hoe.plugin :rdoc
 Hoe.plugin :rubocop
@@ -33,13 +33,12 @@ Hoe.spec 'hoe-manns' do
   #email_to << 'Sascha.Manns@directbox.com'
 
   dependency 'parseconfig', '~> 1.0'
-  dependency 'rainbow', '~> 2.1'
+  dependency 'rainbow', '~> 2.2'
   dependency 'bundler-audit', '~> 0.5'
 
   extra_dev_deps << ['coveralls', '~> 0.8']
   extra_dev_deps << ['hoe-bundler', '~> 1.3']
   extra_dev_deps << ['hoe-git', '~> 1.6']
-  extra_dev_deps << ['hoe-manns', '~> 1.6']
   extra_dev_deps << ['hoe-rubocop', '~> 1.0']
   extra_dev_deps << ['hoe-rubygems', '~> 1.0']
   extra_dev_deps << ['hoe-seattlerb', '~> 1.3']
@@ -51,7 +50,7 @@ Hoe.spec 'hoe-manns' do
   self.history_file = 'History.rdoc'
   self.readme_file = 'README.rdoc'
   self.extra_rdoc_files = FileList['*.rdoc'].to_a
-  self.post_install_message = '*** Edit your .hoerc: https://saigkill.tuxfamily.org/dotclear/docs/hoe-manns/tmp/en-US/html/index.html *** Please file bugreports and feature requests on: https://github.com/saigkill/hoe-manns/issues'
+  self.post_install_message = '*** Edit your .hoerc: https://saigkill.tuxfamily.org/docs/hoe-manns/en-US/html/ *** Please file bugreports and feature requests on: https://github.com/saigkill/hoe-manns/issues'
 end
 
 ##################################################SETUP ZONE############################################################

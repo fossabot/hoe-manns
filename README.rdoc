@@ -2,8 +2,8 @@
 
 home  :: http://saigkill.tuxfamily.org
 code  :: http://github.com/saigkill/hoe-manns
-docu (en) :: https://saigkill.tuxfamily.org/dotclear/docs/hoe-manns/tmp/en-US/html/index.html
-docu (de) :: https://saigkill.tuxfamily.org/dotclear/docs/hoe-manns/tmp/en-US/html/index.html
+docu (en) :: https://saigkill.tuxfamily.org/docs/hoe-manns/en-US/html/
+docu (de) :: https://saigkill.tuxfamily.org/docs/hoe-manns/de-DE/html/
 apidoc :: http://www.rubydoc.info/gems/hoe-manns
 bugs  :: https://github.com/saigkill/hoe-manns/issues
 min. rubyver :: 2.2.0
@@ -21,7 +21,7 @@ coverage :: {<img src="https://coveralls.io/repos/saigkill/hoe-manns/badge.svg?b
 dependency check :: {<img src="https://gemnasium.com/saigkill/hoe-manns.svg" alt="Dependency Status" />}[https://gemnasium.com/saigkill/hoe-manns]
 documentation quality :: {<img src="http://inch-ci.org/github/saigkill/hoe-manns.svg?branch=master" alt="Documentation Quality" />}[http://inch-ci.org/github/saigkill/hoe-manns]
 donations :: {<img src="https://pledgie.com/campaigns/30268.png?skin_name=chrome" alt="Donations" />}[https://pledgie.com/campaigns/30268]
-donations :: {<img src="http://tsv-neuss.de/cms/upload/News-Bilder/amazon1.png" alt="Donations" />}[http://www.amazon.de/registry/wishlist/D75HOEQ00BDD]
+donations :: {<img src="https://saigkill.tuxfamily.org/dotclear/public/Amazon.png" alt="Donations" />}[http://www.amazon.de/registry/wishlist/D75HOEQ00BDD]
 
 == DESCRIPTION:
 
@@ -43,15 +43,14 @@ hoe-manns is a small collection of my personal used rake tasks for using with ho
 * Removes the old *.gemspec created in test cases
 * commits the workspace before rake release
 * copies your manuals to your docpath.
-* runs the rake tasks before release: git:manifest, bundler:gemfile, update_gemfile_lock, remove_pre_gemspec, update_workspace, bundler_audit:run and copy_mirror.
+* runs the rake tasks before release: git:manifest, bundler:gemfile, update_gemfile_lock, remove_pre_gemspec,
+                                      update_workspace, bundler_audit:run and copy_mirror.
 * runs after release: send_email.
 * Cleans up the pkg dir
 * provides bundler_audit tasks
 
 This Gem was programmed and tested for Linux systems. If anyone would like to make the methods also fit for other OS,
 i'm happy about Pull requests.
-
-For a detailed information please visit: https://saigkill.tuxfamily.org/dotclear/docs/hoe-manns/tmp/en-US/html/index.html (en) or https://saigkill.tuxfamily.org/dotclear/docs/hoe-manns/tmp/en-US/html/index.html (de).
 
 If you like this piece of software don't forget to give the gitlab repo a star.
 
@@ -78,7 +77,7 @@ Also add hoe-manns to your requirements and recreate your Gemfile.
 
     gem install hoe-manns
 
-Edit your .hoerc: https://saigkill.tuxfamily.org/dotclear/docs/hoe-manns/tmp/en-US/html/index.html (en) or https://saigkill.tuxfamily.org/dotclear/docs/hoe-manns/tmp/en-US/html/index.html (de).
+Edit your .hoerc: https://saigkill.tuxfamily.org/docs/hoe-manns/en-US/html/ (en) or https://saigkill.tuxfamily.org/docs/hoe-manns/de-DE/html/ (de).
 
 == DEVELOPERS:
 

@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # @encoding: utf-8
 # @author: Sascha Manns
 # @abstract: hoe-manns is a small collection of my personal used rake tasks for
@@ -13,7 +12,7 @@ require 'hoe'
 # Main module for hoe-manns
 module Hoe::Manns
   # Version constant for HOE::Manns
-  VERSION = '1.6.1'
+  VERSION = '1.6.2'
 
   attr_accessor :remove_pre_gemspec
   attr_accessor :copy_manuals
