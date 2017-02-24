@@ -15,7 +15,7 @@ require 'hoe'
 
 Hoe.plugin :bundler
 Hoe.plugin :email
-#Hoe.plugin :git
+Hoe.plugin :git
 Hoe.plugin :manns
 Hoe.plugin :rdoc
 Hoe.plugin :rubocop

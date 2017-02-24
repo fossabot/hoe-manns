@@ -5,13 +5,12 @@
 source "https://rubygems.org/"
 
 gem "parseconfig", "~>1.0"
-gem "rainbow", "~>2.1"
+gem "rainbow", "~>2.2"
 gem "bundler-audit", "~>0.5"
 
 gem "coveralls", "~>0.8", :group => [:development, :test]
 gem "hoe-bundler", "~>1.3", :group => [:development, :test]
 gem "hoe-git", "~>1.6", :group => [:development, :test]
-gem "hoe-manns", "~>1.6", :group => [:development, :test]
 gem "hoe-rubocop", "~>1.0", :group => [:development, :test]
 gem "hoe-rubygems", "~>1.0", :group => [:development, :test]
 gem "hoe-seattlerb", "~>1.3", :group => [:development, :test]
@@ -20,6 +19,6 @@ gem "rake", "~>11.3", :group => [:development, :test]
 gem "rspec", "~>3.5", :group => [:development, :test]
 gem "simplecov", "~>0.12", :group => [:development, :test]
 gem "rdoc", "~>4.0", :group => [:development, :test]
-gem "hoe", "~>3.15", :group => [:development, :test]
+gem "hoe", "~>3.16", :group => [:development, :test]
 
 # vim: syntax=ruby
