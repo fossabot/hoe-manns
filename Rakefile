@@ -29,9 +29,6 @@ Hoe.spec 'hoe-manns' do
   license 'MIT' # this should match the license in the README
   require_ruby_version '>= 2.2.0'
 
-  email_to << 'ruby-talk@ruby-lang.org'
-  #email_to << 'Sascha.Manns@directbox.com'
-
   dependency 'parseconfig', '~> 1.0'
   dependency 'rainbow', '~> 2.2'
   dependency 'bundler-audit', '~> 0.5'

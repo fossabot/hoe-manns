@@ -1,27 +1,17 @@
 = hoe-manns
 
-home  :: http://saigkill.tuxfamily.org
-code  :: http://github.com/saigkill/hoe-manns
-docu (en) :: https://saigkill.tuxfamily.org/docs/hoe-manns/en-US/html/
-docu (de) :: https://saigkill.tuxfamily.org/docs/hoe-manns/de-DE/html/
-apidoc :: http://www.rubydoc.info/gems/hoe-manns
-bugs  :: https://github.com/saigkill/hoe-manns/issues
-min. rubyver :: 2.2.0
-license :: {<img src="http://img.shields.io/:license-mit-blue.svg" />}[https://github.com/saigkill/hoe-manns/blob/master/LICENSE.rdoc]
-last public version  :: {<img src="https://badge.fury.io/rb/hoe-manns.png" alt="Last Version" />}[http://rubygems.org/gems/hoe-manns]
-downloads latest :: {<img src="https://img.shields.io/gem/dtv/hoe-manns.svg" alt="Downloads latest version" />}[http://rubygems.org/gems/hoe-manns]
-downloads all :: {<img src="https://img.shields.io/gem/dt/hoe-manns.svg" alt="Downloads all versions" />}[http://rubygems.org/gems/hoe-manns]
-continuous integration :: {<img src="https://travis-ci.org/saigkill/hoe-manns.svg" />}[https://travis-ci.org/saigkill/hoe-manns]
-continuous integration master :: {<img src="https://scrutinizer-ci.com/g/saigkill/hoe-manns/badges/build.png?b=master" />}[https://scrutinizer-ci.com/g/saigkill/hoe-manns]
-code quality :: {<img src="https://scrutinizer-ci.com/g/saigkill/hoe-manns/badges/quality-score.png?b=master" />}[https://scrutinizer-ci.com/g/saigkill/hoe-manns]
-code quality :: {<img src="https://d3s6mut3hikguw.cloudfront.net/github/saigkill/hoe-manns/badges/gpa.svg" alt="Code Quality" />}[https://codeclimate.com/github/saigkill/hoe-manns]
-code quality :: {<img src="https://api.codacy.com/project/badge/Grade/59c5e250bebd4116b39a7577f361f061" alt="Codacy code quality" />}[https://www.codacy.com/app/samannsml/hoe-manns?utm_source=github.com&utm_medium=referral&utm_content=saigkill/hoe-manns&utm_campaign=Badge_Grade]
-security :: {<img src="https://hakiri.io/github/saigkill/hoe-manns/master.svg" alt="security" />}[https://hakiri.io/github/saigkill/hoe-manns/master]
-coverage :: {<img src="https://coveralls.io/repos/saigkill/hoe-manns/badge.svg?branch=master&service=github" alt="Coverage Status" />}[https://coveralls.io/github/saigkill/hoe-manns?branch=master]
-dependency check :: {<img src="https://gemnasium.com/saigkill/hoe-manns.svg" alt="Dependency Status" />}[https://gemnasium.com/saigkill/hoe-manns]
-documentation quality :: {<img src="http://inch-ci.org/github/saigkill/hoe-manns.svg?branch=master" alt="Documentation Quality" />}[http://inch-ci.org/github/saigkill/hoe-manns]
-donations :: {<img src="https://pledgie.com/campaigns/30268.png?skin_name=chrome" alt="Donations" />}[https://pledgie.com/campaigns/30268]
-donations :: {<img src="https://saigkill.tuxfamily.org/dotclear/public/Amazon.png" alt="Donations" />}[http://www.amazon.de/registry/wishlist/D75HOEQ00BDD]
+code  :: https://launchpad.net/hoe-manns
+rdoc  :: http://www.rubydoc.info/gems/hoe-manns
+docs  :: https://saigkill.github.io/hoe-manns/about/
+bugs  :: https://bugs.launchpad.net/hoe-manns
+questions :: https://answers.launchpad.net/hoe-manns
+feature requests :: https://blueprints.launchpad.net/hoe-manns
+openhub statistics :: https://www.openhub.net/p/hoe-manns
+authors blog :: https://saigkill.tuxfamily.org
+min_rubyver :: 2.3.0
+
+If you're reading this on Github, please keep in mind, that this is just a
+mirror. The development happens on: https://launchpad.net/hoe-manns
 
 == DESCRIPTION:
 
@@ -36,6 +26,17 @@ hoe-manns is a small collection of my personal used rake tasks for using with ho
 * run_before_release
 * run_after_release
 * update_workspace
+
+The History.rdoc contains a detailed description on what has changed. For most
+users the NEWS file might be a better place to look since it contains
+change summaries between the different versions.
+
+youtube_dlhelper is released under the GPL3 License, see the file 'License.rdoc'
+for more information.
+
+The official web site is:
+
+    https://launchpad.net/hoe-manns
 
 == FEATURES/PROBLEMS:
 
@@ -52,7 +53,8 @@ hoe-manns is a small collection of my personal used rake tasks for using with ho
 This Gem was programmed and tested for Linux systems. If anyone would like to make the methods also fit for other OS,
 i'm happy about Pull requests.
 
-If you like this piece of software don't forget to give the gitlab repo a star.
+See the {FAQs}[https://answers.launchpad.net/hoe-manns/+faqs] for checking known issues.
+See the {status}[https://github.com/saigkill/hoe-manns/blob/master/STATUS.rdoc] of the app.
 
 == SYNOPSIS:
 
@@ -66,6 +68,8 @@ Use in your Rakefile:
 
 Also add hoe-manns to your requirements and recreate your Gemfile.
 
+Read the documentation at: https://saigkill.github.io/hoe-manns/about/
+
 == REQUIREMENTS:
 
 * rake
@@ -75,9 +79,11 @@ Also add hoe-manns to your requirements and recreate your Gemfile.
 
 == INSTALL:
 
+The installation is very easy.
+
     gem install hoe-manns
 
-Edit your .hoerc: https://saigkill.tuxfamily.org/docs/hoe-manns/en-US/html/ (en) or https://saigkill.tuxfamily.org/docs/hoe-manns/de-DE/html/ (de).
+Read the documentation at: https://saigkill.github.io/hoe-manns/about/
 
 == DEVELOPERS:
 
@@ -88,31 +94,87 @@ After checking out the source, run:
 This task will install any missing dependencies, run the tests/specs,
 and generate the RDoc.
 
-Merge Requests are welcome :-)
+=== IDEAS:
 
-Read https://github.com/saigkill/hoe-manns/blob/master/CONTRIBUTING.md
+* Add ideas on: https://blueprints.launchpad.net/hoe-manns
 
-== LICENSE:
+=== COOL HACKS:
 
-(The MIT License)
+* Open a bugreport on https://bugs.launchpad.net/hoe-manns.
+* Please use the -u flag when generating the patch as it makes the patch
+  more readable.
+* Write a good explanation of what the patch does.
+* It is better to use git format-patch command: git format-patch HEAD^
 
-Copyright (c) 2015-2017 Sascha Manns <Sascha.Manns@mailbox.org>
+=== CONTRIBUTOR CODE OF CONDUCT:
 
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-'Software'), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
+As contributors and maintainers of this project, we pledge to respect all
+people who contribute through reporting issues, posting feature requests,
+updating documentation, submitting pull requests or patches, and other
+activities.
 
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
+We are committed to making participation in this project a harassment-free
+experience for everyone, regardless of level of experience, gender, gender
+identity and expression, sexual orientation, disability, personal
+appearance, body size, race, age, or religion.
 
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Examples of unacceptable behavior by participants include the use of sexual
+language or imagery, derogatory comments or personal attacks, trolling,
+public or private harassment, insults, or other unprofessional conduct.
+
+Project maintainers have the right and responsibility to remove, edit, or
+reject comments, commits, code, wiki edits, issues, and other contributions
+that are not aligned to this Code of Conduct. Project maintainers who do
+not follow the Code of Conduct may be removed from the project team.
+
+Instances of abusive, harassing, or otherwise unacceptable behavior may be
+reported by opening an issue or contacting one or more of the project
+maintainers.
+
+This Code of Conduct is adapted from the {Contributor Covenant}[http:contributor-covenant.org],
+version 1.0.0, available at {http://contributor-covenant.org/version/1/0/0/}[http://contributor-covenant.org/version/1/0/0/].
+
+=== MAINTANANCE POLICY:
+
+I'm following the Semantic Versioning for its releases: (Major).(Minor).(Patch).
+
+ * Major version: Whenever there is something significant or any backwards
+   incompatible changes.
+ * Minor version: When new, backwards compatible functionality is introduced a
+   minor feature is introduced, or when a set of smaller features is rolled out.
+ * Patch number: When backwards compatible bug fixes are introduced that fix
+   incorrect behavior.
+ * The current stable release will receive security patches and bug fixes
+   (eg. 5.0 -> 5.0.1).
+ * Feature releases will mark the next supported stable release where the minor
+   version is increased numerically by increments of one (eg. 5.0 -> 5.1).
+
+I encourage everyone to run the latest stable release to ensure that you can
+easily upgrade to the most secure and feature rich experience. In order to
+make sure you can easily run the most recent stable release, we are working
+hard to keep the update process simple and reliable.
+
+=== STRUCTURE:
+
+==== BRANCHES:
+
+===== `master` BRANCH:
+The master branch is the current edge of development.
+
+===== `X.X` BRANCH:
+The X.X branch is the last stable branch. It will used for tarballs.
+
+===== MERGE REQUESTS:
+If you want to merge your branch with the trunk, join the team.
+
+Please base all Merge requests off the `master` branch. Merges to
+`X.X` only occur through the `master` branch.
+
+== COMMUNICATION:
+
+Join the team on: https://launchpad.net/~hoe-manns.
+
+== PROBLEM REPORTING:
+
+Bugs should be reported to https://bugs.launchpad.net/hoe-manns. You will need to create an
+account for yourself.

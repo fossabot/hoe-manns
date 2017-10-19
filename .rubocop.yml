@@ -6,12 +6,15 @@ AllCops:
 
   Exclude:
     - 'Rakefile'
+    - 'Gemfile'
+    - 'Gemfile.lock'
+    - 'docs/**/*'
 
   DisplayCopNames: true
 
 Metrics/LineLength:
   Enabled: true
-  Max: 80
+  Max: 120
 
 Metrics/CyclomaticComplexity:
   Severity: warning

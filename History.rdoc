@@ -1,3 +1,9 @@
+=== 1.6.2 / 2017-02-25
+
+* 1 minor enhancement
+
+  * fixed travis
+
 === 1.6.1 / 2017-02-22
 
 * 1 minor enhancement

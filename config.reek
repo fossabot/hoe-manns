@@ -9,7 +9,7 @@ ClassVariable:
   enabled: true
   exclude: []
 ControlParameter:
-  enabled: true
+  enabled: false
   exclude: []
 DataClump:
   enabled: true
@@ -17,9 +17,9 @@ DataClump:
   max_copies: 2
   min_clump_size: 2
 DuplicateMethodCall:
-  enabled: true
+  enabled: false
   exclude: []
-  max_calls: 3
+  max_calls: 1
   allow_calls: []
 FeatureEnvy:
   enabled: true
@@ -44,7 +44,7 @@ ModuleInitialize:
 NestedIterators:
   enabled: true
   exclude: []
-  max_allowed_nesting: 1
+  max_allowed_nesting: 2
   ignore_iterators: []
 NilCheck:
   enabled: true
@@ -68,7 +68,7 @@ TooManyStatements:
   enabled: true
   exclude:
   - initialize
-  max_statements: 15
+  max_statements: 6
 UncommunicativeMethodName:
   enabled: true
   exclude: []

@@ -1,12 +1,23 @@
 language: ruby
 rvm:
   - 2.2.0
-  - 2.2.1
-  - 2.2.2
-  - 2.2.3
+  - 2.3.0
+  - 2.4.0
+  - 2.4.1
+  - ruby-head
+  - jruby
+  - jruby-head
+
+matrix:
+  allow_failures:
+  - rvm: jruby
+  - rvm: jruby-head
+  - rvm: ruby-head
+
+cache: bundler
 
 dist: trusty
-sudo: required
+sudo: false
 
 os:
   - linux
@@ -21,6 +32,8 @@ env:
 
 before_install:
     - gem install bundler
+    - sudo apt-get update
+    - sudo apt-get install software-properties-common -y
 
 after_success:
     - CI=true TRAVIS=true coveralls --verbose
