@@ -1,4 +1,4 @@
-# @encoding: utf-8
+
 # @author: Sascha Manns
 # @abstract: hoe-manns is a small collection of my personal used rake tasks for
 #            using with hoe
@@ -12,7 +12,7 @@ require 'hoe'
 # Main module for hoe-manns
 module Hoe::Manns
   # Version constant for HOE::Manns
-  VERSION = '1.6.2'
+  VERSION = '1.6.2'.freeze
 
   attr_accessor :remove_pre_gemspec
   attr_accessor :copy_manuals
@@ -33,7 +33,6 @@ module Hoe::Manns
 
   # Definitions of the Rake task
   def define_manns_tasks
-    # rubocop:disable Metrics/LineLength
     # Rake Task for updating Gemfile.lock
     desc 'Update Gemfile.lock'
     task 'bundler:gemfile_lock' do
@@ -67,16 +66,16 @@ module Hoe::Manns
 
     # Rake Task for running needed Rake Tasks before running rake release
     desc 'Run all tasks before rake release'
-    task :run_before_release => %w(git:manifest bundler:gemfile
-bundler:gemfile_lock gem:spec_remove bundle_audit:run update_workspace
-copy_master) do
+    task run_before_release: %w[git:manifest bundler:gemfile
+                                bundler:gemfile_lock gem:spec_remove bundle_audit:run update_workspace
+                                copy_master] do
       puts 'Ready to run rake release VERSION=x.y.z'.colour(:green)
     end
 
     # Rake Task for running needed Rake Tasks after running rake release
     desc 'Run all tasks after rake release'
-    task :run_after_release => %w(send_email clean_pkg) do
-      puts 'Release finished'.colour (:green)
+    task run_after_release: %w[send_email clean_pkg] do
+      puts 'Release finished'.colour :green
     end
 
     # Rake Task for cleaning up the pkg
@@ -126,14 +125,14 @@ copy_master) do
   # Method for updating workspace
   def self.update_workspace_method
     puts 'Updating workspace'.colour(:yellow)
-    %w(Rakefile Gemfile Gemfile.lock .autotest .codeclimate.yml .coveralls.yml
-.gemnasium.yml .gitignore .rspec .rubocop.yml .scrutinizer.yml .travis.yml
-CODE_OF_CONDUCT.md config.reek CONTRIBUTING.md History.rdoc Index.yml
-LICENSE.rdoc MAINTENANCE.md Manifest.txt README.rdoc VERSION
-recipes/recipe.rb).each do |i|
+    %w[Rakefile Gemfile Gemfile.lock .autotest .codeclimate.yml .coveralls.yml
+       .gemnasium.yml .gitignore .rspec .rubocop.yml .scrutinizer.yml .travis.yml
+       CODE_OF_CONDUCT.md config.reek CONTRIBUTING.md History.rdoc Index.yml
+       LICENSE.rdoc MAINTENANCE.md Manifest.txt README.rdoc VERSION
+       recipes/recipe.rb].each do |i|
       system("git add #{i}") if File.exist?(i)
     end
-    %w(bin etc data docs lib test spec).each do |d|
+    %w[bin etc data docs lib test spec].each do |d|
       system("git add #{d}/*") if File.exist?(d)
     end
     system('git commit -m "Updated workspace"')
@@ -146,7 +145,7 @@ recipes/recipe.rb).each do |i|
   def self.copy_manuals_method
     puts 'Copying manual pages to target'.colour(:yellow)
     project = Hoe::Manns.get_projectname
-    config = YAML.load(File.read("#{Dir.home}/.hoerc"))
+    config = YAML.safe_load(File.read("#{Dir.home}/.hoerc"))
     docpath = config['manns']['docpath'].to_s
     FileUtils.cp_r('manual/output', "#{docpath}/#{project}")
     puts 'Copied manuals'.colour(:green)
@@ -170,14 +169,14 @@ recipes/recipe.rb).each do |i|
 
   # Method for getting the project name
   def self.get_projectname
-    pnameraw = File.open(*Dir.glob('README.*')) { |f| f.readline }
+    pnameraw = File.open(*Dir.glob('README.*'), &:readline)
     project = pnameraw.gsub(/[^0-9A-Za-z_-]/, '')
     return project
   end
 
   # Method for getting the develpath
   def self.get_develpath
-    config = YAML.load(File.read("#{Dir.home}/.hoerc"))
+    config = YAML.safe_load(File.read("#{Dir.home}/.hoerc"))
     develpath = config['manns']['develpath'].to_s
     return develpath
   end
@@ -189,5 +188,4 @@ recipes/recipe.rb).each do |i|
     FileUtils.rm_rf('recipes/pkg') if Dir.exist?('recipes/pkg')
     puts 'Cleanup succeed'.colour(:green)
   end
-
 end
