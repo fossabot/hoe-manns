@@ -22,7 +22,6 @@ module Hoe::Manns
   VERSION = '1.6.2'.freeze
 
   attr_accessor :remove_pre_gemspec
-  attr_accessor :copy_manuals
   attr_accessor :copy_master
   attr_accessor :run_before_release
   attr_accessor :run_after_release
@@ -31,9 +30,7 @@ module Hoe::Manns
 
   # Initialize plugin
   def initialize_manns
-    require 'yaml'
     require 'fileutils'
-    require 'parseconfig'
     require 'rainbow/ext/string'
     require 'bundler/audit/cli'
   end
@@ -74,9 +71,8 @@ module Hoe::Manns
     # Rake Task for running needed Rake Tasks before running rake release
     desc 'Run all tasks before rake release'
     task run_before_release: %w[git:manifest bundler:gemfile
-                                bundler:gemfile_lock gem:spec_remove bundle_audit:run update_workspace
-                                copy_master] do
-      puts 'Ready to run rake release VERSION=x.y.z'.colour(:green)
+                                bundler:gemfile_lock gem:spec_remove bundle_audit:run copy_master] do
+      puts 'Ready to run rake release VERSION=x.y.z'.color(:green)
     end
 
     # Rake Task for running needed Rake Tasks after running rake release
@@ -127,25 +123,6 @@ module Hoe::Manns
     puts 'Removing pre version of gemspec'.color(:yellow)
     File.delete(*Dir.glob('*.gemspec'))
     puts 'Removed'.color(:green)
-  end
-
-  # Method for updating workspace
-  def self.update_workspace_method
-    puts 'Updating workspace'.color(:yellow)
-    %w[Rakefile Gemfile Gemfile.lock .autotest .codeclimate.yml .coveralls.yml
-       .gemnasium.yml .gitignore .rspec .rubocop.yml .scrutinizer.yml .travis.yml
-       CODE_OF_CONDUCT.md config.reek CONTRIBUTING.md History.rdoc Index.yml
-       LICENSE.rdoc MAINTENANCE.md Manifest.txt README.rdoc VERSION
-       recipes/recipe.rb].each do |i|
-      system("git add #{i}") if File.exist?(i)
-    end
-    %w[bin etc data docs lib test spec].each do |d|
-      system("git add #{d}/*") if File.exist?(d)
-    end
-    system('git commit -m "Updated workspace"')
-    system('git push')
-    system('git status')
-    puts 'Updated workspace'.color(:green)
   end
 
   # Method for copying to master

@@ -29,9 +29,8 @@ Hoe.spec 'hoe-manns' do
   license 'GPL-3' # this should match the license in the README
   require_ruby_version '>= 2.2.0'
 
-  dependency 'parseconfig', '~> 1.0'
   dependency 'rainbow', '~> 2.2'
-  dependency 'bundler-audit', '~> 0.5'
+  dependency 'bundler-audit', '~> 0.6'
 
   extra_dev_deps << ['coveralls', '~> 0.8']
   extra_dev_deps << ['hoe-bundler', '~> 1.3']
@@ -40,14 +39,13 @@ Hoe.spec 'hoe-manns' do
   extra_dev_deps << ['hoe-rubygems', '~> 1.0']
   extra_dev_deps << ['hoe-seattlerb', '~> 1.3']
   extra_dev_deps << ['hoe-version', '~> 1.2']
-  extra_dev_deps << ['rake', '~> 11.3']
-  extra_dev_deps << ['rspec', '~> 3.5']
-  extra_dev_deps << ['simplecov', '~> 0.12']
+  extra_dev_deps << ['rake', '~> 12.1']
+  extra_dev_deps << ['rspec', '~> 3.7']
 
   self.history_file = 'History.rdoc'
   self.readme_file = 'README.rdoc'
   self.extra_rdoc_files = FileList['*.rdoc'].to_a
-  self.post_install_message = '*** Edit your .hoerc: https://saigkill.tuxfamily.org/docs/hoe-manns/en-US/html/ *** Please file bugreports and feature requests on: https://github.com/saigkill/hoe-manns/issues'
+  self.post_install_message = 'Please file bugreports on: https://bugs.launchpad.net/hoe-manns'
 end
 
 ##################################################SETUP ZONE############################################################
