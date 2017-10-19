@@ -1,10 +1,17 @@
-
-# @author: Sascha Manns
-# @abstract: hoe-manns is a small collection of my personal used rake tasks for
-#            using with hoe
+# Copyright (C) 2013-2017 Sascha Manns <Sascha.Manns@mailbox.org>
 #
-# Copyright (c) 2015-2017 Sascha Manns <Sascha.Manns@mailbox.org>
-# License: MIT
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 # Dependencies
 require 'hoe'
@@ -110,21 +117,21 @@ module Hoe::Manns
   require 'rainbow/ext/string'
   # Method for updating Gemfile.lock
   def self.update_gemfile_lock_method
-    puts 'Updating Gemfile.lock'.colour(:yellow)
+    puts 'Updating Gemfile.lock'.color(:yellow)
     system('bundle update')
-    puts 'Updated Gemfile.lock'.colour(:green)
+    puts 'Updated Gemfile.lock'.color(:green)
   end
 
   # Method for removing prerelease gemspec
   def self.remove_pre_gemspec_method
-    puts 'Removing pre version of gemspec'.colour(:yellow)
+    puts 'Removing pre version of gemspec'.color(:yellow)
     File.delete(*Dir.glob('*.gemspec'))
-    puts 'Removed'.colour(:green)
+    puts 'Removed'.color(:green)
   end
 
   # Method for updating workspace
   def self.update_workspace_method
-    puts 'Updating workspace'.colour(:yellow)
+    puts 'Updating workspace'.color(:yellow)
     %w[Rakefile Gemfile Gemfile.lock .autotest .codeclimate.yml .coveralls.yml
        .gemnasium.yml .gitignore .rspec .rubocop.yml .scrutinizer.yml .travis.yml
        CODE_OF_CONDUCT.md config.reek CONTRIBUTING.md History.rdoc Index.yml
@@ -138,54 +145,30 @@ module Hoe::Manns
     system('git commit -m "Updated workspace"')
     system('git push')
     system('git status')
-    puts 'Updated workspace'.colour(:green)
-  end
-
-  # Method for copying the manuals to a target directory
-  def self.copy_manuals_method
-    puts 'Copying manual pages to target'.colour(:yellow)
-    project = Hoe::Manns.get_projectname
-    config = YAML.safe_load(File.read("#{Dir.home}/.hoerc"))
-    docpath = config['manns']['docpath'].to_s
-    FileUtils.cp_r('manual/output', "#{docpath}/#{project}")
-    puts 'Copied manuals'.colour(:green)
+    puts 'Updated workspace'.color(:green)
   end
 
   # Method for copying to master
   def self.copy_master
-    puts 'Checking out master'.colour(:yellow)
+    puts 'Checking out master'.color(:yellow)
     system('git checkout master')
-    puts 'Merging master with develop'.colour(:yellow)
+    puts 'Merging master with develop'.color(:yellow)
     system('git merge develop')
-    puts 'Pushing master to origin'.colour(:yellow)
+    puts 'Pushing master to origin'.color(:yellow)
     system('git add recipes/recipe.rb') if File.exist?('recipes/recipe.rb')
     system('git push')
-    puts 'Set a Git Tag'.colour(:yellow)
+    puts 'Set a Git Tag'.color(:yellow)
     system('rake git:tag')
-    puts 'Checking out develop again'.colour(:yellow)
+    puts 'Checking out develop again'.color(:yellow)
     system('git checkout develop')
-    puts 'Done'.colour(:green)
-  end
-
-  # Method for getting the project name
-  def self.get_projectname
-    pnameraw = File.open(*Dir.glob('README.*'), &:readline)
-    project = pnameraw.gsub(/[^0-9A-Za-z_-]/, '')
-    return project
-  end
-
-  # Method for getting the develpath
-  def self.get_develpath
-    config = YAML.safe_load(File.read("#{Dir.home}/.hoerc"))
-    develpath = config['manns']['develpath'].to_s
-    return develpath
+    puts 'Done'.color(:green)
   end
 
   # Method for cleanup the pkg
   def self.clean_pkg_method
-    puts 'Cleaning pkg'.colour(:yellow)
+    puts 'Cleaning pkg'.color(:yellow)
     FileUtils.rm_rf('pkg') if Dir.exist?('pkg')
     FileUtils.rm_rf('recipes/pkg') if Dir.exist?('recipes/pkg')
-    puts 'Cleanup succeed'.colour(:green)
+    puts 'Cleanup succeed'.color(:green)
   end
 end

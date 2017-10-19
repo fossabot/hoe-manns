@@ -26,7 +26,7 @@ Hoe.plugin :version
 # rubocop:disable Metrics/LineLength
 Hoe.spec 'hoe-manns' do
   developer('Sascha Manns', 'Sascha.Manns@mailbox.org')
-  license 'MIT' # this should match the license in the README
+  license 'GPL-3' # this should match the license in the README
   require_ruby_version '>= 2.2.0'
 
   dependency 'parseconfig', '~> 1.0'
