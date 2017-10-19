@@ -1,8 +1,8 @@
 ===============================================================================
-hoe 1.7.0 - 2017-10-19
+hoe-manns 2.0.0 - 2017-10-19
 ===============================================================================
 
-    hoe 1.7.0 is the culmination of a days' work by 1 developer.
+    hoe 2.0.0 is the culmination of a days' work by 1 developer.
 
     New Features:
 
@@ -18,7 +18,7 @@ hoe 1.7.0 - 2017-10-19
       * Nothing yet
 
 
-    Notable Bugs Fixed (1 fixed since 2.0.4):
+    Notable Bugs Fixed:
 
       * HM-7: Changed license from MIT to GPL-3
 
@@ -30,8 +30,8 @@ SOURCES / PACKAGES
 Sources
 -------
 
-    * hoe-manns 1.7.0 Tarballs:
-      https://launchpad.net/hoe-manns/1.x/1.7.0/+download/hoe-manns-1.7.0.tar.xz
+    * hoe-manns 2.0.0 Tarballs:
+      https://launchpad.net/hoe-manns/2.x/2.0.0/+download/hoe-manns-2.0.0.tar.xz
 
 Packages
 --------
