@@ -1,0 +1,22 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2015-05-13 19:08+0200\n"
+"PO-Revision-Date: 2015-05-13 19:08+0200\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: None\n"
+"Language: en-US \n"
+"MIME-Version: 1.0\n"
+"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Publican v4.2.6\n"
+
+msgid "We Need Feedback!"
+msgstr ""
+
+msgid "<primary>feedback</primary> <secondary>contact information for this manual</secondary>"
+msgstr ""
+
+msgid "You should over ride this by creating your own local Feedback.xml file."
+msgstr ""
+

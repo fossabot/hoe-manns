@@ -1,0 +1,68 @@
+===============================================================================
+hoe 1.7.0 - 2017-10-19
+===============================================================================
+
+    hoe 1.7.0 is the culmination of a days' work by 1 developer.
+
+    New Features:
+
+      * Handling
+
+            run_before_release changed. The trigger for update_workspace are
+            removed. It was written before i knew 'git -a' ;-) Also the method
+            for running the manuals was dropped.
+
+
+    Enhancements:
+
+      * Nothing yet
+
+
+    Notable Bugs Fixed (1 fixed since 2.0.4):
+
+      * HM-7: Changed license from MIT to GPL-3
+
+
+===============================================================================
+SOURCES / PACKAGES
+===============================================================================
+
+Sources
+-------
+
+    * hoe-manns 1.7.0 Tarballs:
+      https://launchpad.net/hoe-manns/1.x/1.7.0/+download/hoe-manns-1.7.0.tar.xz
+
+Packages
+--------
+
+    Download and installation information is available here:
+
+    * https://saigkill.github.io/hoe-manns/userdocs/en/
+
+    Gems:
+
+    * https://rubygems.org/gems/hoe-manns
+
+===============================================================================
+REPORT BUGS - HELP THE PROJECT - GROW THE COMMUNITY
+===============================================================================
+
+    If you encounter any bad behavior with this release, please do not
+    hesitate to file bugs!
+
+    * https://bugs.launchpad.net/hoe-manns
+
+
+===============================================================================
+VALUED HOE-MANNS CONTRIBUTORS
+===============================================================================
+
+Contributors For This Release
+-----------------------------
+
+    The following people directly contributed to the release of this version
+    of hoe-manns. Without their help, there would be no release!
+
+     Sascha Manns
+

@@ -1,0 +1,84 @@
+@import "http://saigkill.tuxfamily.org/dotclear/webfonts/css/stafford.css";
+@import "http://saigkill.tuxfamily.org/dotclear/webfonts/css/arezzo.css";
+
+a:link {	
+	color:#76ad2d;
+}
+
+a:visited {
+	color:#439239;
+}
+
+h1, h2, h3, h4, h5, h6, header .home, .title {
+    font-family: "Arezzo Pro Light", "overpass", "Open Sans","liberation sans", "Myriad ", "Bitstream Vera Sans", "Lucida Grande", "Luxi Sans", "Trebuchet MS", helvetica, verdana, arial, sans-serif;
+}
+
+h1 {
+    color: #439239;
+}
+
+h2 {
+    color: #5e9632;
+}
+
+h3 {
+    color: #76ad2d;
+}
+
+h4, h5, h6 {
+    color: #7dc24d;
+}
+
+div.producttitle {
+	color:#439239;
+}
+
+.section h1.title {
+	color:#439239;
+}
+
+table {
+	border:1px solid #aaa;
+}
+
+table th {
+	/*background-color:#900;*/
+	background-color: #439239;
+}
+
+table tr.even td {
+	background-color:#f5f5f5;
+}
+
+#title a {
+	height:54px;
+}
+
+.term{
+	color:#439239;
+}
+
+.revhistory table th {
+	color:#439239;
+}
+
+.titlepage .edition {
+	color: #439239;
+}
+
+span.remark{
+	background-color: #ffff00;
+}
+
+body {
+    background-color: white;
+    margin: 0 auto;
+    font-family: "Stafford Pro Light", "Open Sans","liberation sans", "Myriad ", "Bitstream Vera Sans", "Lucida Grande", "Luxi Sans", "Trebuchet MS", helvetica, verdana, arial, sans-serif;
+    font-size: 12pt;
+    max-width: 54em;
+    color: black;
+    line-height: 1.3em;
+    padding-bottom: 3em;
+    padding-top: 2em;
+}
+
