@@ -1,3 +1,17 @@
+=== 1.7.0 / 2017-10-19
+
+* 5 major enhancements
+
+  * HM-2: Remove copy_manuals and get_projectname methods
+  * HM-3: Remove get_develpath (was used by a already removed method)
+  * HM-6: Cleanup run_before_release (Removed old stuff)
+  * HM-7: Changed license from MIT to GPL-3
+  * HM-8: Removed parseconfig and yaml dependency
+
+* 1 minor enhancement
+
+  * updated dependencies
+
 === 1.6.2 / 2017-02-25
 
 * 1 minor enhancement

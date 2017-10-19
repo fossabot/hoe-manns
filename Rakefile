@@ -14,13 +14,15 @@ require 'rubygems'
 require 'hoe'
 
 Hoe.plugin :bundler
-Hoe.plugin :email
+Hoe.plugin :doofus
 Hoe.plugin :git
-Hoe.plugin :manns
 Hoe.plugin :rdoc
+Hoe.plugin :reek
 Hoe.plugin :rubocop
 Hoe.plugin :rubygems
+Hoe.plugin :travis
 Hoe.plugin :version
+
 
 ###########################################DEVELOPING ZONE##############################################################
 # rubocop:disable Metrics/LineLength
@@ -34,10 +36,12 @@ Hoe.spec 'hoe-manns' do
 
   extra_dev_deps << ['coveralls', '~> 0.8']
   extra_dev_deps << ['hoe-bundler', '~> 1.3']
+  extra_dev_deps << ['hoe-doofus', '~> 1.0']
   extra_dev_deps << ['hoe-git', '~> 1.6']
+  extra_dev_deps << ['hoe-reek', '~> 1.1']
   extra_dev_deps << ['hoe-rubocop', '~> 1.0']
   extra_dev_deps << ['hoe-rubygems', '~> 1.0']
-  extra_dev_deps << ['hoe-seattlerb', '~> 1.3']
+  extra_dev_deps << ['hoe-travis', '~> 1.3']
   extra_dev_deps << ['hoe-version', '~> 1.2']
   extra_dev_deps << ['rake', '~> 12.1']
   extra_dev_deps << ['rspec', '~> 3.7']

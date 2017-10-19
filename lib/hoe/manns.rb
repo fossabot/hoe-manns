@@ -19,7 +19,7 @@ require 'hoe'
 # Main module for hoe-manns
 module Hoe::Manns
   # Version constant for HOE::Manns
-  VERSION = '1.6.2'.freeze
+  VERSION = '1.7.0'.freeze
 
   attr_accessor :remove_pre_gemspec
   attr_accessor :copy_master
@@ -49,19 +49,6 @@ module Hoe::Manns
       Hoe::Manns.remove_pre_gemspec_method
     end
 
-    # Rake Task for updating the workspace
-    desc 'Update Workspace'
-    task :update_workspace do
-      Hoe::Manns.update_workspace_method
-    end
-
-    # Rake Task for copying manuals
-    require 'parseconfig'
-    desc 'Copy manuals'
-    task :copy_manuals do
-      Hoe::Manns.copy_manuals_method
-    end
-
     # Rake Task for git tag
     desc 'Copy master'
     task :copy_master do
@@ -78,7 +65,7 @@ module Hoe::Manns
     # Rake Task for running needed Rake Tasks after running rake release
     desc 'Run all tasks after rake release'
     task run_after_release: %w[send_email clean_pkg] do
-      puts 'Release finished'.colour :green
+      puts 'Release finished'.color :green
     end
 
     # Rake Task for cleaning up the pkg
