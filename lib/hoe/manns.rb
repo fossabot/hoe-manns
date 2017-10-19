@@ -19,7 +19,7 @@ require 'hoe'
 # Main module for hoe-manns
 module Hoe::Manns
   # Version constant for HOE::Manns
-  VERSION = '1.7.0'.freeze
+  VERSION = '2.0.0'.freeze
 
   attr_accessor :remove_pre_gemspec
   attr_accessor :copy_master
