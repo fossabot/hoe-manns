@@ -1,0 +1,27 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: hoe-manns 1.6.1\n"
+"POT-Creation-Date: 2017-02-22 18:38+0100\n"
+"PO-Revision-Date: 2017-02-22 18:44+0100\n"
+"Language-Team: Sascha Manns <Sascha.Manns@mailbox.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.9\n"
+"Last-Translator: Sascha Manns <Sascha.Manns@mailbox.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: de_DE\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+msgid "&hoem;"
+msgstr "&hoem;"
+
+msgid "Integration of some useful Rake-Tasks into hoe."
+msgstr "Integration einger nützlicher Tasks in hoe."
+
+msgid "hoe-manns extends the standard Rake-Task with some useful new tasks."
+msgstr "hoe-manns erweitert die Standard-Ruby-Tasks um einige neue und nützliche Tasks."
+
+msgid "<inlinemediaobject> <imageobject> <imagedata fileref=\"Common_Content/images/title_logo.svg\" format=\"SVG\" width=\"50%\" /> </imageobject> </inlinemediaobject>"
+msgstr "<inlinemediaobject> <imageobject> <imagedata fileref=\"Common_Content/images/title_logo.svg\" format=\"SVG\" width=\"50%\" /> </imageobject> </inlinemediaobject>"
+

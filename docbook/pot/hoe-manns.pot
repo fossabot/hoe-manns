@@ -1,0 +1,121 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2017-10-19 22:26+0200\n"
+"PO-Revision-Date: 2017-10-19 22:26+0200\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: None\n"
+"Language: en-US \n"
+"MIME-Version: 1.0\n"
+"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Publican v4.3.2\n"
+
+msgid "&PRODUCT;"
+msgstr ""
+
+msgid "Introduction to &PRODUCT;"
+msgstr ""
+
+msgid "&PRODUCT; is a extension of the <application>&rb;</application> projectsoftware <application>hoe</application> (see <link xlink:href=\"https://github.com/seattlerb/hoe\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">https://github.com/seattlerb/hoe</link>.) It extends the standard <application>&rb;</application> tasks to some new useful tasks."
+msgstr ""
+
+msgid "To use the software you will need a installed <application>&rb;</application> version (Higher or equal 2.2.0), <application>parseconfig</application>, <application>bundler-audit</application> and a installed and already configured <application>hoe</application>."
+msgstr ""
+
+msgid "Installation"
+msgstr ""
+
+msgid "For installing you have to type in your Shell/Console: <command>gem install hoe-manns</command>."
+msgstr ""
+
+msgid "How to use <productname>&PRODUCT;</productname> in your projects"
+msgstr ""
+
+msgid "First you have to open the <filename>Rakefile</filename> of your project and writes there near the <filename>Hoe.spec</filename> line:"
+msgstr ""
+
+msgid "<code>Hoe.plugin :manns </code>"
+msgstr ""
+
+msgid "<code>Hoe.spec 'yourproject' do ... </code>"
+msgstr ""
+
+msgid "<code>end</code>"
+msgstr ""
+
+msgid "Sure now you have to add <productname>&PRODUCT;</productname> as dependency in your <filename>Rakefile</filename> and generate a new <filename>Gemfile</filename> now. Then <productname>&PRODUCT;</productname> is ready to work."
+msgstr ""
+
+msgid "Usage"
+msgstr ""
+
+msgid "<productname>&PRODUCT;</productname> integrates some additional <application>Rake</application>-Taks as explained in the next table."
+msgstr ""
+
+msgid "The Rake Tasks"
+msgstr ""
+
+msgid "Task"
+msgstr ""
+
+msgid "Effect"
+msgstr ""
+
+msgid "<command>rake bundler:gemfile_lock</command>"
+msgstr ""
+
+msgid "generates a new <filename>Gemfile.lock</filename>"
+msgstr ""
+
+msgid "<command>rake bundle-audit:run</command>"
+msgstr ""
+
+msgid "downloads the actual security warnings from <application>bundle-audit</application> and checks possible problems by the dependencies."
+msgstr ""
+
+msgid "<command>rake clean-pkg</command>"
+msgstr ""
+
+msgid "checks if a \"<filename>pkg</filename>\" directory is present, if then it will be deleted."
+msgstr ""
+
+msgid "<command>rake copy_master</command>"
+msgstr ""
+
+msgid "it expects a branch \"develop\" and merges the new stuff into the master branch. Then it runs a rake <command>git:tag</command> and returns again into the develop branch."
+msgstr ""
+
+msgid "<command>rake remove_pre_gemspec</command>"
+msgstr ""
+
+msgid "checks the presence of a Pre-Gemspec (a generated file for test cases) and deletes them."
+msgstr ""
+
+msgid "<command>rake run_before_release</command>"
+msgstr ""
+
+msgid "runs the task in that order: git:manifest, bundler:gemfile, bundler:gemfile_lock, gem:spec_remove, bundle_audit:run, copy_master."
+msgstr ""
+
+msgid "<command>rake run_after_release</command>"
+msgstr ""
+
+msgid "runs the tasks: send_email and clean_pkg"
+msgstr ""
+
+msgid "Additional Information"
+msgstr ""
+
+msgid "The API-Dokumentation is placed there: <link xlink:href=\"http://www.rubydoc.info/gems/hoe-manns\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">http://www.rubydoc.info/gems/hoe-manns</link>."
+msgstr ""
+
+msgid "You can place Bugreports there: <link xlink:href=\"https://bugs.launchpad.net/hoe-manns\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">https://bugs.launchpad.net/hoe-manns</link>."
+msgstr ""
+
+msgid "You can place Feature Requests there: <link xlink:href=\"https://blueprints.launchpad.net/hoe-manns\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">https://blueprints.launchpad.net/hoe-manns</link>."
+msgstr ""
+
+msgid "This software was developed and tested on a Linux system with RVM as Rubymanager. If anyone has any idea to make the software fit for other OS and Rubymanagers, then you can send a Pull-Request on Github."
+msgstr ""
+

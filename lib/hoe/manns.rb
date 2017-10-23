@@ -15,124 +15,86 @@
 
 # Dependencies
 require 'hoe'
+require_relative 'manns-methods'
 
-# Main module for hoe-manns
-module Hoe::Manns
-  # Version constant for HOE::Manns
-  VERSION = '2.0.0'.freeze
+# Main module Hoe
+module Hoe
+  # module Manns extends main Hoe
+  module Manns
+    # Version constant for HOE::Manns
+    VERSION = '2.0.0'.freeze
 
-  attr_accessor :remove_pre_gemspec
-  attr_accessor :copy_master
-  attr_accessor :run_before_release
-  attr_accessor :run_after_release
-  attr_accessor :clean_pkg
-  attr_accessor :bundle_audit
+    attr_accessor :remove_pre_gemspec
+    attr_accessor :copy_master
+    attr_accessor :run_before_release
+    attr_accessor :clean_pkg
+    attr_accessor :bundle_audit
 
-  # Initialize plugin
-  def initialize_manns
-    require 'fileutils'
-    require 'rainbow/ext/string'
-    require 'bundler/audit/cli'
-  end
-
-  # Definitions of the Rake task
-  def define_manns_tasks
-    # Rake Task for updating Gemfile.lock
-    desc 'Update Gemfile.lock'
-    task 'bundler:gemfile_lock' do
-      Hoe::Manns.update_gemfile_lock_method
+    # Initialize plugin
+    def initialize_manns
+      require 'fileutils'
+      require 'rainbow/ext/string'
+      require 'bundler/audit/cli'
     end
 
-    # Rake Task for removing Prerelease Gemspecs
-    desc 'Remove Pre-Gemspec'
-    task 'gem:spec_remove' do
-      Hoe::Manns.remove_pre_gemspec_method
-    end
-
-    # Rake Task for git tag
-    desc 'Copy master'
-    task :copy_master do
-      Hoe::Manns.copy_master
-    end
-
-    # Rake Task for running needed Rake Tasks before running rake release
-    desc 'Run all tasks before rake release'
-    task run_before_release: %w[git:manifest bundler:gemfile
-                                bundler:gemfile_lock gem:spec_remove bundle_audit:run copy_master] do
-      puts 'Ready to run rake release VERSION=x.y.z'.color(:green)
-    end
-
-    # Rake Task for running needed Rake Tasks after running rake release
-    desc 'Run all tasks after rake release'
-    task run_after_release: %w[send_email clean_pkg] do
-      puts 'Release finished'.color :green
-    end
-
-    # Rake Task for cleaning up the pkg
-    desc 'Clean pkg'
-    task :clean_pkg do
-      Hoe::Manns.clean_pkg_method
-    end
-
-    # Method for bundle audit
-    namespace :bundle_audit do
-      desc 'Update bundle-audit database'
-      task :update do
-        Bundler::Audit::CLI.new.update
+    # Definitions of the Rake task
+    # TODO: Check if this smells can be pacified in future
+    # rubocop:disable Metrics/AbcSize
+    # rubocop:disable Metrics/MethodLength
+    # This method smells of :reek:TooManyStatements
+    def define_manns_tasks
+      # Rake Task for updating Gemfile.lock
+      desc 'Update Gemfile.lock'
+      task 'bundler:gemfile_lock' do
+        Hoe::MannsMethods.update_gemfile_lock_method
       end
 
-      desc 'Check gems for vulns using bundle-audit'
-      task :check do
-        Bundler::Audit::CLI.new.check
+      # Rake Task for removing Prerelease Gemspecs
+      desc 'Remove Pre-Gemspec'
+      task 'gem:spec_remove' do
+        Hoe::MannsMethods.remove_pre_gemspec_method
       end
 
-      desc 'Update vulns database and check gems using bundle-audit'
-      task :run do
-        Rake::Task['bundle_audit:update'].invoke
-        Rake::Task['bundle_audit:check'].invoke
+      # Rake Task for git tag
+      desc 'Copy master'
+      task :copy_master do
+        Hoe::MannsMethods.copy_master
+      end
+
+      # Rake Task for running needed Rake Tasks before running rake release
+      desc 'Run all tasks before rake release'
+      task run_before_release:
+               %w[git:manifest bundler:gemfile bundler:gemfile_lock gem:spec_remove bundle_audit:run copy_master] do
+        puts 'Ready to run rake release VERSION=x.y.z'.color(:green)
+      end
+
+      # Rake Task for cleaning up the pkg
+      desc 'Clean pkg'
+      task :clean_pkg do
+        Hoe::MannsMethods.clean_pkg_method
+      end
+
+      # Method for bundle audit
+      namespace :bundle_audit do
+        desc 'Update bundle-audit database'
+        task :update do
+          Bundler::Audit::CLI.new.update
+        end
+
+        desc 'Check gems for vulns using bundle-audit'
+        task :check do
+          Bundler::Audit::CLI.new.check
+        end
+
+        desc 'Update vulns database and check gems using bundle-audit'
+        task :run do
+          Rake::Task['bundle_audit:update'].invoke
+          Rake::Task['bundle_audit:check'].invoke
+        end
+      end
+      task :bundle_audit do
+        Rake::Task['bundle_audit:run'].invoke
       end
     end
-    task :bundle_audit do
-      Rake::Task['bundle_audit:run'].invoke
-    end
-  end
-
-  require 'rainbow/ext/string'
-  # Method for updating Gemfile.lock
-  def self.update_gemfile_lock_method
-    puts 'Updating Gemfile.lock'.color(:yellow)
-    system('bundle update')
-    puts 'Updated Gemfile.lock'.color(:green)
-  end
-
-  # Method for removing prerelease gemspec
-  def self.remove_pre_gemspec_method
-    puts 'Removing pre version of gemspec'.color(:yellow)
-    File.delete(*Dir.glob('*.gemspec'))
-    puts 'Removed'.color(:green)
-  end
-
-  # Method for copying to master
-  def self.copy_master
-    puts 'Checking out master'.color(:yellow)
-    system('git checkout master')
-    puts 'Merging master with develop'.color(:yellow)
-    system('git merge develop')
-    puts 'Pushing master to origin'.color(:yellow)
-    system('git add recipes/recipe.rb') if File.exist?('recipes/recipe.rb')
-    system('git push')
-    puts 'Set a Git Tag'.color(:yellow)
-    system('rake git:tag')
-    puts 'Checking out develop again'.color(:yellow)
-    system('git checkout develop')
-    puts 'Done'.color(:green)
-  end
-
-  # Method for cleanup the pkg
-  def self.clean_pkg_method
-    puts 'Cleaning pkg'.color(:yellow)
-    FileUtils.rm_rf('pkg') if Dir.exist?('pkg')
-    FileUtils.rm_rf('recipes/pkg') if Dir.exist?('recipes/pkg')
-    puts 'Cleanup succeed'.color(:green)
   end
 end

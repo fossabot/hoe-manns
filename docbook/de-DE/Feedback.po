@@ -1,0 +1,52 @@
+# Sascha Manns <Sascha.Manns@mailbox.org>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2017-02-24 22:58+0100\n"
+"PO-Revision-Date: 2017-10-19 19:03+0200\n"
+"Last-Translator: Sascha Manns <Sascha.Manns@mailbox.org>\n"
+"Language-Team: German <Sascha.Manns@mailbox.org>\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+msgid "We Need Feedback!"
+msgstr "Wir benötigen Feedback!"
+
+msgid "<primary>Feedback</primary> <secondary>Contact information</secondary>"
+msgstr "<primary>Rückmeldungen</primary> <secondary>Kontaktinformation</secondary>"
+
+msgid "I'm happy about feedback. You can send me an email: <link xlink:href=\"mailto:Sascha.Manns@directbox.com\">Sascha.Manns@mailbox.org</link>."
+msgstr "Ich freue mich über Rückmeldungen. Sie können mir gerne eine Email schreiben: <link xlink:href=\"mailto:Sascha.Manns@directbox.com\">Sascha.Manns@mailbox.org</link>."
+
+msgid "<emphasis role=\"bold\">Contact</emphasis>"
+msgstr "<emphasis role=\"bold\">Kontakt</emphasis>"
+
+msgid "Authors Blog: <link xlink:href=\"http://saigkill.tuxfamily.org\">http://saigkill.tuxfamily.org</link>"
+msgstr "Autorenblog: <link xlink:href=\"http://saigkill.tuxfamily.org\">http://saigkill.tuxfamily.org</link>"
+
+msgid "<emphasis role=\"bold\">Contribute</emphasis>"
+msgstr "<emphasis role=\"bold\">Unterstützen</emphasis>"
+
+msgid "Clone the code: <link xlink:href=\"https://git.launchpad.net/hoe-manns \">https://git.launchpad.net/hoe-manns </link>. Feel free to add new Tasks."
+msgstr "Klone den Code: <link xlink:href=\"https://git.launchpad.net/hoe-manns\">https://git.launchpad.net/hoe-manns</link>. Fühlen Sie sich frei, neue Tasks hinzuzufügen."
+
+msgid "File a bug: <link xlink:href=\"https://bugs.launchpad.net/hoe-manns\">https://bugs.launchpad.net/hoe-manns</link>"
+msgstr "Berichten Sie einen Bug: <link xlink:href=\"https://bugs.launchpad.net/hoe-manns\">https://bugs.launchpad.net/hoe-manns</link>"
+
+msgid "File a feature request: <link xlink:href=\"https://blueprints.launchpad.net/hoe-manns\">https://blueprints.launchpad.net/hoe-manns</link>"
+msgstr "Schreiben Sie einen Feature Request:<link xlink:href=\"https://blueprints.launchpad.net/hoe-manns\">https://blueprints.launchpad.net/hoe-manns</link>"
+
+msgid "Improve the Docs: <link xlink:href=\"https://git.launchpad.net/~sascha-manns-h/hoe-manns/+git/docbook\">https://git.launchpad.net/~sascha-manns-h/hoe-manns/+git/docbook</link>"
+msgstr "Verbessern Sie die Dokumentation:<link xlink:href=\"https://git.launchpad.net/~sascha-manns-h/hoe-manns/+git/docbook\">https://git.launchpad.net/~sascha-manns-h/hoe-manns/+git/docbook</link>"
+
+#~ msgid "File a bug: <link xlink:href=\"https://github.com/saigkill/hoe-manns/issues\">https://github.com/saigkill/hoe-manns/issues</link>"
+#~ msgstr "Fügen Sie einen Bug hinzu: <link xlink:href=\"https://github.com/saigkill/hoe-manns/issues\">https://github.com/saigkill/hoe-manns/issues</link>"
+
+#~ msgid "Improve the Docs: <link xlink:href=\"https://github.com/saigkill/docs/tree/master/articles/hoe-manns\">https://github.com/saigkill/docs/tree/master/articles/hoe-manns</link>"
+#~ msgstr "Verbessern Sie die Dokumentation zu dieser Anwendung: <link xlink:href=\"https://github.com/saigkill/docs/tree/master/articles/hoe-manns\">https://github.com/saigkill/docs/tree/master/articles/hoe-manns</link>"
+

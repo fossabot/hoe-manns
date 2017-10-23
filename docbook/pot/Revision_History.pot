@@ -1,0 +1,52 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: 0\n"
+"POT-Creation-Date: 2017-10-19 22:26+0200\n"
+"PO-Revision-Date: 2017-10-19 22:26+0200\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: None\n"
+"Language: en-US \n"
+"MIME-Version: 1.0\n"
+"Content-Type: application/x-publican; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Publican v4.3.2\n"
+
+msgid "Revision History"
+msgstr ""
+
+msgid "Sascha"
+msgstr ""
+
+msgid "Manns"
+msgstr ""
+
+msgid "Removed update_workspace method description"
+msgstr ""
+
+msgid "Removed copy_manual description. Both methods a dropped upstream"
+msgstr ""
+
+msgid "Added Feedback Section"
+msgstr ""
+
+msgid "Beautifyed DocBook Code"
+msgstr ""
+
+msgid "Updated dependencies"
+msgstr ""
+
+msgid "Updated Handbook"
+msgstr ""
+
+msgid "fixed HM-2: Simplify copy_wiki method (dropped)"
+msgstr ""
+
+msgid "fixed HM-3: manns.rb (Code cleanup)"
+msgstr ""
+
+msgid "removed pandoc dependency"
+msgstr ""
+
+msgid "Translation files synchronised with XML sources 0.0-0"
+msgstr ""
+
