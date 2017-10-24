@@ -1,4 +1,74 @@
 ===============================================================================
+hoe-manns 2.1.0 - 2017-10-24
+===============================================================================
+
+    hoe-manns 2.1.0 is the culmination of two days' work by 1 developer.
+
+    New Features:
+
+      * Handling
+
+            run
+
+
+    Enhancements:
+
+      * Nothing yet
+
+
+    Notable Bugs Fixed:
+
+      * HM-9: Split module into two seperate modules
+      * HM-10: Remove run_after_release
+      * HM-11: Remove system('git add recipes/recipe.rb') if File.exist?('recipes/recipe.rb')
+
+
+===============================================================================
+SOURCES / PACKAGES
+===============================================================================
+
+Sources
+-------
+
+    * hoe-manns 2.1.0 Tarballs:
+      https://launchpad.net/hoe-manns/2.x/2.1.0/+download/hoe-manns-2.1.0.tar.xz
+
+Packages
+--------
+
+    Download and installation information is available here:
+
+    * https://saigkill.github.io/hoe-manns/about/
+
+    Gems:
+
+    * https://rubygems.org/gems/hoe-manns
+
+===============================================================================
+REPORT BUGS - HELP THE PROJECT - GROW THE COMMUNITY
+===============================================================================
+
+    If you encounter any bad behavior with this release, please do not
+    hesitate to file bugs!
+
+    * https://bugs.launchpad.net/hoe-manns
+
+
+===============================================================================
+VALUED HOE-MANNS CONTRIBUTORS
+===============================================================================
+
+Contributors For This Release
+-----------------------------
+
+    The following people directly contributed to the release of this version
+    of hoe-manns. Without their help, there would be no release!
+
+     Sascha Manns
+
+
+
+===============================================================================
 hoe-manns 2.0.0 - 2017-10-19
 ===============================================================================
 

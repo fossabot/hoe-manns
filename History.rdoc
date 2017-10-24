@@ -1,3 +1,11 @@
+=== 2.1.0 / 2017-10-23
+
+* 3 major enhancements
+
+    * HM-9: Split module into two seperate modules
+    * HM-10: Remove run_after_release
+    * HM-11: Remove system('git add recipes/recipe.rb') if File.exist?('recipes/recipe.rb')
+
 === 2.0.0 / 2017-10-19
 
 * 5 major enhancements

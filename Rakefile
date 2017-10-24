@@ -1,14 +1,6 @@
 # -*- ruby -*-
 # Release:
-# * bump version
-# * do stuff
-# * update documentation
-# * enable :git
-# * rake run_before_release
-# * disable :git
-# * Checkin
-# * rake release
-# * rake run_after_release
+# See README.rdoc.release
 
 require 'rubygems'
 require 'hoe'

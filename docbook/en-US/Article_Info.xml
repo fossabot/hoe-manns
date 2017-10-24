@@ -1,29 +1,30 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <!DOCTYPE info [
-<!ENTITY % BOOK_ENTITIES SYSTEM "hoe-manns.ent">
-%BOOK_ENTITIES;
-<!ENTITY % sgml.features "IGNORE">
-<!ENTITY % xml.features "INCLUDE">
-<!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook Character Entities V4.5//EN" "/usr/share/xml/docbook/schema/dtd/4.5/dbcentx.mod">
-%DOCBOOK_ENTS;
-]>
+        <!ENTITY % BOOK_ENTITIES SYSTEM "hoe-manns.ent">
+        %BOOK_ENTITIES;
+        <!ENTITY % sgml.features "IGNORE">
+        <!ENTITY % xml.features "INCLUDE">
+        <!ENTITY % DOCBOOK_ENTS PUBLIC "-//OASIS//ENTITIES DocBook Character Entities V4.5//EN" "/usr/share/xml/docbook/schema/dtd/4.5/dbcentx.mod">
+        %DOCBOOK_ENTS;
+        ]>
 <info version="5.0" xml:lang="en-US" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<title>&hoem;</title>
-	<subtitle>Integration of some useful Rake-Tasks into hoe.</subtitle>
-	<productname>&hoem;</productname>
-	<productnumber>&VERSION;</productnumber>
-	<edition>0</edition>
-	<abstract>
-		<para>
-			hoe-manns extends the standard Rake-Task with some useful new tasks.
-		</para>
-	</abstract>
-	<orgname> <inlinemediaobject>
-		<imageobject>
-			<imagedata fileref="Common_Content/images/title_logo.svg" format="SVG" width="50%" />
-		</imageobject>
-	</inlinemediaobject>
-	</orgname>
-	<xi:include href="Common_Content/Legal_Notice.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
-	<xi:include href="Author_Group.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+  <title>&hoem;</title>
+  <subtitle>Integration of some useful Rake-Tasks into hoe.</subtitle>
+  <productname>&hoem;</productname>
+  <productnumber>&VERSION;</productnumber>
+  <edition>0</edition>
+  <abstract>
+    <para>
+      &hoem; extends the standard Rake-Task with some useful new tasks.
+    </para>
+  </abstract>
+  <orgname>
+    <inlinemediaobject>
+      <imageobject>
+        <imagedata fileref="Common_Content/images/title_logo.svg" format="SVG" width="50%"/>
+      </imageobject>
+    </inlinemediaobject>
+  </orgname>
+  <xi:include href="Common_Content/Legal_Notice.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  <xi:include href="Author_Group.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 </info>
