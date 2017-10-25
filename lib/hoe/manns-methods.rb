@@ -17,49 +17,54 @@
 require 'rainbow/ext/string'
 
 # Module Hoe
-module Hoe
-  # Module MannsMethods extends module Hoe::Manns
-  module MannsMethods
-    # Method for updating Gemfile.lock
-    def self.update_gemfile_lock_method
-      puts 'Updating Gemfile.lock'.color(:yellow)
-      system('bundle update')
-      puts 'Updated Gemfile.lock'.color(:green)
-    end
+# rubocop:disable Metrics/ClassAndModuleChildren
+module Hoe::MannsMethods
+  # Installs a bundle
+  def self.bundle_install
+    puts 'Installing Bundle'.color(:yellow)
+    system('bundle install')
+    puts 'Installed Bundle'.color(:green)
+  end
 
-    # Method for removing prerelease gemspec
-    def self.remove_pre_gemspec_method
-      puts 'Removing pre version of gemspec'.color(:yellow)
-      File.delete(*Dir.glob('*.gemspec'))
-      puts 'Removed'.color(:green)
-    end
+  # Update Gemfile.lock
+  def self.update_gemfile_lock_method
+    puts 'Updating Gemfile.lock'.color(:yellow)
+    system('bundle update')
+    puts 'Updated Gemfile.lock'.color(:green)
+  end
 
-    # Method for copying to master
-    def self.copy_master
-      copy_master_co_master
-      puts 'Set a Git Tag'.color(:yellow)
-      system('rake git:tag')
-      puts 'Checking out develop again'.color(:yellow)
-      system('git checkout develop')
-      puts 'Done'.color(:green)
-    end
+  # Remove prerelease gemspec
+  def self.remove_pre_gemspec_method
+    puts 'Removing pre version of gemspec'.color(:yellow)
+    File.delete(*Dir.glob('*.gemspec'))
+    puts 'Removed'.color(:green)
+  end
 
-    # Method for checking out master
-    def self.copy_master_co_master
-      puts 'Checking out master'.color(:yellow)
-      system('git checkout master')
-      puts 'Merging master with develop'.color(:yellow)
-      system('git merge develop')
-      puts 'Pushing master to origin'.color(:yellow)
-      system('git push')
-    end
+  # Copying stuff to master
+  def self.copy_master
+    copy_master_co_master
+    puts 'Set a Git Tag'.color(:yellow)
+    system('rake git:tag')
+    puts 'Checking out develop again'.color(:yellow)
+    system('git checkout develop')
+    puts 'Done'.color(:green)
+  end
 
-    # Method for cleanup the pkg
-    def self.clean_pkg_method
-      puts 'Cleaning pkg'.color(:yellow)
-      FileUtils.rm_rf('pkg') if Dir.exist?('pkg')
-      FileUtils.rm_rf('recipes/pkg') if Dir.exist?('recipes/pkg')
-      puts 'Cleanup succeed'.color(:green)
-    end
+  # Check out master
+  def self.copy_master_co_master
+    puts 'Checking out master'.color(:yellow)
+    system('git checkout master')
+    puts 'Merging master with develop'.color(:yellow)
+    system('git merge develop')
+    puts 'Pushing master to origin'.color(:yellow)
+    system('git push')
+  end
+
+  # Cleanup the pkg
+  def self.clean_pkg_method
+    puts 'Cleaning pkg'.color(:yellow)
+    FileUtils.rm_rf('pkg') if Dir.exist?('pkg')
+    FileUtils.rm_rf('recipes/pkg') if Dir.exist?('recipes/pkg')
+    puts 'Cleanup succeed'.color(:green)
   end
 end
