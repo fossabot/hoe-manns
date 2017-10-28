@@ -1,11 +1,12 @@
 === 2.1.0 / 2017-10-25
 
-* 4 minor enhancements
+* 5 minor enhancements
 
     * HM-9: Split module into two seperate modules
     * HM-10: Remove run_after_release
     * HM-11: Remove system('git add recipes/recipe.rb') if File.exist?('recipes/recipe.rb')
     * HM-13: Add more tests
+    * Added task 'rake bundler:gemfile install'
 
 === 2.0.0 / 2017-10-19
 

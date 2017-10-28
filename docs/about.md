@@ -13,8 +13,7 @@ projecthelper (https://github.com/seattlerb/hoe).
 ## Documentation
 
 * [API-Documentation](http://www.rubydoc.info/gems/hoe-manns)
-* [User Documentation (en)](https://saigkill.github.io/hoe-manns/userdocs/en/index.html)
-* [User Documentation (de)](https://saigkill.github.io/hoe-manns/userdocs/de/index.html)
+* [User Documentation](https://saigkill.github.io/hoe-manns/userdocs/hoe-manns/index.html)
 
 ## Development
 The development happens on [Launchpad](https://launchpad.net/hoe-manns)

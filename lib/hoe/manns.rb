@@ -46,7 +46,7 @@ module Hoe::Manns
   def define_manns_tasks
     # Install a Bundle
     desc 'Install a Bundle'
-    task 'bundler:install' do
+    task 'bundler:gemfile_install' do
       Hoe::MannsMethods.bundle_install
     end
 
