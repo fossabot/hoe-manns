@@ -74,7 +74,6 @@ Read the documentation at: https://saigkill.github.io/hoe-manns/about/
 
 * rake
 * hoe
-* parseconfig
 * bundler-audit
 
 == INSTALL:

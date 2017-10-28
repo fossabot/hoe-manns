@@ -7,6 +7,7 @@
     * HM-11: Remove system('git add recipes/recipe.rb') if File.exist?('recipes/recipe.rb')
     * HM-13: Add more tests
     * Added task 'rake bundler:gemfile install'
+    * Changed publican to daps docbook managing
 
 === 2.0.0 / 2017-10-19
 
