@@ -19,3 +19,5 @@ A new release of hoe-manns are now available.
 
 ## How to get it?
 Just use "gem install hoe-manns".
+
+More on: https://launchpad.net/hoe-manns
