@@ -20,12 +20,10 @@ hoe-manns is a small collection of my personal used rake tasks for using with ho
 * bundler:gemfile_lock
 * bundle_audit:*
 * clean_pkg
-* copy_manuals
 * copy_master
 * remove_pre_gemspec
 * run_before_release
 * run_after_release
-* update_workspace
 
 The History.rdoc contains a detailed description on what has changed. For most
 users the NEWS file might be a better place to look since it contains
@@ -42,7 +40,6 @@ The official web site is:
 
 * Updates the Gemfile.lock
 * Removes the old *.gemspec created in test cases
-* commits the workspace before rake release
 * copies your manuals to your docpath.
 * runs the rake tasks before release: git:manifest, bundler:gemfile, update_gemfile_lock, remove_pre_gemspec,
                                       update_workspace, bundler_audit:run and copy_mirror.
@@ -168,10 +165,6 @@ If you want to merge your branch with the trunk, join the team.
 
 Please base all Merge requests off the `master` branch. Merges to
 `X.X` only occur through the `master` branch.
-
-== COMMUNICATION:
-
-Join the team on: https://launchpad.net/~hoe-manns.
 
 == PROBLEM REPORTING:
 
