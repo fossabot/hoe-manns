@@ -19,3 +19,4 @@ checks:
 filter:
     excluded_paths:
         - 'spec/*'
+        - 'docs/*'

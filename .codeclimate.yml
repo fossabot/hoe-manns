@@ -1,12 +1,4 @@
-languages:
-  Ruby: true
-
-exclude_paths:
-  - .bundle/**
-  - spec/**/*
-  - docs/**/*
-  - benchmarks/**/*
-  - '*.min.js'
-  - '**/tests/**'
-  - Gemfile*
-  - Rakefile
+version: "2"
+exclude_patterns:
+  - "**/docs/"
+  - "**/pkg
