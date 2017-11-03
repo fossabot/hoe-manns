@@ -42,7 +42,7 @@ The official web site is:
 * Removes the old *.gemspec created in test cases
 * copies your manuals to your docpath.
 * runs the rake tasks before release: git:manifest, bundler:gemfile, update_gemfile_lock, remove_pre_gemspec,
-                                      update_workspace, bundler_audit:run and copy_mirror.
+bundler_audit:run and copy_mirror.
 * runs after release: send_email.
 * Cleans up the pkg dir
 * provides bundler_audit tasks
