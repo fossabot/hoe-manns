@@ -5,6 +5,7 @@ LICENSE.rdoc
 Manifest.txt
 README.rdoc
 Rakefile
+NEWS
 lib/hoe/manns.rb
 lib/hoe/manns-methods.rb
 spec/manns_spec.rb

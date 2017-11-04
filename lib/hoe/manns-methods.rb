@@ -17,6 +17,7 @@
 require 'rainbow/ext/string'
 
 # Module Hoe
+# TODO: Try to fix this in future
 # rubocop:disable Metrics/ClassAndModuleChildren
 module Hoe::MannsMethods
   # Installs a bundle

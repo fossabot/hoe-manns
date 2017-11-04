@@ -16,7 +16,7 @@ projecthelper. See [hoe](https://github.com/seattlerb/hoe).
 * [User Documentation](https://saigkill.github.io/hoe-manns/userdocs/hoe-manns/index.html)
 
 ## Development
-The development happens on [Launchpad](https://launchpad.net/hoe-manns)
+The development happens on [Launchpad](https://launchpad.net/hoe-manns).
 
 Visit authors [blog](https://saigkill.tuxfamily.org).
 
@@ -24,4 +24,4 @@ If you like this app, please click on "I use it":
 
 <script type='text/javascript' src='https://www.openhub.net/p/hoe-manns/widgets/project_users_logo?format=js'></script>
 
-Also you can review the app on: [OpenHub](https://www.openhub.net/p/hoe-manns/reviews/new)
+Also you can review the app on: [OpenHub](https://www.openhub.net/p/hoe-manns/reviews/new).

@@ -29,7 +29,7 @@ The History.rdoc contains a detailed description on what has changed. For most
 users the NEWS file might be a better place to look since it contains
 change summaries between the different versions.
 
-youtube_dlhelper is released under the GPL3 License, see the file 'License.rdoc'
+hoe-manns is released under the GPL3 License, see the file 'License.rdoc'
 for more information.
 
 The official web site is:
