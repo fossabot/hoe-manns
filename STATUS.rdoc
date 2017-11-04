@@ -11,7 +11,7 @@ continuous integration :: {<img src="https://scrutinizer-ci.com/g/saigkill/hoe-m
 
 == Code Review
 code quality :: {<img src="https://scrutinizer-ci.com/g/saigkill/hoe-manns/badges/quality-score.png?b=master" />}[https://scrutinizer-ci.com/g/saigkill/hoe-manns/]
-code quality :: {<img src="https://codeclimate.com/github/saigkill/hoe-manns/badges/gpa.svg" alt="Code Quality" />}[https://codeclimate.com/github/saigkill/hoe-manns]
+code quality :: {<img src="https://api.codeclimate.com/v1/badges/009b795034d7c698c74f/maintainability" />}[https://codeclimate.com/github/saigkill/hoe-manns/maintainability]
 code quality :: {<img src="https://api.codacy.com/project/badge/Grade/bfa993bdac4b46efa6e102daf97ca311" alt="Codacy code quality" />}[https://www.codacy.com/app/saigkill_2/hoe-manns?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=saigkill/hoe-manns&amp;utm_campaign=Badge_Grade]
 
 == Security
