@@ -1,4 +1,66 @@
 ===============================================================================
+hoe-manns 2.1.1 - 2017-11-06
+===============================================================================
+
+    hoe-manns 2.1.1 is the culmination of one days' work by 1 developer.
+
+    New Features:
+
+      * Nothing yet
+
+    Enhancements:
+
+      * Nothing yet
+
+    Notable Bugs Fixed:
+
+      * Updated reek dependency
+
+
+===============================================================================
+SOURCES / PACKAGES
+===============================================================================
+
+Sources
+-------
+
+    * hoe-manns 2.1.1 Tarballs:
+      https://launchpad.net/hoe-manns/2.x/2.1.1/+download/hoe-manns-2.1.1.tar.xz
+
+Packages
+--------
+
+    Download and installation information is available here:
+
+    * https://saigkill.github.io/hoe-manns/about/
+
+    Gems:
+
+    * https://rubygems.org/gems/hoe-manns
+
+===============================================================================
+REPORT BUGS - HELP THE PROJECT - GROW THE COMMUNITY
+===============================================================================
+
+    If you encounter any bad behavior with this release, please do not
+    hesitate to file bugs!
+
+    * https://bugs.launchpad.net/hoe-manns
+
+
+===============================================================================
+VALUED HOE-MANNS CONTRIBUTORS
+===============================================================================
+
+Contributors For This Release
+-----------------------------
+
+    The following people directly contributed to the release of this version
+    of hoe-manns. Without their help, there would be no release!
+
+     Sascha Manns
+
+===============================================================================
 hoe-manns 2.1.0 - 2017-10-24
 ===============================================================================
 

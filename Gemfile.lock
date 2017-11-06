@@ -34,8 +34,8 @@ GEM
       bundler-audit (~> 0.5)
       parseconfig (~> 1.0)
       rainbow (~> 2.2)
-    hoe-reek (1.2.0)
-      bundler (~> 1.15)
+    hoe-reek (1.2.2)
+      bundler (~> 1.16)
       reek (~> 4.7)
     hoe-rubocop (1.0.8)
       bundler (~> 1.14)
@@ -55,7 +55,7 @@ GEM
       rake
     rake (12.2.1)
     rdoc (5.1.0)
-    reek (4.7.2)
+    reek (4.7.3)
       codeclimate-engine-rb (~> 0.4.0)
       parser (>= 2.4.0.0, < 2.5)
       rainbow (~> 2.0)
@@ -120,4 +120,4 @@ DEPENDENCIES
   rubocop (~> 0.50)
 
 BUNDLED WITH
-   1.15.4
+   1.16.0

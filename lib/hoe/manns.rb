@@ -23,7 +23,7 @@ require_relative 'manns-methods.rb'
 # rubocop:disable Metrics/ClassAndModuleChildren
 module Hoe::Manns
   # Version constant for HOE::Manns
-  VERSION = '2.1.0'.freeze
+  VERSION = '2.1.1'.freeze
 
   attr_accessor :remove_pre_gemspec
   attr_accessor :copy_master
