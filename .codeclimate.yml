@@ -1,5 +1,5 @@
 version: "2"
 exclude_patterns:
-  - "docs1/"
-  - "**/docs1/"
+  - "docs/"
+  - "**/docs/"
   - "**/pkg"

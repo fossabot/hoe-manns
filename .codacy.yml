@@ -23,7 +23,7 @@ languages:
 exclude_paths:
   - .bundle/**
   - spec/**/*
-  - docs1/**/*
+  - docs/**/*
   - benchmarks/**/*
   - '*.min.js'
   - '**/tests/**'
