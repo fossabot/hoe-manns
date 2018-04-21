@@ -1,3 +1,9 @@
+=== 2.1.2 / 2018-04-13
+
+* 1 misc enhancement
+
+    * just changed the urls for documentation and project
+
 === 2.1.1 / 2017-11-06
 
 * 1 patch enhancement

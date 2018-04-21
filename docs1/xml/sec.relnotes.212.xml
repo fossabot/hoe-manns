@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://docbook.org/xml/5.0/rng/docbookxi.rng"
+            schematypens="http://relaxng.org/ns/structure/1.0"?>
+<!--
+<?xml-model href="http://docbook.org/xml/5.1CR3/rng/docbook.rng"
+            schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
+<!DOCTYPE sect2
+[
+  <!ENTITY % entities SYSTEM "hoe-manns.ent">
+    %entities;
+]>
+<sect2 xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns="http://docbook.org/ns/docbook" xml:lang="en" xml:id="sec.hoe-manns-relnotes212"
+    version="5.0">
+    <info>
+        <title>Release Notes - 2.1.2</title>
+        <productnumber>2.1.2</productnumber>
+        <productname>hoe-manns</productname>
+        <releaseinfo>Version 2.1 - Revision: 2</releaseinfo>
+        <date>
+            2017
+        </date>
+    </info>
+    <sect3>
+        <info>
+            <title>New Features</title>
+        </info>
+        <itemizedlist>
+            <listitem>
+                <para>Noe new features</para>
+            </listitem>
+        </itemizedlist>
+    </sect3>    
+    <sect3>
+        <info>
+            <title>Notable Bugs fixed:</title>
+        </info>
+        <para>No bugs</para>
+        <para>Just updated the projects and the bug trackers URL.</para>
+    </sect3>
+    
+    <sect3>
+        <info>
+            <title>Documentation</title>
+        </info>
+        <para>We are providing a user documentation: <link
+            xlink:href="http://saigkill.tuxfamily.org/documentation/hoe-manns"
+            >html</link>.</para>
+    </sect3>
+    
+    <sect3>
+        <info>
+            <title>Report Bugs - Help the Project - Grow the Community</title>
+        </info>
+        <para>If you encounter any bad behavior with this release, please don't hesitate to file
+            bugs!</para>
+        <para><link xlink:href="https://smanns.myjetbrains.com/youtrack/issues">See https://smanns.myjetbrains.com/youtrack/issues</link></para>
+    </sect3>
+    
+</sect2>

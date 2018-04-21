@@ -1,4 +1,4 @@
-# Copyright (C) 2013-2017 Sascha Manns <Sascha.Manns@mailbox.org>
+# Copyright (C) 2013-2018 Sascha Manns <Sascha.Manns@mailbox.org>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -23,7 +23,7 @@ require_relative 'manns-methods.rb'
 # rubocop:disable Metrics/ClassAndModuleChildren
 module Hoe::Manns
   # Version constant for HOE::Manns
-  VERSION = '2.1.1'.freeze
+  VERSION = '2.1.2'.freeze
 
   attr_accessor :remove_pre_gemspec
   attr_accessor :copy_master

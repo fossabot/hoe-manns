@@ -1,0 +1,35 @@
+@charset "utf-8";
+/**
+ * style.css
+ *
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation, either version 3 of the License, or (at your option) any
+ * later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program. If not, see <http://gnu.org/licenses/lgpl.txt>.
+ *
+ * @project      Weblog and Open Source Projects of Sascha Manns
+ * @package      xhtml-css
+ * @author       Sascha Manns <Sascha.Manns@mailbox.org>
+ * @copyright    2018 Sascha Manns (http://saigkill.tuxfamily.org/wordpress)
+ * @cssdoc       version 1.0-pre
+ * @license      https://gnu.org/licenses/lgpl.txt LGPL-3.0+
+ * @link         https://github.com/FlorianWolters/jekyll-bootstrap-theme
+ * @media        all
+ * @valid        true
+ */
+
+@font-face {
+    font-family: 'Isonorm Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Isonorm Pro'), local('IsonormPro'), url(http://saigkill.tuxfamily.org/wordpress/webfonts/fonts/isonorm-pro-webfont.woff) format('woff');
+    /* unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; */
+}

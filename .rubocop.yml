@@ -8,7 +8,7 @@ AllCops:
     - 'Rakefile'
     - 'Gemfile'
     - 'Gemfile.lock'
-    - 'docs/**/*'
+    - 'docs1/**/*'
 
   DisplayCopNames: true
 

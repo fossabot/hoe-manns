@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://docbook.org/xml/5.0/rng/docbookxi.rng"
+            schematypens="http://relaxng.org/ns/structure/1.0"?>
+<!--
+<?xml-model href="http://docbook.org/xml/5.1CR3/rng/docbook.rng"
+            schematypens="http://purl.oclc.org/dsdl/schematron"?>
+-->
+<!DOCTYPE article
+[
+  <!ENTITY % entities SYSTEM "hoe-manns.ent">
+    %entities;
+]>
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns="http://docbook.org/ns/docbook" xml:lang="en" xml:id="art.hoe-manns-relnotes" version="5.0">
+  <info>
+    <title>Release Notes</title>
+    <productnumber>&VERSION;</productnumber>
+    <productname>hoe-manns</productname>
+    <subtitle></subtitle>
+    <releaseinfo>Version 1.1 - Revision: 0</releaseinfo>
+    <date>
+      <?dbtimestamp format="B d, Y"?>
+    </date>
+    <mediaobject> 
+      <imageobject role="html"> 
+        <imagedata fileref="ruby.png" align="center"/> 
+      </imageobject> 
+      <imageobject role="fo"> 
+        <imagedata fileref="ruby.png" align="center"/> 
+      </imageobject> 
+    </mediaobject>
+    <authorgroup>
+      <author>
+        <personname>
+          <firstname>Sascha</firstname>
+          <surname>Manns</surname>
+        </personname>
+        <affiliation>
+          <orgname/>
+          <orgdiv/>
+        </affiliation>
+        <email>Sascha.Manns@mailbox.org</email>
+      </author>
+    </authorgroup>
+    <abstract>
+      <para>                
+        <productname>hoe-manns</productname> is a small plugin for hoe, which provides some useful Rake tasks.</para>
+    </abstract>
+  </info>
+  <sect1 xml:id="sect.relnotes">
+    <info>
+      <title>Details</title>
+    </info>
+    <xi:include href="sec.relnotes.212.xml" />
+  </sect1>  
+</article>
