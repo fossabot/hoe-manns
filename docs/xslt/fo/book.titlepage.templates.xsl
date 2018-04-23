@@ -19,14 +19,15 @@
   %metrics;
 ]>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  xmlns:fo="http://www.w3.org/1999/XSL/Format"
+  xmlns:d="http://docbook.org/ns/docbook">
 
   <!--  Book ====================================================== -->
 
   <xsl:template name="book.titlepage.before.recto">
-    <xsl:if test="info/mediaobject">
+    <xsl:if test="d:info/d:mediaobject">
       <fo-block class="logo">
-        <xsl:apply-templates select="info/mediaobject"/>
+        <xsl:apply-templates select="d:info/d:mediaobject"/>
       </fo-block>
     </xsl:if>
   </xsl:template>
