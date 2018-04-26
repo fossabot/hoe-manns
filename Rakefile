@@ -49,6 +49,7 @@ Hoe.spec 'hoe-manns' do
   extra_dev_deps << ['hoe-version', '~> 1.2']
   extra_dev_deps << ['rdoc', '~> 5.1']
   extra_dev_deps << ['rspec', '~> 3.7']
+  extra_dev_deps << ['coveralls', '~> 0.8']
 
   self.history_file = 'History.rdoc'
   self.readme_file = 'README.rdoc'
