@@ -5,21 +5,21 @@
 <?xml-model href="http://docbook.org/xml/5.1CR3/rng/docbook.rng"
             schematypens="http://purl.oclc.org/dsdl/schematron"?>
 -->
-<!DOCTYPE book
+<!DOCTYPE article
 [
   <!ENTITY % entities SYSTEM "entity-decl.ent">
   <!ENTITY % own_ent SYSTEM "hoe-manns.ent">
     %entities;
     %own_ent;
 ]>
-<book xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude"
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude"
   xmlns="http://docbook.org/ns/docbook" xml:lang="en" xml:id="hoe-manns" version="5.0">
   <info>
     <title>How to use hoe-manns</title>
     <productnumber>&VERSION;</productnumber>
     <productname>hoe-manns</productname>
     <subtitle>Some useful tasks for Rake</subtitle>
-    <releaseinfo>Version 1.0.2 - Revision: 0</releaseinfo>
+    <releaseinfo>Version &VERSION; - Revision: 0</releaseinfo>
     <date>
       <?dbtimestamp format="B d, Y"?>
     </date>
@@ -49,14 +49,11 @@
         <productname>hoe-manns</productname> extends the standard Rake-Task with some
         useful new tasks.</para>
     </abstract>
-    <legalnotice version="5.0" xml:id="copyright_gfdl" xml:lang="en-US"
-      xmlns="http://docbook.org/ns/docbook"
-      xmlns:xi="http://www.w3.org/2001/XInclude"
-      xmlns:xlink="http://www.w3.org/1999/xlink">
+    <legalnotice>
       <para>
         Copyright &copy; 2006&ndash;
         <?dbtimestamp format="Y"?>
-        Sascha Manns (Sascha.Manns@mailbox.org). All rights reserved.
+        Sascha Manns (<link xlink:href="mailto:Sascha.Manns@mailbox.org">Sascha.Manns@mailbox.org</link>). All rights reserved.
       </para>
       <para>
         Permission is granted to copy, distribute and/or modify this document under
@@ -77,7 +74,7 @@
     </legalnotice>    
   </info>
 
-  <chapter xml:id="cha.about">
+  <sect1 xml:id="cha.about">
     <info>
       <title>Round about</title>
     </info>
@@ -85,13 +82,13 @@
     <xi:include href="common_intro_feedback.xml"/>
     <xi:include href="common_intro_making.xml"/>
     <xi:include href="common_intro_source_code.xml"/>
-  </chapter>
+  </sect1>
 
-  <chapter xml:id="cha.introduction">
+  <sect1 xml:id="cha.introduction">
     <info>
       <title>Introduction to hoe-manns</title>
     </info>
-    <sect1 xml:id="sec.introduction">
+    <sect2 xml:id="sec.introduction">
       <info>
         <title>Introduction</title>
       </info>
@@ -107,8 +104,8 @@
       <para>To use the software you will need an installed <application>Ruby</application> version
         (Higher or equal 2.2.0), <application>bundler-audit</application> and an installed and
         already configured <application>hoe</application>.</para>
-    </sect1>
-    <sect1 xml:id="sec.installation">
+    </sect2>
+    <sect2 xml:id="sec.installation">
       <info>
         <title>Installation</title>
       </info>
@@ -117,10 +114,10 @@
       </indexterm>
       <para>For installing you have to type in your user shell: &prompt.user;<command>gem install
           hoe-manns</command>.</para>
-    </sect1>
-  </chapter>
+    </sect2>
+  </sect1>
 
-  <chapter xml:id="sec.usage">
+  <sect1 xml:id="sec.usage">
     <info>
       <title>How to use <productname>Ruby</productname> in your projects</title>
     </info>
@@ -139,9 +136,9 @@
     <para>Sure now you have to add <productname>hoe-manns</productname> as a dependency in your
         <filename>Rakefile</filename> and generate a new <filename>Gemfile</filename> now. Then
         <productname>hoe-manns</productname> is ready to work.</para>
-  </chapter>
+  </sect1>
 
-  <chapter xml:id="sec.tasks">
+  <sect1 xml:id="sec.tasks">
     <info>
       <title>The Tasks</title>
     </info>
@@ -211,9 +208,9 @@
         </tgroup>
       </table>
     </para>
-  </chapter>
+  </sect1>
 
-  <chapter>
+  <sect1>
     <title>Additional Information</title>
     <indexterm>
       <primary>API Documentation</primary>
@@ -228,9 +225,9 @@
           send a Merge-Request on Launchpad (See Feedback section).</para>
       </note>
     </para>
-  </chapter>
+  </sect1>
 
   <xi:include href="app.revision_update.xml"/>
   <xi:include href="common_legal.xml"/>
   <index/>
-</book>
+</article>

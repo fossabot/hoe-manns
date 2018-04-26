@@ -23,14 +23,18 @@
   xmlns:d="http://docbook.org/ns/docbook">
 
   <!--  Book ====================================================== -->
-
-  <xsl:template name="book.titlepage.before.recto">
-    <xsl:if test="d:info/d:mediaobject">
-      <fo-block class="logo">
-        <xsl:apply-templates select="d:info/d:mediaobject"/>
-      </fo-block>
-    </xsl:if>
-  </xsl:template>
+  <xsl:template name="book.titlepage.before.recto"> 
+    <xsl:message>In book.titlepage.before.recto: <xsl:value-of 
+      select="local-name()"/> info: <xsl:value-of select="boolean(info)"/> 
+      local-name: <xsl:value-of select="local-name(*[1])"/> 
+    </xsl:message> 
+    <xsl:if test="bookinfo/mediaobject"> 
+      <xsl:message>Inside info/mediaobject</xsl:message> 
+      <fo-block class="logo"> 
+        <xsl:apply-templates select="bookinfo/mediaobject"/> 
+      </fo-block> 
+    </xsl:if> 
+  </xsl:template> 
 
   <xsl:template name="book.titlepage.recto">
     <xsl:variable name="height">
@@ -43,21 +47,6 @@
         <xsl:with-param name="string" select="$page.height"/>
       </xsl:call-template>
     </xsl:variable>
-
-    <!-- Geeko tail cover image -->
-    <xsl:if test="$enable.secondary.branding = 1">
-      <!-- FIXME: Review LTR/RTL situation...  -->
-      <fo:block-container top="{(2 - &goldenratio;) * $height}{$unit}" left="0" text-align="right"
-        absolute-position="fixed">
-        <fo:block>
-          <!-- Almost golden ratio... -->
-          <fo:instream-foreign-object content-width="{$titlepage.background.width}"
-            width="{$titlepage.background.width}">
-            <xsl:call-template name="secondary-branding"/>
-          </fo:instream-foreign-object>
-        </fo:block>
-      </fo:block-container>
-    </xsl:if>
 
     <!-- Logo -->
     <!--

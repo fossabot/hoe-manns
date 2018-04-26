@@ -3,7 +3,7 @@
 code  :: https://github.com/saigkill/hoe-manns
 rdoc  :: http://www.rubydoc.info/gems/hoe-manns
 docs  :: http://saigkill.tuxfamily.org/documentation/hoe-manns/
-bugs  & feature requests:: https://smanns.myjetbrains.com/youtrack
+bugs  & feature requests:: https://github.com/saigkill/hoe-manns/issues
 mailing list :: https://groups.google.com/forum/#!forum/saigkills-hoe-plugins
 openhub statistics :: https://www.openhub.net/p/hoe-manns
 authors blog :: https://saigkill.tuxfamily.org
@@ -39,7 +39,7 @@ The History.rdoc contains a detailed description of what has changed. For most
 users the NEWS file might be a better place to look since it contains
 change summaries between the different versions.
 
-hoe-manns is released under the GPL3 License, see the file 'License.rdoc'
+hoe-manns is released under the GPL3 License, see the file 'LICENSE.rdoc'
 for more information.
 
 The official website is:
@@ -60,20 +60,6 @@ bundler_audit:run and copy_mirror.
 This Gem was programmed and tested on Linux systems. If anyone would like to make the methods also fit for other OS,
 I'm happy about Pull requests.
 
-== SYNOPSIS:
-
-Use in your Rakefile:
-
-    Hoe.plugin :manns
-
-    Hoe.spec 'your project' do
-    ...
-    end
-
-Also add hoe-manns to your requirements and recreate your Gemfile.
-
-Read the documentation at http://saigkill.tuxfamily.org/documentation/hoe-manns/
-
 == REQUIREMENTS:
 
 * rake
@@ -86,7 +72,18 @@ The installation is very easy.
 
     gem install hoe-manns
 
-Read the documentation at http://saigkill.tuxfamily.org/documentation/hoe-manns/
+== SYNOPSIS:
+
+Use in your Rakefile:
+
+    Hoe.plugin :manns
+
+    Hoe.spec 'your project' do
+    ...
+    end
+
+Also add hoe-manns to your requirements and recreate your Gemfile.
+
 
 == DEVELOPERS:
 
@@ -96,82 +93,12 @@ After checking out the source, run:
 
 This task will install any missing dependencies, run the tests/specs,
 and generate the RDoc.
+Also you can read the DEVELOPING.md and CONTRIBUTING.md for more information.
 
 === IDEAS:
 
-* Add ideas on: https://smanns.myjetbrains.com/youtrack
+* Add ideas on: https://github.com/saigkill/hoe-manns/issues
 
-=== COOL HACKS:
-
-* Open a bug report on https://smanns.myjetbrains.com/youtrack
-* Please use the -u flag when generating the patch as it makes the patch
-  more readable.
-* Write a good explanation of what the patch does.
-* It is better to use git format-patch command: git format-patch HEAD^
-
-=== CONTRIBUTOR CODE OF CONDUCT:
-
-As contributors and maintainers of this project, we pledge to respect all
-people who contribute through reporting issues, posting feature requests,
-updating documentation, submitting pull requests or patches, and other
-activities.
-
-We are committed to making participation in this project a harassment-free
-experience for everyone, regardless of the level of experience, gender, gender
-identity and expression, sexual orientation, disability, personal
-appearance, body size, race, age, or religion.
-
-Examples of unacceptable behavior by participants include the use of sexual
-language or imagery, derogatory comments or personal attacks, trolling,
-public or private harassment, insults, or other unprofessional conduct.
-
-Project maintainers have the right and responsibility to remove, edit, or
-reject comments, commits, code, wiki edits, issues, and other contributions
-that are not aligned with this Code of Conduct. Project maintainers who do
-not follow the Code of Conduct may be removed from the project team.
-
-Instances of abusive, harassing or otherwise unacceptable behavior may be
-reported by opening an issue or contacting one or more of the project
-maintainers.
-
-This Code of Conduct is adapted from the {Contributor Covenant}[http:contributor-covenant.org],
-version 1.0.0, available at {http://contributor-covenant.org/version/1/0/0/}[http://contributor-covenant.org/version/1/0/0/].
-
-=== MAINTENANCE POLICY:
-
-I'm following the Semantic Versioning for its releases: (Major).(Minor).(Patch).
-
- * Major version: Whenever there is something significant or any backward
-   incompatible changes.
- * Minor version: When new, backward compatible functionality is introduced a
-   minor feature is introduced, or when a set of smaller features is rolled out.
- * Patch number: When backward compatible bug fixes are introduced that fix
-   incorrect behavior.
- * The current stable release will receive security patches and bug fixes
-   (eg. 5.0 -> 5.0.1).
- * Feature releases will mark the next supported stable release where the minor
-   version is increased numerically by increments of one (eg. 5.0 -> 5.1).
-
-I encourage everyone to run the latest stable release to ensure that you can
-easily upgrade to the most secure and feature-rich experience. In order to
-make sure you can easily run the most recent stable release, we are working
-hard to keep the update process simple and reliable.
-
-=== STRUCTURE:
-
-==== BRANCHES:
-
-===== `master` BRANCH:
-The master branch is the current edge of development.
-
-===== `X.X` BRANCH:
-The X.X branch is the last stable branch. It will be used for tarballs.
-
-===== MERGE REQUESTS:
-If you want to merge your branch with the trunk, join the team.
-
-Please base all Merge requests off the `master` branch. Merges to
-`X.X` only occur through the `master` branch.
 
 == PROBLEM REPORTING:
 

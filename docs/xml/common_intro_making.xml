@@ -6,7 +6,7 @@
   <!ENTITY % entities SYSTEM "entity-decl.ent">
     %entities;
 ]>
-<sect1 version="5.0" xml:lang="en" xml:id="common_intro_making"
+<sect2 version="5.0" xml:lang="en" xml:id="common_intro_making"
     xmlns="http://docbook.org/ns/docbook"
     xmlns:xi="http://www.w3.org/2001/XInclude"
     xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -24,9 +24,9 @@
         project's home page can be found at <link xlink:show="new"
             xlink:href="https://github.com/openSUSE/daps">https://github.com/openSUSE/daps</link>. </para>
     <para>You can find the docbook sources of this documentation on <link
-            xlink:href="https://git.tuxfamily.org/saigkillsblg/documentation.git/"
-            >https://git.tuxfamily.org/saigkillsblg/documentation.git/</link>. </para>
-</sect1>
+        xlink:href="https://github.com/saigkill/hoe-manns/tree/master/docs"
+        >https://github.com/saigkill/hoe-manns/tree/master/docs</link>. </para>
+</sect2>
 
 
 

@@ -6,12 +6,12 @@
   <!ENTITY % entities SYSTEM "entity-decl.ent">
     %entities;
 ]>
-<sect1 version="5.0" xml:lang="en" xml:id="common_intro_source_code"
+<sect2 version="5.0" xml:lang="en" xml:id="common_intro_source_code"
     xmlns="http://docbook.org/ns/docbook"
     xmlns:xi="http://www.w3.org/2001/XInclude"
     xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>Source Code</title>
     <para>The source code of <productname>hoe-manns</productname> is publicly available on <link
       xlink:href="https://github.com/saigkill/hoe-manns">https://github.com/saigkill/hoe-manns</link> for download links and more information.</para>
-</sect1>
+</sect2>
 

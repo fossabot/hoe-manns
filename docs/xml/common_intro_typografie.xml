@@ -6,7 +6,7 @@
   <!ENTITY % entities SYSTEM "entity-decl.ent">
     %entities;
 ]>
-<sect1 version="5.0" xml:id="common_intro_typografie"
+<sect2 version="5.0" xml:id="common_intro_typografie"
     xmlns="http://docbook.org/ns/docbook"
     xmlns:xi="http://www.w3.org/2001/XInclude"
     xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -120,5 +120,5 @@
             </tip>
         </listitem>
     </itemizedlist>
-</sect1>
+</sect2>
 

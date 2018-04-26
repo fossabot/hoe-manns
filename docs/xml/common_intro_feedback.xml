@@ -6,7 +6,7 @@
   <!ENTITY % entities SYSTEM "entity-decl.ent">
     %entities;
 ]>
-<sect1 xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="common_intro_feedback" xml:lang="en-US">
+<sect2 xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="common_intro_feedback" xml:lang="en-US">
     <title>Feedback</title>
     
     <para>
@@ -19,8 +19,8 @@
             <listitem>
                 <para>You are welcome to file a Bug Report or a Feature Request.</para>
                 <para>File a bug or a Feature request: <link
-                        xlink:href="https://smanns.myjetbrains.com/youtrack/"
-                        >https://smanns.myjetbrains.com/youtrack/</link>.</para>
+                    xlink:href="https://github.com/saigkill/hoe-manns/issues"
+                    >https://github.com/saigkill/hoe-manns/issues</link>.</para>
             </listitem>            
         </varlistentry>
         <varlistentry>
@@ -28,8 +28,8 @@
             <listitem>
                 <para>We want to hear your comments about and suggestions for this manual and the
                     other documentation included with this product. Go to <link
-                        xlink:href="https://smanns.myjetbrains.com/youtrack/issues"
-                        >https://smanns.myjetbrains.com/youtrack/issues</link> and enter your comments
+                        xlink:href="https://github.com/saigkill/hoe-manns/issues"
+                        >https://github.com/saigkill/hoe-manns/issues</link> and enter your comments
                     there. </para>
             </listitem>
         </varlistentry>
@@ -62,4 +62,4 @@
             </listitem>
         </varlistentry>
     </variablelist>
-</sect1>
+</sect2>
