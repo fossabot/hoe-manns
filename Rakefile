@@ -10,6 +10,12 @@
 #* git:manifest
 #* bundler:gemfile
 #* bundler:gemfile_lock
+# x64-mingw32
+# x64-mswin32
+# x86-mingw32
+# x86-mswin32
+# ruby
+# x86_64-linux
 #* bundle_audit:run
 #* git -a -m "Anything"
 #* git tag x.x.x
@@ -47,7 +53,7 @@ Hoe.spec 'hoe-manns' do
   extra_dev_deps << ['hoe-bundler', '~> 1.3']
   extra_dev_deps << ['hoe-rubygems', '~> 1.0']
   extra_dev_deps << ['hoe-version', '~> 1.2']
-  extra_dev_deps << ['rdoc', '~> 5.1']
+  extra_dev_deps << ['rdoc', '~> 6.0']
   extra_dev_deps << ['rspec', '~> 3.7']
   extra_dev_deps << ['coveralls', '~> 0.8']
 
