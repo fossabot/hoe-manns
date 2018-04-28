@@ -6,6 +6,9 @@ Manifest.txt
 README.rdoc
 Rakefile
 NEWS
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+DEVELOPING.md
 lib/hoe/manns.rb
 lib/hoe/manns-methods.rb
 spec/manns_spec.rb

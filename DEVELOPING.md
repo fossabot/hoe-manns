@@ -39,5 +39,5 @@ The X.X branch is the last stable branch. It will be used for tarballs.
 #### PULL REQUESTS
 If you want to merge your branch with the trunk, send a pull request.
 
-Please base all Merge requests off the `master` branch. Merges to
-`X.X` only occur through the `master` branch.
+Please base all Merge requests off the `develop` branch. Merges to
+`X.X` only occur through the `develop` branch.
