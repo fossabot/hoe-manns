@@ -1,5 +1,5 @@
 # -*- ruby -*-
-# Copyright (C) 2013-2018 Sascha Manns <Sascha.Manns@mailbox.org>
+# Copyright (C) 2013-2018 Sascha Manns <Sascha.Manns@outlook.de>
 # Release:
 # Pre-release:
 #* update docs
@@ -43,14 +43,14 @@ Hoe.plugin :version
 ###########################################DEVELOPING ZONE##############################################################
 # rubocop:disable Metrics/LineLength
 Hoe.spec 'hoe-manns' do
-  developer('Sascha Manns', 'Sascha.Manns@mailbox.org')
+  developer('Sascha Manns', 'Sascha.Manns@outlook.de')
   license 'GPL-3.0' # this should match the license in the README
   require_ruby_version '>= 2.3.0'
 
   dependency 'rainbow', '~> 3.0'
   dependency 'bundler-audit', '~> 0.6'
 
-  extra_dev_deps << ['hoe-bundler', '~> 1.3']
+  extra_dev_deps << ['hoe-bundler', '~> 1.4']
   extra_dev_deps << ['hoe-rubygems', '~> 1.0']
   extra_dev_deps << ['hoe-version', '~> 1.2']
   extra_dev_deps << ['rdoc', '~> 6.0']

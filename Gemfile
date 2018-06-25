@@ -7,7 +7,7 @@ source "https://rubygems.org/"
 gem "rainbow", "~>3.0"
 gem "bundler-audit", "~>0.6"
 
-gem "hoe-bundler", "~>1.3", :group => [:development, :test]
+gem "hoe-bundler", "~>1.4", :group => [:development, :test]
 gem "hoe-rubygems", "~>1.0", :group => [:development, :test]
 gem "hoe-version", "~>1.2", :group => [:development, :test]
 gem "rdoc", "~>6.0", :group => [:development, :test]

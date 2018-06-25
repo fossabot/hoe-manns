@@ -20,7 +20,7 @@ GEM
     json (2.1.0)
     rainbow (3.0.0)
     rake (12.3.1)
-    rdoc (6.0.3)
+    rdoc (6.0.4)
     rspec (3.7.0)
       rspec-core (~> 3.7.0)
       rspec-expectations (~> 3.7.0)
@@ -56,7 +56,7 @@ DEPENDENCIES
   bundler-audit (~> 0.6)
   coveralls (~> 0.8)
   hoe (~> 3.17)
-  hoe-bundler (~> 1.3)
+  hoe-bundler (~> 1.4)
   hoe-rubygems (~> 1.0)
   hoe-version (~> 1.2)
   rainbow (~> 3.0)
@@ -64,4 +64,4 @@ DEPENDENCIES
   rspec (~> 3.7)
 
 BUNDLED WITH
-   1.16.1
+   1.16.2

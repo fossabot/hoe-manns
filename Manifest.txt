@@ -8,7 +8,7 @@ Rakefile
 NEWS
 CODE_OF_CONDUCT.md
 CONTRIBUTING.md
-DEVELOPING.md
+MAINTENANCE.md
 lib/hoe/manns.rb
 lib/hoe/manns-methods.rb
 spec/manns_spec.rb

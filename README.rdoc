@@ -2,11 +2,11 @@
 
 code  :: https://github.com/saigkill/hoe-manns
 rdoc  :: http://www.rubydoc.info/gems/hoe-manns
-docs  :: http://saigkill.tuxfamily.org/documentation/hoe-manns/
+docs  :: https://github.com/saigkill/hoe-manns/wiki
 bugs  & feature requests:: https://github.com/saigkill/hoe-manns/issues
 mailing list :: https://groups.google.com/forum/#!forum/saigkills-hoe-plugins
 openhub statistics :: https://www.openhub.net/p/hoe-manns
-authors blog :: https://saigkill.tuxfamily.org
+authors blog :: https://saigkills-backtrace.de
 min_rubyver :: 2.3.0
 
 last public version  :: {<img src="https://badge.fury.io/rb/hoe-manns.png" alt="Last Version" />}[http://rubygems.org/gems/hoe-manns]
@@ -19,9 +19,7 @@ code quality :: {<img src="https://api.codeclimate.com/v1/badges/009b795034d7c69
 code quality :: {<img src="https://api.codacy.com/project/badge/Grade/bfa993bdac4b46efa6e102daf97ca311" alt="Codacy code quality" />}[https://www.codacy.com/app/saigkill_2/hoe-manns?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=saigkill/hoe-manns&amp;utm_campaign=Badge_Grade]
 security :: {<img src="https://hakiri.io/github/saigkill/hoe-manns/master.svg" alt="security" />}[https://hakiri.io/github/saigkill/hoe-manns/master/shield]
 test coverage :: {<img src="https://coveralls.io/repos/github/saigkill/hoe-manns/badge.svg?branch=master" alt="Test Coverage" />}[https://coveralls.io/github/saigkill/hoe-manns]
-dependency check :: {<img src="https://gemnasium.com/badges/github.com/saigkill/hoe-manns.svg" alt="Dependency Status" />}[https://gemnasium.com/github.com/saigkill/hoe-manns]
 documentation quality :: {<img src="https://inch-ci.org/github/saigkill/hoe-manns.svg?branch=master" alt="Documentation Quality" />}[https://inch-ci.org/github/saigkill/hoe-manns]
-donations :: http://saigkill.tuxfamily.org/wordpress/campaigns/hoe-manns/
 
 == DESCRIPTION:
 
@@ -35,16 +33,13 @@ hoe-manns is a small collection of my personal used rake tasks for using with ho
 * run_before_release
 * run_after_release
 
-The History.rdoc contains a detailed description of what has changed. For most
-users the NEWS file might be a better place to look since it contains
-change summaries between the different versions.
+The History.rdoc contains a detailed description of what has changed.
 
-hoe-manns is released under the GPL3 License, see the file 'LICENSE.rdoc'
-for more information.
+hoe-manns is released under the GPL3 License, see the file 'LICENSE.rdoc' for more information.
 
 The official website is:
 
-    http://saigkill.tuxfamily.org/wordpress
+    https://saigkills-backtrace.de
 
 == FEATURES:
 
@@ -56,9 +51,6 @@ bundler_audit:run and copy_mirror.
 * runs after release: send_email.
 * Cleans up the pkg dir
 * provides bundler_audit tasks
-
-This Gem was programmed and tested on Linux systems. If anyone would like to make the methods also fit for other OS,
-I'm happy about Pull requests.
 
 == REQUIREMENTS:
 
@@ -91,9 +83,8 @@ After checking out the source, run:
 
   $ rake newb
 
-This task will install any missing dependencies, run the tests/specs,
-and generate the RDoc.
-Also you can read the DEVELOPING.md and CONTRIBUTING.md for more information.
+This task will install any missing dependencies, run the tests/specs, and generate the RDoc.
+Also you can read the MAINTENANCE.md and CONTRIBUTING.md for more information.
 
 === IDEAS:
 
@@ -102,5 +93,4 @@ Also you can read the DEVELOPING.md and CONTRIBUTING.md for more information.
 
 == PROBLEM REPORTING:
 
-Bugs should be reported to https://bugs.launchpad.net/hoe-manns. You will need to create an
-account for yourself.
+Bugs should be reported to https://bugs.launchpad.net/hoe-manns. You will need to create an account for yourself.
