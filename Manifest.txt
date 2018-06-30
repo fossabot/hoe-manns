@@ -5,7 +5,6 @@ LICENSE.rdoc
 Manifest.txt
 README.rdoc
 Rakefile
-NEWS
 CODE_OF_CONDUCT.md
 CONTRIBUTING.md
 MAINTENANCE.md

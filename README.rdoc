@@ -86,11 +86,6 @@ After checking out the source, run:
 This task will install any missing dependencies, run the tests/specs, and generate the RDoc.
 Also you can read the MAINTENANCE.md and CONTRIBUTING.md for more information.
 
-=== IDEAS:
+=== ISSUE TRACKING:
 
 * Add ideas on: https://github.com/saigkill/hoe-manns/issues
-
-
-== PROBLEM REPORTING:
-
-Bugs should be reported to https://bugs.launchpad.net/hoe-manns. You will need to create an account for yourself.
