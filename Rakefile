@@ -6,8 +6,7 @@
 #* Update copyright years if needed, in the following paths:
 #  + lib/*
 #* Check version in lib/hoe-manns.rb
-#* Update History.rdoc & NEWS
-#* git:manifest
+#* Update History.rdoc
 #* bundler:gemfile
 #* bundler:gemfile_lock
 # x64-mingw32
@@ -28,7 +27,6 @@
 
 # Post-release:
 #* Bump version
-#* Add new Milestone on Github
 
 # Dependencies
 require 'rubygems'

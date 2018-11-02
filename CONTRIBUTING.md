@@ -6,7 +6,7 @@
 * Assign yourself to the issue when you are working on it
 * Reference the issue number (with `#NUMBER`) in your pull request
 
-Thanks! :heart: :heart: :heart:
+Thanks!
 
 # IDEAS:
 
