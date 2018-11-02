@@ -59,7 +59,7 @@ Hoe.spec 'hoe-manns' do
   extra_dev_deps << ['simplecov-cobertura', '~> 1.3']
 
   self.history_file = 'History.rdoc'
-  self.readme_file = 'README.rdoc'
+  self.readme_file = 'README.md'
   self.extra_rdoc_files = FileList['*.rdoc'].to_a
   self.post_install_message = 'Please file bugreports on: https://dev.azure.com/saigkill/hoe-manns/_workitems'
 end

@@ -1,4 +1,3 @@
-require 'coveralls'
 require 'fileutils'
 require 'rake'
 require 'simplecov'
