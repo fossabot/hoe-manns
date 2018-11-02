@@ -19,7 +19,8 @@ steps:
 - script: bundle exec rake
   displayName: 'bundle exec rake'
 
-- script: bundle exec rspec spec --format RspecJunitFormatter --out test_results/TEST-rspec.xml
+- script: rake spec
+  displayName: 'rake spec'
 
 - task: PublishTestResults@2
 
