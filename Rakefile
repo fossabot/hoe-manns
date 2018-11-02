@@ -54,13 +54,14 @@ Hoe.spec 'hoe-manns' do
   extra_dev_deps << ['hoe-rubygems', '~> 1.0']
   extra_dev_deps << ['hoe-version', '~> 1.2']
   extra_dev_deps << ['rdoc', '~> 6.0']
-  extra_dev_deps << ['rspec', '~> 3.7']
-  extra_dev_deps << ['coveralls', '~> 0.8']
+  extra_dev_deps << ['rspec', '~> 3.8']
+  extra_dev_deps << ['simplecov', '~> 0.16']
+  extra_dev_deps << ['simplecov-cobertura', '~> 1.3']
 
   self.history_file = 'History.rdoc'
   self.readme_file = 'README.rdoc'
   self.extra_rdoc_files = FileList['*.rdoc'].to_a
-  self.post_install_message = 'Please file bugreports on: https://github.com/saigkill/hoe-manns/issues'
+  self.post_install_message = 'Please file bugreports on: https://dev.azure.com/saigkill/hoe-manns/_workitems'
 end
 
 ##################################################SETUP ZONE############################################################

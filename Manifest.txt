@@ -3,7 +3,7 @@ Gemfile.lock
 History.rdoc
 LICENSE.rdoc
 Manifest.txt
-README.rdoc
+README.md
 Rakefile
 CODE_OF_CONDUCT.md
 CONTRIBUTING.md

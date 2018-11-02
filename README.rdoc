@@ -1,12 +1,12 @@
 = hoe-manns
 
-code  :: https://github.com/saigkill/hoe-manns
+code  :: https://dev.azure.com/saigkill/hoe-manns
 rdoc  :: http://www.rubydoc.info/gems/hoe-manns
-docs  :: https://github.com/saigkill/hoe-manns/wiki
-bugs  & feature requests:: https://github.com/saigkill/hoe-manns/issues
+docs  :: https://dev.azure.com/saigkill/hoe-manns/_wiki
+bugs  & feature requests:: https://dev.azure.com/saigkill/hoe-manns/_workitems
 mailing list :: https://groups.google.com/forum/#!forum/saigkills-hoe-plugins
 openhub statistics :: https://www.openhub.net/p/hoe-manns
-authors blog :: https://saigkills-backtrace.de
+authors blog :: https://saigkillsbacktrace.azurewebsites.net/
 min_rubyver :: 2.3.0
 
 last public version  :: {<img src="https://badge.fury.io/rb/hoe-manns.png" alt="Last Version" />}[http://rubygems.org/gems/hoe-manns]
