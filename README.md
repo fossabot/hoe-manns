@@ -11,7 +11,8 @@ min_rubyver :: 2.3.0
 
 | What | Status |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|last public version | [![Last Version](https://badge.fury.io/rb/hoe-manns.png)](http://rubygems.org/gems/hoe-manns) |
+|last public version | [![Last Version](https://badge.fury.io/rb/hoe-manns.png)](http://rubygems.org/gems/hoe-manns) [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fsaigkill%2Fhoe-manns.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fsaigkill%2Fhoe-manns?ref=badge_shield)
+|
 |downloads latest | [![Downloads latest](https://img.shields.io/gem/dtv/hoe-manns.svg)](http://rubygems.org/gems/hoe-manns)  |
 |downloads all | [![Downloads all](https://img.shields.io/gem/dt/hoe-manns.svg)](http://rubygems.org/gems/hoe-manns) |
 |continuous integration | [![Build Status](https://dev.azure.com/saigkill/hoe-manns/_apis/build/status/hoe-manns-CI)](https://dev.azure.com/saigkill/hoe-manns/_build/latest?definitionId=3) |
@@ -81,3 +82,7 @@ Also you can read the MAINTENANCE.md and CONTRIBUTING.md for more information.
 ## ISSUE TRACKING:
 
 * Add ideas on: https://dev.azure.com/saigkill/hoe-manns/_workitems
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fsaigkill%2Fhoe-manns.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fsaigkill%2Fhoe-manns?ref=badge_large)
